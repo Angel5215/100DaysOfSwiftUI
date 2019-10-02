@@ -13,3 +13,4 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 6: Closures, part one.
 - [Day 7](Introduction/Day07): Closures, part two.
 - Day 8: Structs, part one.
+- [Day 9](Introduction/Day09): Structs, part two.
