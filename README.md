@@ -14,3 +14,4 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 7](Introduction/Day07): Closures, part two.
 - Day 8: Structs, part one.
 - [Day 9](Introduction/Day09): Structs, part two.
+- [Day 10](Introduction/Day10): Classes.
