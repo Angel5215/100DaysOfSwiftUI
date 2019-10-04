@@ -15,3 +15,4 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 8: Structs, part one.
 - [Day 9](Introduction/Day09): Structs, part two.
 - [Day 10](Introduction/Day10): Classes.
+- [Day 11](Introduction/Day11): Protocols and extensions.
