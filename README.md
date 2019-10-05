@@ -16,3 +16,4 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 9](Introduction/Day09): Structs, part two.
 - [Day 10](Introduction/Day10): Classes.
 - [Day 11](Introduction/Day11): Protocols and extensions.
+- [Day 12](Introduction/Day12): Optionals.
