@@ -27,3 +27,4 @@ Repository made to follow 100 Days of SwiftUI.
 ## Days 16-26: Starting SwiftUI
 
 - [Day 16](WeSplit): Project 1, part one.
+- [Day 17](WeSplit): Project 1, part two.

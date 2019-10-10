@@ -5,6 +5,8 @@ First project in the 100 Days of SwiftUI challenge. It consists int a check-spli
 
 ## Images
 
+<p style="text-align: center;"><img src="./img/run-example.gif" height="600px"/></p>
+
 ## Notes
 
 - The `SceneDelegate.swift` file contains code for **launching one window** in your app. It doesn't do much on iPhone, but on iPad (where users can have multiple instances of an app open at the same time) this is important.
@@ -80,5 +82,8 @@ struct ContentView: View {
 
 - `ForEach` can loop over arrays and ranges to create as many views as needed. It also doesn't get git by the 10-view limit that occurs when typing the view by hand.
 
+- Swift can format numbers inside **string interpolation** using [C-like format specifiers]( https://en.wikipedia.org/wiki/Printf_format_string).
 
-
+```swift
+Text("$\(amount, specifier: "%.2f")")
+```
