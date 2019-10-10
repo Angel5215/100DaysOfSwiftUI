@@ -8,12 +8,14 @@
 
 import SwiftUI
 
+// MARK: - ContentView
 struct ContentView: View {
     
+    // MARK: - Properties
     /// Cost of the check.
     @State private var checkAmount = ""
     
-    /// Number of people sharing the cost.
+    /// Index for the number of people sharing the cost in a picker.
     @State private var numberOfPeople = 2
     
     /// How much tip people want to leave. Mapped to an index of `tipPercentages`
@@ -21,6 +23,19 @@ struct ContentView: View {
     
     /// Possible tip sizes.
     let tipPercentages = [10, 15, 20, 25, 0]
+    
+    // MARK: - Computed properties
+    var totalPerPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        let tipSelection = Double(tipPercentages[tipPercentage])
+        let orderAmount = Double(checkAmount) ?? 0
+        
+        let tipValue = orderAmount / 100 * tipSelection
+        let grandTotal = orderAmount + tipValue
+        let amountPerPerson = grandTotal / peopleCount
+        
+        return amountPerPerson
+    }
     
     var body: some View {
         NavigationView {
@@ -46,7 +61,7 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text("$\(checkAmount)")
+                    Text("$\(totalPerPerson, specifier: "%.2f")")
                 }
             }
             .navigationBarTitle("WeSplit")
@@ -54,6 +69,7 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
