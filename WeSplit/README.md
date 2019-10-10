@@ -5,7 +5,7 @@ First project in the 100 Days of SwiftUI challenge. It consists int a check-spli
 
 ## Images
 
-<p style="text-align: center;"><img src="./img/run-example.gif" height="600px"/></p>
+<p align="center"><img src="./img/run-example.gif" height="600px"></p>
 
 ## Notes
 
