@@ -16,7 +16,7 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 9](Introduction/Day09): Structs, part two.
 - [Day 10](Introduction/Day10): Classes.
 - [Day 11](Introduction/Day11): Protocols and extensions.
-- [Day 12](Introducttion/Day12): Optionals, unwrapping and typecasting.
+- [Day 12](Introduction/Day12): Optionals, unwrapping and typecasting.
 
 ## Days 13-15: Consolidation I
 
@@ -28,3 +28,11 @@ Repository made to follow 100 Days of SwiftUI.
 
 - [Day 16](WeSplit): Project 1, part one.
 - [Day 17](WeSplit): Project 1, part two.
+- Day 18. Project 1, part three (**Challenge day**).
+
+
+## Challenge days
+
+The solution for challenge days will be uploaded in separate branches to keep the projects in a state that can be used for a later review or upcoming challenges that use the same projects. To check my attempts at solving them, just checkout the branch from the following list:
+
+- Day 18: `challenge/project_one_day_18`
