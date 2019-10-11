@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var checkAmount = ""
     
     /// Index for the number of people sharing the cost in a picker.
-    @State private var numberOfPeople = ""
+    @State private var numberOfPeople = 2
     
     /// How much tip people want to leave. Mapped to an index of `tipPercentages`
     @State private var tipPercentage = 2
@@ -26,7 +26,7 @@ struct ContentView: View {
     
     // MARK: - Computed properties
     var totalPerPerson: Double {
-        let peopleCount = Double(numberOfPeople) ?? 2
+        let peopleCount = Double(numberOfPeople)
         let finalCount = peopleCount > 0 ? peopleCount : 2
         let amountPerPerson = totalAmount / finalCount
         return amountPerPerson
@@ -48,9 +48,7 @@ struct ContentView: View {
                     TextField("Amount", text: $checkAmount)
                         .keyboardType(.decimalPad)
                     
-                    // MARK: - Challenge 3
-                    TextField("Number of people", text: $numberOfPeople)
-                        .keyboardType(.numberPad)
+                    Stepper("Number of people: \(numberOfPeople)", value: $numberOfPeople, in: 2 ... 100)
                 }
                 
                 Section(header: Text("How much tip do you want to leave?")) {
