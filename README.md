@@ -35,6 +35,8 @@ Repository made to follow 100 Days of SwiftUI.
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
 
+- [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
+
 ## Wrap-up challenges
 
 The solution for challenges of wrap-up days will be uploaded in separate branches to keep the projects in a state that can be used for a later review or upcoming challenges that use the same projects. To check my attempts at solving them, just checkout the branch from the following list:
