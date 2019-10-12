@@ -29,11 +29,11 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 16](WeSplit): Project 1, part one.
 - [Day 17](WeSplit): Project 1, part two.
 - Day 18. Project 1, part three (**Wrap-up day**).
-- Day 19. Challenge day #1.
+- [Day 19](Challenges/Unit%20Converter). Challenge day #1.
 
 ## Challenge days
 
-The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](./Challenges) folder.
+The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
 
 ## Wrap-up challenges
 
