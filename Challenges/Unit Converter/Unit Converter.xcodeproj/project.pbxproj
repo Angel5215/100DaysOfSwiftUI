@@ -13,6 +13,7 @@
 		FA0D6FAB235185DC001A70E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0D6FAA235185DC001A70E5 /* Assets.xcassets */; };
 		FA0D6FAE235185DC001A70E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0D6FAD235185DC001A70E5 /* Preview Assets.xcassets */; };
 		FA0D6FB1235185DC001A70E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0D6FAF235185DC001A70E5 /* LaunchScreen.storyboard */; };
+		FAC0EA4A2352626E005F8A46 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0EA492352626E005F8A46 /* Converter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA0D6FAD235185DC001A70E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA0D6FB0235185DC001A70E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0D6FB2235185DC001A70E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC0EA492352626E005F8A46 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FA0D6FA4235185DB001A70E5 /* AppDelegate.swift */,
 				FA0D6FA6235185DB001A70E5 /* SceneDelegate.swift */,
 				FA0D6FA8235185DB001A70E5 /* ContentView.swift */,
+				FAC0EA492352626E005F8A46 /* Converter.swift */,
 				FA0D6FAA235185DC001A70E5 /* Assets.xcassets */,
 				FA0D6FAF235185DC001A70E5 /* LaunchScreen.storyboard */,
 				FA0D6FB2235185DC001A70E5 /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				FA0D6FA5235185DB001A70E5 /* AppDelegate.swift in Sources */,
 				FA0D6FA7235185DB001A70E5 /* SceneDelegate.swift in Sources */,
+				FAC0EA4A2352626E005F8A46 /* Converter.swift in Sources */,
 				FA0D6FA9235185DB001A70E5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
