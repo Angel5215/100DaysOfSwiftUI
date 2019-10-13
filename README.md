@@ -30,6 +30,7 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 17](WeSplit): Project 1, part two.
 - Day 18. Project 1, part three (**Wrap-up day**).
 - [Day 19](Challenges/Unit%20Converter). Challenge day #1.
+- [Day 20](GuessTheFlag). Project 2, part one.
 
 ## Challenge days
 
