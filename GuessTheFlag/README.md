@@ -9,6 +9,8 @@ Guessing game that helps user learn some of the many flags of the world.
 
 ## Images
 
+<p align="center"><img src="./img/run-example.gif" height="600px"></p>
+
 ## Notes
 
 - A `VStack` is a vertical stack of views. It's possible to stack up to 10 children. If you need to add more, stack multiple `Group` views.

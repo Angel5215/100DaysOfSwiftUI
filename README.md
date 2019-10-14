@@ -31,6 +31,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 18. Project 1, part three (**Wrap-up day**).
 - [Day 19](Challenges/Unit%20Converter). Challenge day #1.
 - [Day 20](GuessTheFlag). Project 2, part one.
+- Day 21. Project 2, part two.
 
 ## Challenge days
 
