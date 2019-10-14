@@ -11,6 +11,15 @@ Guessing game that helps user learn some of the many flags of the world.
 
 <p align="center"><img src="./img/run-example.gif" height="600px"></p>
 
+## Wrap-up challenges
+
+1. Add an @State property to store the user’s score, modify it when they get an answer right or wrong, then display it in the alert.
+
+2. Show the player’s current score in a label directly below the flags.
+
+3. When someone chooses the wrong flag, tell them their mistake in your alert message – something like “Wrong! That’s the flag of France,” for example.
+
+
 ## Notes
 
 - A `VStack` is a vertical stack of views. It's possible to stack up to 10 children. If you need to add more, stack multiple `Group` views.
