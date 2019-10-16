@@ -13,9 +13,11 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 10) {
             CapsuleText(text: "First")
-                .foregroundColor(Color.white)
             CapsuleText(text: "Second")
-                .foregroundColor(Color.yellow)
+            
+            Color.blue
+                .frame(width: 300, height: 200)
+                .watermarked(with: "Hacking with Swift")
         }
     }
 }
@@ -25,10 +27,45 @@ struct CapsuleText: View {
     
     var body: some View {
         Text(text)
+            .titleStyle()
+    }
+}
+
+struct Title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
             .font(.largeTitle)
+            .foregroundColor(.white)
             .padding()
             .background(Color.blue)
             .clipShape(Capsule())
+    }
+}
+
+struct Watermark: ViewModifier {
+    
+    var text: String
+    
+    func body(content: Content) -> some View {
+        ZStack(alignment: .bottom) {
+            content
+            
+            Text(text)
+                .font(.caption)
+                .foregroundColor(.white)
+                .padding(5)
+                .background(Color.black)
+        }
+    }
+}
+
+extension View {
+    func titleStyle() -> some View {
+        self.modifier(Title())
+    }
+    
+    func watermarked(with text: String) -> some View {
+        self.modifier(Watermark(text: text))
     }
 }
 
