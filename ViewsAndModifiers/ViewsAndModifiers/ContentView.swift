@@ -15,9 +15,18 @@ struct ContentView: View {
             CapsuleText(text: "First")
             CapsuleText(text: "Second")
             
-            Color.blue
+            ZStack {
+                Color.blue
                 .frame(width: 300, height: 200)
                 .watermarked(with: "Hacking with Swift")
+                
+                GridStack(rows: 5, columns: 4) { row, col in
+                    Text("(\(row),\(col))")
+                }
+                .padding(10)
+                .background(Color.yellow)
+                .font(.system(.headline, design: .monospaced))
+            }
         }
     }
 }
