@@ -10,24 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isYellow = false
+    var body: some View {
+        VStack(spacing: 10) {
+            CapsuleText(text: "First")
+                .foregroundColor(Color.white)
+            CapsuleText(text: "Second")
+                .foregroundColor(Color.yellow)
+        }
+    }
+}
+
+struct CapsuleText: View {
+    var text: String
     
     var body: some View {
-        VStack(spacing: 40) {
-            VStack(spacing: 20) {
-                Text("Gryffindor")
-                Text("Hufflepuff")
-                Text("Ravenclaw")
-                Text("Slytherin")
-            }
-            .font(.title)
+        Text(text)
+            .font(.largeTitle)
             .padding()
-            .background(isYellow ? Color.yellow : Color.green)
-            
-            Button("Change background") {
-                self.isYellow.toggle()
-            }
-        }
+            .background(Color.blue)
+            .clipShape(Capsule())
     }
 }
 
