@@ -11,7 +11,7 @@ Technique project to explore certain SwiftUI features in depth - looking at how 
 
 ## Images
 
-<p align="center"><img src="./img/run-example.gif" height="600px"></p>
+<p align="center"><img src="./img/run-example.png" height="600px"></p>
 
 ## Notes
 

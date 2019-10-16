@@ -33,6 +33,7 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 20](GuessTheFlag). Project 2, part one.
 - Day 21. Project 2, part two.
 - Day 22. Project 2, part three (**Wrap-up day**).
+- [Day 23](ViewsAndModifiers). Project 3, part one.
 
 ## Challenge days
 
