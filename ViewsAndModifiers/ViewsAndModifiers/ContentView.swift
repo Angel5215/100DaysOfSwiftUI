@@ -9,16 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isYellow = false
+    
     var body: some View {
-        Text("Hello world!")
+        VStack(spacing: 40) {
+            VStack(spacing: 20) {
+                Text("Gryffindor")
+                Text("Hufflepuff")
+                Text("Ravenclaw")
+                Text("Slytherin")
+            }
+            .font(.title)
             .padding()
-            .background(Color.red)
-            .padding()
-            .background(Color.blue)
-            .padding()
-            .background(Color.green)
-            .padding()
-            .background(Color.yellow)
+            .background(isYellow ? Color.yellow : Color.green)
+            
+            Button("Change background") {
+                self.isYellow.toggle()
+            }
+        }
     }
 }
 
