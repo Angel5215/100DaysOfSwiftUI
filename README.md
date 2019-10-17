@@ -34,6 +34,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 21. Project 2, part two.
 - Day 22. Project 2, part three (**Wrap-up day**).
 - [Day 23](ViewsAndModifiers). Project 3, part one.
+- Day 24. Project 3, part two. (**Wrap-up day**).
 
 ## Challenge days
 
@@ -47,3 +48,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 
 - Day 18: `challenge/project_one_day_18`
 - Day 22: `challenge/project_two_day_22`.
+- Day 24: `challenge/project_three_day_24`
