@@ -3,9 +3,13 @@
 
 First project in the 100 Days of SwiftUI challenge. It consists int a check-splitting app that someone may use after eating in a restaurant - you enter the cost of the food, select how much of a tip you want to leave, and how many people you're with, and it will tell you how much each person needs to pay.
 
+## Challenge
+
+Go back to project 1 and use a conditional modifier to change the total amount text view to red if the user selects a 0% tip.
+
 ## Images
 
-<p align="center"><img src="./img/run-example.gif" height="600px"></p>
+<p align="center"><img src="./img/run-example.png" height="600px"></p>
 
 ## Notes
 

@@ -12,6 +12,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 10) {
+            
+            Text("Views and Modifiers")
+                .blueTitled()
+                
             CapsuleText(text: "First")
             CapsuleText(text: "Second")
             
@@ -68,6 +72,14 @@ struct Watermark: ViewModifier {
     }
 }
 
+struct BlueTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 30, weight: .black, design: .rounded))
+            .foregroundColor(.blue)
+    }
+}
+
 extension View {
     func titleStyle() -> some View {
         self.modifier(Title())
@@ -75,6 +87,10 @@ extension View {
     
     func watermarked(with text: String) -> some View {
         self.modifier(Watermark(text: text))
+    }
+    
+    func blueTitled() -> some View {
+        self.modifier(BlueTitle())
     }
 }
 

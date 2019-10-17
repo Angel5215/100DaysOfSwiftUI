@@ -7,6 +7,12 @@ Guessing game that helps user learn some of the many flags of the world.
 
 - `VStack`, `HStack`, `ZStack`
 
+## Challenge
+
+Go back to project 2 and create a `FlagImage` view that renders one flag image using the specific set of modifiers we had.
+
+
+
 ## Images
 
 <p align="center"><img src="./img/run-example.gif" height="600px"></p>

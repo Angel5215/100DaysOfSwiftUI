@@ -9,6 +9,10 @@ Technique project to explore certain SwiftUI features in depth - looking at how 
 - Structs
 - Opaque return types (`some Type`)
 
+## Challenge
+
+Create a custom ViewModifier (and accompanying View extension) that makes a view have a large, blue font suitable for prominent titles in a view. Solution: Views and Modifiers.
+
 ## Images
 
 <p align="center"><img src="./img/run-example.png" height="600px"></p>
