@@ -41,6 +41,7 @@ Repository made to follow 100 Days of SwiftUI.
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
 
 - [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
+- [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
 
 ## Wrap-up challenges
 
