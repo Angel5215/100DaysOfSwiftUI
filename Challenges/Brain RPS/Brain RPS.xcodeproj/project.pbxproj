@@ -13,6 +13,7 @@
 		FA82D9A9235961BD009BA386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA82D9A8235961BD009BA386 /* Assets.xcassets */; };
 		FA82D9AC235961BD009BA386 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA82D9AB235961BD009BA386 /* Preview Assets.xcassets */; };
 		FA82D9AF235961BD009BA386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA82D9AD235961BD009BA386 /* LaunchScreen.storyboard */; };
+		FA82D9B7235966FA009BA386 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82D9B6235966FA009BA386 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA82D9AB235961BD009BA386 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA82D9AE235961BD009BA386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA82D9B0235961BD009BA386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA82D9B6235966FA009BA386 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,10 @@
 		FA82D9A1235961BC009BA386 /* Brain RPS */ = {
 			isa = PBXGroup;
 			children = (
-				FA82D9A2235961BC009BA386 /* AppDelegate.swift */,
-				FA82D9A4235961BC009BA386 /* SceneDelegate.swift */,
-				FA82D9A6235961BC009BA386 /* ContentView.swift */,
-				FA82D9A8235961BD009BA386 /* Assets.xcassets */,
-				FA82D9AD235961BD009BA386 /* LaunchScreen.storyboard */,
-				FA82D9B0235961BD009BA386 /* Info.plist */,
+				FA82D9BB23596721009BA386 /* Resources */,
+				FA82D9BA23596714009BA386 /* Data */,
+				FA82D9B92359670B009BA386 /* Views */,
+				FA82D9B823596703009BA386 /* Delegates */,
 				FA82D9AA235961BD009BA386 /* Preview Content */,
 			);
 			path = "Brain RPS";
@@ -73,6 +73,41 @@
 				FA82D9AB235961BD009BA386 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA82D9B823596703009BA386 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				FA82D9A2235961BC009BA386 /* AppDelegate.swift */,
+				FA82D9A4235961BC009BA386 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		FA82D9B92359670B009BA386 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA82D9AD235961BD009BA386 /* LaunchScreen.storyboard */,
+				FA82D9A6235961BC009BA386 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA82D9BA23596714009BA386 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA82D9B6235966FA009BA386 /* Move.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA82D9BB23596721009BA386 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA82D9A8235961BD009BA386 /* Assets.xcassets */,
+				FA82D9B0235961BD009BA386 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA82D9B7235966FA009BA386 /* Move.swift in Sources */,
 				FA82D9A3235961BC009BA386 /* AppDelegate.swift in Sources */,
 				FA82D9A5235961BC009BA386 /* SceneDelegate.swift in Sources */,
 				FA82D9A7235961BC009BA386 /* ContentView.swift in Sources */,
@@ -288,7 +324,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Brain RPS/Preview Content\"";
 				DEVELOPMENT_TEAM = 486CCPNU3B;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Brain RPS/Info.plist";
+				INFOPLIST_FILE = "Brain RPS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +344,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Brain RPS/Preview Content\"";
 				DEVELOPMENT_TEAM = 486CCPNU3B;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Brain RPS/Info.plist";
+				INFOPLIST_FILE = "Brain RPS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
