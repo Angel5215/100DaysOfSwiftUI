@@ -26,4 +26,4 @@ The game ends after 10 questions, at which point their score is shown.
 
 ## Images
 
-TODO
+<p align="center"><img src="./img/run-example.gif" height="600px"></p>
