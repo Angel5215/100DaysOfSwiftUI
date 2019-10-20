@@ -3,7 +3,8 @@
 
 Repository made to follow 100 Days of SwiftUI.
 
-## Days 1 - 12: Introduction to Swift
+## Days
+### Days 1 - 12: Introduction to Swift
 
 - [Day 1](Introduction/Day01): Simple types.
 - [Day 2](Introduction/Day02): Complex types.
@@ -18,13 +19,13 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 11](Introduction/Day11): Protocols and extensions.
 - [Day 12](Introduction/Day12): Optionals, unwrapping and typecasting.
 
-## Days 13-15: Consolidation I
+### Days 13-15: Consolidation I
 
 - Day 13: Swift review, day one.
 - Day 14: Swift review, day two.
 - Day 15: Swift review, day three.
 
-## Days 16-26: Starting SwiftUI
+### Days 16-24: Starting SwiftUI
 
 - [Day 16](WeSplit): Project 1, part one.
 - [Day 17](WeSplit): Project 1, part two.
@@ -35,6 +36,15 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 22. Project 2, part three (**Wrap-up day**).
 - [Day 23](ViewsAndModifiers). Project 3, part one.
 - Day 24. Project 3, part two. (**Wrap-up day**).
+
+### Day 25: Consolidation II
+
+- [Day 25](Challenges/Brain%20RPS): Milestone: Projects 1-3.
+
+### Days 26-34: Expanding your skills
+
+- [Day 26](BetterRest): Project 4, part one.
+- Day 27: Project 4, part two.
 
 ## Challenge days
 
