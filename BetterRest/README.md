@@ -9,9 +9,17 @@ The app is designed to help coffee drinkers get a good night’s sleep by asking
 
 The app feeds those three values to CoreML to get a result when they ought to go to bed.
 
+## Challenges
+
+1. Replace each VStack in our form with a Section, where the text view is the title of the section. Do you prefer this layout or the VStack layout? It’s your app – you choose!
+
+2. Replace the “Number of cups” stepper with a Picker showing the same range of values.
+
+3. Change the user interface so that it always shows their recommended bedtime using a nice and large font. You should be able to remove the “Calculate” button entirely.
+
 ## Images
 
-<p align="center"><img src="./img/run-example.gif" height="600px"></p>
+<p align="center"><img src="./img/run-example.png" height="600px"></p>
 
 ## Notes
 
