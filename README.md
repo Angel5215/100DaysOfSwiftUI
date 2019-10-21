@@ -45,6 +45,7 @@ Repository made to follow 100 Days of SwiftUI.
 
 - [Day 26](BetterRest): Project 4, part one.
 - Day 27: Project 4, part two.
+- Day 28: Project 4, part three. (**Wrap-up day**).
 
 ## Challenge days
 
@@ -58,5 +59,6 @@ The projects in this section are completely started from scratch and are designe
 The solution for challenges of wrap-up days will be uploaded in separate branches to keep the projects in a state that can be used for a later review or upcoming challenges that use the same projects. To check my attempts at solving them, just checkout the branch from the following list:
 
 - Day 18: `challenge/project_one_day_18`
-- Day 22: `challenge/project_two_day_22`.
+- Day 22: `challenge/project_two_day_22`
 - Day 24: `challenge/project_three_day_24`
+- Day 28: `challenge/project_four_day_28`
