@@ -18,6 +18,9 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var allWords = [String]()
+    @State private var score = 0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -30,12 +33,21 @@ struct ContentView: View {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
                 }
+                
+                Text("Score: \(score)")
+                    .font(Font.system(size: 46, weight: .black, design: .rounded))
+                    .padding(.bottom)
             }
             .navigationBarTitle(rootWord)
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
+            .navigationBarItems(leading: Button(action: restartGame) {
+                Image(systemName: "arrow.clockwise")
+                Text("Restart")
+                    .font(.headline)
+            }.foregroundColor(Color(.systemPurple)))
         }
     }
     
@@ -46,21 +58,43 @@ struct ContentView: View {
             return
         }
         
+        guard isDifferent(word: answer) else {
+            wordError(title: "It's the same word", message: "You can't use the same word!")
+            score -= answer.count
+            return
+        }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
+            score -= answer.count / 3
             return
         }
 
         guard isPossible(word: answer) else {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
+            score -= answer.count / 2
             return
         }
 
         guard isReal(word: answer) else {
             wordError(title: "Word not possible", message: "That isn't a real word.")
+            score -= answer.count
             return
         }
         
+        guard isReal(word: answer) else {
+            wordError(title: "Word not possible", message: "That isn't a real word.")
+            score -= answer.count
+            return
+        }
+        
+        guard !isTooShort(word: answer) else {
+            wordError(title: "Word not possible", message: "Type a word with at least three letters.")
+            score -= answer.count
+            return
+        }
+        
+        score += answer.count * 2
         usedWords.insert(answer, at: 0)
         newWord = ""
     }
@@ -69,6 +103,7 @@ struct ContentView: View {
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
+                self.allWords = allWords
                 rootWord = allWords.randomElement() ?? "silkworm"
                 return
             }
@@ -106,6 +141,21 @@ struct ContentView: View {
         errorTitle = title
         errorMessage = message
         showingError = true
+    }
+    
+    func isDifferent(word: String) -> Bool {
+        return rootWord != word
+    }
+    
+    func isTooShort(word: String) -> Bool {
+        return word.count < 3
+    }
+    
+    private func restartGame() {
+        rootWord = allWords.randomElement() ?? "silkworm"
+        usedWords.removeAll(keepingCapacity: true)
+        newWord = ""
+        score = 0
     }
 }
 
