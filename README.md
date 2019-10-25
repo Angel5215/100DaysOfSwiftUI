@@ -48,7 +48,8 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 28: Project 4, part three. (**Wrap-up day**).
 - [Day 29](WordScramble): Project 5, part one.
 - Day 30: Project 5, part two.
-- Day 31: Project 5, part trhee. (**Wrap-up day**)
+- Day 31: Project 5, part three. (**Wrap-up day**)
+- [Day 32](Animations): Project 6, part one.
 
 ## Challenge days
 
