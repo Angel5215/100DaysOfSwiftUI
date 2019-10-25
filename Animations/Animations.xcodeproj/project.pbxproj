@@ -15,6 +15,7 @@
 		FAE4D537236290D7005F1721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE4D535236290D7005F1721 /* LaunchScreen.storyboard */; };
 		FAE4D54123629E16005F1721 /* BindingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D54023629E16005F1721 /* BindingAnimation.swift */; };
 		FAE4D54323629E20005F1721 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D54223629E20005F1721 /* ContentView.swift */; };
+		FAE4D5452362A2CF005F1721 /* ExplicitAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D5442362A2CF005F1721 /* ExplicitAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FAE4D538236290D7005F1721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE4D54023629E16005F1721 /* BindingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingAnimation.swift; sourceTree = "<group>"; };
 		FAE4D54223629E20005F1721 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAE4D5442362A2CF005F1721 /* ExplicitAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FAE4D54223629E20005F1721 /* ContentView.swift */,
 				FAE4D52E236290D6005F1721 /* PulsatingAnimation.swift */,
 				FAE4D54023629E16005F1721 /* BindingAnimation.swift */,
+				FAE4D5442362A2CF005F1721 /* ExplicitAnimation.swift */,
 				FAE4D530236290D7005F1721 /* Assets.xcassets */,
 				FAE4D535236290D7005F1721 /* LaunchScreen.storyboard */,
 				FAE4D538236290D7005F1721 /* Info.plist */,
@@ -154,6 +157,7 @@
 			files = (
 				FAE4D54123629E16005F1721 /* BindingAnimation.swift in Sources */,
 				FAE4D54323629E20005F1721 /* ContentView.swift in Sources */,
+				FAE4D5452362A2CF005F1721 /* ExplicitAnimation.swift in Sources */,
 				FAE4D52B236290D6005F1721 /* AppDelegate.swift in Sources */,
 				FAE4D52D236290D6005F1721 /* SceneDelegate.swift in Sources */,
 				FAE4D52F236290D6005F1721 /* PulsatingAnimation.swift in Sources */,

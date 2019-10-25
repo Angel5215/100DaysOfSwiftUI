@@ -38,6 +38,6 @@ struct PulsatingAnimation: View {
 
 struct PulsatingAnimation_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PulsatingAnimation()
     }
 }

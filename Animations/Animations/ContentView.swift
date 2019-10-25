@@ -13,8 +13,8 @@ struct ContentView: View {
         NavigationView {
             List {
                 NavigationLink("Pulsating animation", destination: PulsatingAnimation())
-                    .labelsHidden()
                 NavigationLink("Animating bindings", destination: BindingAnimation())
+                NavigationLink("Explicit animations", destination: ExplicitAnimation())
             }
             .navigationBarTitle("Animations")
         }
