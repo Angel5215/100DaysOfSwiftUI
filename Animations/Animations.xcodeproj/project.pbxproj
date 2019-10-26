@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAC99DBA2364ED56007BD772 /* AnimationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC99DB92364ED56007BD772 /* AnimationStackView.swift */; };
 		FAE4D52B236290D6005F1721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D52A236290D6005F1721 /* AppDelegate.swift */; };
 		FAE4D52D236290D6005F1721 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D52C236290D6005F1721 /* SceneDelegate.swift */; };
 		FAE4D52F236290D6005F1721 /* PulsatingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4D52E236290D6005F1721 /* PulsatingAnimation.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAC99DB92364ED56007BD772 /* AnimationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStackView.swift; sourceTree = "<group>"; };
 		FAE4D527236290D6005F1721 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE4D52A236290D6005F1721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE4D52C236290D6005F1721 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				FAE4D54223629E20005F1721 /* ContentView.swift */,
 				FAE4D52E236290D6005F1721 /* PulsatingAnimation.swift */,
 				FAE4D54023629E16005F1721 /* BindingAnimation.swift */,
+				FAC99DB92364ED56007BD772 /* AnimationStackView.swift */,
 				FAE4D5442362A2CF005F1721 /* ExplicitAnimation.swift */,
 				FAE4D530236290D7005F1721 /* Assets.xcassets */,
 				FAE4D535236290D7005F1721 /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 				FAE4D54323629E20005F1721 /* ContentView.swift in Sources */,
 				FAE4D5452362A2CF005F1721 /* ExplicitAnimation.swift in Sources */,
 				FAE4D52B236290D6005F1721 /* AppDelegate.swift in Sources */,
+				FAC99DBA2364ED56007BD772 /* AnimationStackView.swift in Sources */,
 				FAE4D52D236290D6005F1721 /* SceneDelegate.swift in Sources */,
 				FAE4D52F236290D6005F1721 /* PulsatingAnimation.swift in Sources */,
 			);

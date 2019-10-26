@@ -15,6 +15,7 @@ struct ContentView: View {
                 NavigationLink("Pulsating animation", destination: PulsatingAnimation())
                 NavigationLink("Animating bindings", destination: BindingAnimation())
                 NavigationLink("Explicit animations", destination: ExplicitAnimation())
+                NavigationLink("Controlling the animation stack", destination: AnimationStackView())
             }
             .navigationBarTitle("Animations")
         }
