@@ -17,6 +17,7 @@ struct ContentView: View {
                 NavigationLink("Explicit animations", destination: ExplicitAnimation())
                 NavigationLink("Controlling the animation stack", destination: AnimationStackView())
                 NavigationLink("Gesture animation", destination: GestureAnimation())
+                NavigationLink("Transitions", destination: Transitions())
             }
             .navigationBarTitle("Animations")
         }
