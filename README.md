@@ -50,6 +50,8 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 30: Project 5, part two.
 - Day 31: Project 5, part three. (**Wrap-up day**)
 - [Day 32](Animations): Project 6, part one.
+- Day 33: Project 6, part two.
+- Day 34: Project 6, part three (**Wrap-up day**).
 
 ## Challenge days
 

@@ -11,7 +11,7 @@ This project looks at a range of animations and transitions with SwiftUI.
 
 ## Images
 
-<p align="center"><img src="./img/run-example.png" height="600px"></p>
+<p align="center"><img src="img/run-example.gif" height="600px"></p>
 
 ## Notes
 
@@ -34,3 +34,9 @@ This project looks at a range of animations and transitions with SwiftUI.
 - In implicit animations, the state change has no idea it will trigger an animation; in binding animations the view has no idea it will be animated.
 
 - When using explicit animations we ask SwiftUI that we want an animation to occur when some arbitrary state change occurs.
+
+- The order in which we apply animations matters: only changes that occur before the `animation()` modifier get animated.
+
+- It's possible to disable animations entirely by passing `nil` to the modifier.
+
+- We can use the `transition()` modifier to control how a view is shown and hidden. A useful transition is `.assymetric` that lets you use one transition when the view is shown, and other one when it's disappearing. 
