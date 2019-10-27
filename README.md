@@ -69,3 +69,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 24: `challenge/project_three_day_24`
 - Day 28: `challenge/project_four_day_28`
 - Day 31: `challenge/project_five_day_31`
+- Day 34: `challenge/project_six_day_34`
