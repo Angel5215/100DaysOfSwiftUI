@@ -28,6 +28,12 @@ struct ContentView: View {
         Color(.systemPurple),
     ]
     
+    // MARK: - Animation properties
+    @State private var rotationAmounts = [0.0, 0.0, 0.0]
+    @State private var opacityAmounts = [1.0, 1.0, 1.0]
+    @State private var wrongRotations = [0.0, 0.0, 0.0]
+    @State private var wrongScalings: [CGFloat] = [1, 1, 1]
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: backgroundColors), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -44,6 +50,7 @@ struct ContentView: View {
                 ForEach(0 ..< 3) { number in
                     Button(action: {
                         self.flagTapped(number)
+                        self.rotationAmounts = [0, 0, 0]
                     }, label: {
                         Image(self.countries[number])
                             .renderingMode(.original)
@@ -51,6 +58,10 @@ struct ContentView: View {
                             .overlay(Capsule().stroke(Color.black, lineWidth: 1))
                             .shadow(color: .black, radius: 2)
                     })
+                    .rotation3DEffect(.degrees(self.rotationAmounts[number]), axis: (0, 1, 0))
+                    .opacity(self.opacityAmounts[number])
+                    .rotation3DEffect(.degrees(self.wrongRotations[number]), axis: (1, 1, 1))
+                    .scaleEffect(self.wrongScalings[number], anchor: .center)
                 }
                 
                 VStack {
@@ -75,18 +86,48 @@ struct ContentView: View {
             score += 1
             scoreTitle = "Correct 😃"
             scoreMessage = "Great! Your score is \(score)."
+            
+            withAnimation {
+                rotationAmounts[number] += 360
+                for index in otherButtonIndexes(for: number) {
+                    opacityAmounts[index] = 0.25
+                }
+            }
         } else {
             score -= 1
             scoreTitle = "Incorrect ☹️"
             scoreMessage = "Wrong! That's the flag of \(countries[number]). Your score is \(score)."
+            
+            withAnimation(.easeInOut) {
+                wrongRotations[number] -= 90
+                wrongScalings[number] = 0
+            }
         }
         
         showingScore = true
     }
     
     func askQuestion() {
+        // Restart animation values
+        rotationAmounts = [0, 0, 0]
+        opacityAmounts = [1, 1, 1]
+        wrongRotations = [0, 0, 0]
+        wrongScalings = [1, 1, 1]
+        
+        // Select a current flag for this round
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+    }
+    
+    private func otherButtonIndexes(for number: Int) -> [Int] {
+        switch number {
+        case 0:
+            return [1, 2]
+        case 1:
+            return [0, 2]
+        default:
+            return [0, 1]
+        }
     }
 }
 
