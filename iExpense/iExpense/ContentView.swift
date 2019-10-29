@@ -20,6 +20,7 @@ struct ContentView: View {
     
     @State private var numbers = [Int]()
     @State private var currentNumber = 1
+    @State private var tapCount = UserDefaults.standard.integer(forKey: "Tap")
     
     var body: some View {
         NavigationView {
@@ -28,6 +29,7 @@ struct ContentView: View {
                 
                 TextField("First name", text: $user.firstName)
                 TextField("Last name", text: $user.lastName)
+                Text("Tap count: \(tapCount)")
                 
                 Button("Show sheet") {
                     self.showingSheet.toggle()
@@ -43,6 +45,8 @@ struct ContentView: View {
                 Button("Add number") {
                     self.numbers.append(self.currentNumber)
                     self.currentNumber += 1
+                    self.tapCount += 1
+                    UserDefaults.standard.set(self.tapCount, forKey: "Tap")
                 }
                 
             }
