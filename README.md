@@ -53,12 +53,21 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 33: Project 6, part two.
 - Day 34: Project 6, part three (**Wrap-up day**).
 
+### Day 35: Consolidation III
+
+- Day 35: Milestone: Projects 4-6 **(TODO)**.
+
+### Days 36-43: Scaling up to bigger apps
+
+- [Day 36](iExpense): Project 7, part one.
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
 
 - [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
 - [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
+- Challenge 3. **(TODO)**
 
 ## Wrap-up challenges
 
