@@ -9,6 +9,8 @@ This is an expense tracker app that separates personal costs from business costs
 - Delete rows from a list.
 - Save and load user data.
 - `@State`, `@ObservedObject`,  `@Published` and `@Environment` property wrappers.
+- The `Identifiable` protocol.
+- `UUID`: universally unique identifier
 
 ## Images
 
@@ -29,3 +31,4 @@ This is an expense tracker app that separates personal costs from business costs
     - What timezone are they on?
     - Have they asked for smaller or larger fonts?
 
+- UUIDs are long hexadecimal strings (e.g. 08B15DB4-2F02-4AB8-A965-67A9C90D8A44). UUIDs are made of eight digits,four digits, four digits, four digits, then twelve digits, of which the only requirement is that there's a 4 in the first number of the third block.
