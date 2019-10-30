@@ -17,6 +17,7 @@ struct AddView: View {
     static let types = ["Business", "Personal"]
     
     @ObservedObject var expenses: Expenses
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -38,6 +39,7 @@ struct AddView: View {
                                            type: self.type,
                                            amount: actualAmount)
                     self.expenses.items.append(item)
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             })
         }
