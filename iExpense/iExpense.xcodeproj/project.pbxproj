@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA008BF423693E82006EF751 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA008BF323693E82006EF751 /* ExpenseItem.swift */; };
 		FA21A0F82367DE7800A96975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21A0F72367DE7800A96975 /* AppDelegate.swift */; };
 		FA21A0FA2367DE7800A96975 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21A0F92367DE7800A96975 /* SceneDelegate.swift */; };
 		FA21A0FC2367DE7800A96975 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21A0FB2367DE7800A96975 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA008BF323693E82006EF751 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		FA21A0F42367DE7800A96975 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA21A0F72367DE7800A96975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA21A0F92367DE7800A96975 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				FA21A0F72367DE7800A96975 /* AppDelegate.swift */,
 				FA21A0F92367DE7800A96975 /* SceneDelegate.swift */,
 				FA21A0FB2367DE7800A96975 /* ContentView.swift */,
+				FA008BF323693E82006EF751 /* ExpenseItem.swift */,
 				FA21A0FD2367DE7900A96975 /* Assets.xcassets */,
 				FA21A1022367DE7900A96975 /* LaunchScreen.storyboard */,
 				FA21A1052367DE7900A96975 /* Info.plist */,
@@ -149,6 +152,7 @@
 				FA21A0F82367DE7800A96975 /* AppDelegate.swift in Sources */,
 				FA21A0FA2367DE7800A96975 /* SceneDelegate.swift in Sources */,
 				FA21A0FC2367DE7800A96975 /* ContentView.swift in Sources */,
+				FA008BF423693E82006EF751 /* ExpenseItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
