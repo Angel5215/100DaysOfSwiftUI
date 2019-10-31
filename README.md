@@ -60,6 +60,8 @@ Repository made to follow 100 Days of SwiftUI.
 ### Days 36-43: Scaling up to bigger apps
 
 - [Day 36](iExpense): Project 7, part one.
+- Day 37: Project 7, part two.
+- Day 38: Project 7, part three (**Wrap-up day**).
 
 ## Challenge days
 
@@ -79,3 +81,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 28: `challenge/project_four_day_28`
 - Day 31: `challenge/project_five_day_31`
 - Day 34: `challenge/project_six_day_34`
+- Day 38: `challenge/project_seven_day_38`
