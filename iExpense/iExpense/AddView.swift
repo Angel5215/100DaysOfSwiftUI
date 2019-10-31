@@ -19,6 +19,10 @@ struct AddView: View {
     @ObservedObject var expenses: Expenses
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     var body: some View {
         NavigationView {
             Form {
@@ -33,16 +37,33 @@ struct AddView: View {
                     .keyboardType(.numberPad)
             }
             .navigationBarTitle("Add new expense")
-            .navigationBarItems(trailing: Button("Save") {
-                if let actualAmount = Int(self.amount) {
-                    let item = ExpenseItem(name: self.name,
-                                           type: self.type,
-                                           amount: actualAmount)
-                    self.expenses.items.append(item)
-                    self.presentationMode.wrappedValue.dismiss()
-                }
-            })
+            .navigationBarItems(trailing: Button("Save", action: saveItem))
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle),
+                      message: Text(alertMessage),
+                      dismissButton: .default(Text("OK")))
+            }
         }
+    }
+    
+    func saveItem() {
+        guard let actualAmount = Int(self.amount) else {
+            showingAlert = true
+            alertTitle = "Error"
+            alertMessage = "Please type an integer number."
+            return
+        }
+        
+        guard actualAmount > 0 else {
+            showingAlert = true
+            alertTitle = "Wrong amount"
+            alertMessage = "Amount should be a positive number"
+            return
+        }
+        
+        let item = ExpenseItem(name: name, type: type, amount: actualAmount)
+        expenses.items.append(item)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

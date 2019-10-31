@@ -26,13 +26,13 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        Text("$\(item.amount)")
+                        AmountView(value: item.amount)
                     }
                 }
                 .onDelete(perform: removeItems)
             }
             .navigationBarTitle("iExpense")
-            .navigationBarItems(trailing:
+            .navigationBarItems(leading: EditButton(), trailing:
                 Button(action: {
                     self.showingAddExpense = true
                 }, label: {

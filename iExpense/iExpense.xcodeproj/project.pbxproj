@@ -15,6 +15,8 @@
 		FA21A0FE2367DE7900A96975 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA21A0FD2367DE7900A96975 /* Assets.xcassets */; };
 		FA21A1012367DE7900A96975 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA21A1002367DE7900A96975 /* Preview Assets.xcassets */; };
 		FA21A1042367DE7900A96975 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA21A1022367DE7900A96975 /* LaunchScreen.storyboard */; };
+		FA788381236A98820054C0AB /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA788380236A98820054C0AB /* AmountView.swift */; };
+		FA788383236A9BD80054C0AB /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA788382236A9BD80054C0AB /* TextStyleModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FA21A1002367DE7900A96975 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA21A1032367DE7900A96975 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA21A1052367DE7900A96975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA788380236A98820054C0AB /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		FA788382236A9BD80054C0AB /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				FA21A0F92367DE7800A96975 /* SceneDelegate.swift */,
 				FA008BF323693E82006EF751 /* ExpenseItem.swift */,
 				FA21A0FB2367DE7800A96975 /* ContentView.swift */,
+				FA788380236A98820054C0AB /* AmountView.swift */,
+				FA788382236A9BD80054C0AB /* TextStyleModifier.swift */,
 				FA008BF5236944B2006EF751 /* AddView.swift */,
 				FA21A0FD2367DE7900A96975 /* Assets.xcassets */,
 				FA21A1022367DE7900A96975 /* LaunchScreen.storyboard */,
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA21A0F82367DE7800A96975 /* AppDelegate.swift in Sources */,
+				FA788383236A9BD80054C0AB /* TextStyleModifier.swift in Sources */,
 				FA21A0FA2367DE7800A96975 /* SceneDelegate.swift in Sources */,
+				FA788381236A98820054C0AB /* AmountView.swift in Sources */,
 				FA008BF6236944B3006EF751 /* AddView.swift in Sources */,
 				FA21A0FC2367DE7800A96975 /* ContentView.swift in Sources */,
 				FA008BF423693E82006EF751 /* ExpenseItem.swift in Sources */,
