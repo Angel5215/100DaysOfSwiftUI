@@ -21,3 +21,8 @@ This is an expense tracker app that separates personal costs from business costs
 
     - `NavigationLink` is for showing details about the user’s selection, like you’re digging deeper into a topic.
     - `sheet()` is for showing unrelated content, such as settings or a compose window.
+
+- To use a `Spacer` inside a `ScrollView` you have to use its `Spacer(minLength:)` initializer because the spacers take up all available remaining space and that makes no sense inside a scroll view. Also, using spacers this way works for both portrait and landscape orientations.
+
+
+

@@ -12,6 +12,7 @@
 		FA6BFE7A236E53B6007ED4E2 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BFE79236E53B6007ED4E2 /* Astronaut.swift */; };
 		FA6BFE7C236E53FB007ED4E2 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BFE7B236E53FB007ED4E2 /* Bundle-Decodable.swift */; };
 		FA6BFE7E236E55A9007ED4E2 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BFE7D236E55A9007ED4E2 /* Mission.swift */; };
+		FA6BFE80236E685E007ED4E2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BFE7F236E685E007ED4E2 /* MissionView.swift */; };
 		FA87C456236BD31A00D8CD15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C455236BD31A00D8CD15 /* AppDelegate.swift */; };
 		FA87C458236BD31A00D8CD15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C457236BD31A00D8CD15 /* SceneDelegate.swift */; };
 		FA87C45A236BD31A00D8CD15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C459236BD31A00D8CD15 /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 		FA6BFE79236E53B6007ED4E2 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		FA6BFE7B236E53FB007ED4E2 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		FA6BFE7D236E55A9007ED4E2 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mission.swift; path = JSON/Mission.swift; sourceTree = "<group>"; };
+		FA6BFE7F236E685E007ED4E2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		FA87C452236BD31A00D8CD15 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA87C455236BD31A00D8CD15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA87C457236BD31A00D8CD15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				FA87C455236BD31A00D8CD15 /* AppDelegate.swift */,
 				FA87C457236BD31A00D8CD15 /* SceneDelegate.swift */,
 				FA87C459236BD31A00D8CD15 /* ContentView.swift */,
+				FA6BFE7F236E685E007ED4E2 /* MissionView.swift */,
 				FA87C45B236BD31B00D8CD15 /* Assets.xcassets */,
 				FA87C460236BD31B00D8CD15 /* LaunchScreen.storyboard */,
 				FA87C463236BD31B00D8CD15 /* Info.plist */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6BFE80236E685E007ED4E2 /* MissionView.swift in Sources */,
 				FA6BFE7E236E55A9007ED4E2 /* Mission.swift in Sources */,
 				FA87C456236BD31A00D8CD15 /* AppDelegate.swift in Sources */,
 				FA87C458236BD31A00D8CD15 /* SceneDelegate.swift in Sources */,
