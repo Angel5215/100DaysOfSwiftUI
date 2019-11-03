@@ -48,13 +48,21 @@ struct MissionView: View {
                     
                     Spacer(minLength: 25)
                     
+                    HStack {
+                        Text("Crew")
+                            .padding(.leading)
+                            .font(.title)
+                        Spacer()
+                    }
+                    
                     ForEach(self.astronauts, id: \.role) { crewMember in
                         HStack {
                             Image(crewMember.astronaut.id)
                                 .resizable()
                                 .frame(width: 83, height: 60)
-                                .clipShape(Capsule())
-                                .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.primary, lineWidth: 0.5))
+                                .shadow(color: .primary, radius: 10)
                             
                             VStack(alignment: .leading) {
                                 Text(crewMember.astronaut.name)
@@ -62,8 +70,17 @@ struct MissionView: View {
                                 Text(crewMember.role)
                                     .foregroundColor(.secondary)
                             }
-
-                            Spacer()
+                            
+                            Spacer(minLength: 2)
+                            
+                            if crewMember.role.lowercased().contains("commander") {
+                                Image(systemName: "star.fill")
+                                    .renderingMode(.template)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(Color(.systemYellow))
+                                    .frame(width: 25)
+                            }
                         }
                         .padding(.horizontal)
                     }
