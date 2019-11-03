@@ -56,33 +56,36 @@ struct MissionView: View {
                     }
                     
                     ForEach(self.astronauts, id: \.role) { crewMember in
-                        HStack {
-                            Image(crewMember.astronaut.id)
-                                .resizable()
-                                .frame(width: 83, height: 60)
-                                .clipShape(Circle())
-                                .overlay(Circle().stroke(Color.primary, lineWidth: 0.5))
-                                .shadow(color: .primary, radius: 10)
-                            
-                            VStack(alignment: .leading) {
-                                Text(crewMember.astronaut.name)
-                                    .font(.headline)
-                                Text(crewMember.role)
-                                    .foregroundColor(.secondary)
-                            }
-                            
-                            Spacer(minLength: 2)
-                            
-                            if crewMember.role.lowercased().contains("commander") {
-                                Image(systemName: "star.fill")
-                                    .renderingMode(.template)
+                        NavigationLink(destination: AstronautView(astronaut: crewMember.astronaut)) {
+                            HStack {
+                                Image(crewMember.astronaut.id)
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(Color(.systemYellow))
-                                    .frame(width: 25)
+                                    .frame(width: 83, height: 60)
+                                    .clipShape(Circle())
+                                    .overlay(Circle().stroke(Color.primary, lineWidth: 0.5))
+                                    .shadow(color: .primary, radius: 10)
+                                
+                                VStack(alignment: .leading) {
+                                    Text(crewMember.astronaut.name)
+                                        .font(.headline)
+                                    Text(crewMember.role)
+                                        .foregroundColor(.secondary)
+                                }
+                                
+                                Spacer(minLength: 2)
+                                
+                                if crewMember.role.lowercased().contains("commander") {
+                                    Image(systemName: "star.fill")
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .foregroundColor(Color(.systemYellow))
+                                        .frame(width: 25)
+                                }
                             }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        .buttonStyle(PlainButtonStyle())
                     }
                     
                     Spacer(minLength: 25)
