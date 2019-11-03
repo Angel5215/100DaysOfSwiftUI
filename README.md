@@ -62,6 +62,9 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 36](iExpense): Project 7, part one.
 - Day 37: Project 7, part two.
 - Day 38: Project 7, part three (**Wrap-up day**).
+- [Day 39](Moonshot): Project 8, part one.
+- Day 40: Project 8, part two.
+- Day 41: Project 8, part three.
 
 ## Challenge days
 
