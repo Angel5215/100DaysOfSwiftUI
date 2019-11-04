@@ -65,6 +65,7 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 39](Moonshot): Project 8, part one.
 - Day 40: Project 8, part two.
 - Day 41: Project 8, part three.
+- Day 42: Project 8, part four (**Wrap-up day**).
 
 ## Challenge days
 
@@ -85,3 +86,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 31: `challenge/project_five_day_31`
 - Day 34: `challenge/project_six_day_34`
 - Day 38: `challenge/project_seven_day_38`
+- Day 42: `challenge/project_eight_day_42` 
