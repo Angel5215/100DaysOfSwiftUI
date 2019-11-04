@@ -1,7 +1,7 @@
 
-# Project 7. iExpense
+# Project 8. Moonshot
 
-This is an expense tracker app that separates personal costs from business costs. 
+This is an app that lets users learn about the missions and astronauts that formed NASA’s Apollo space program
 
 ## Topics
 
