@@ -10,6 +10,14 @@ This is an expense tracker app that separates personal costs from business costs
 - `NavigationLink`
 - `Spacer`
 
+## Challenges
+
+1. Add the launch date to `MissionView`, below the mission badge.
+
+2. Modify `AstronautView` to show all the missions this astronaut flew on.
+
+3. Make a bar button in `ContentView` that toggles between showing launch dates and showing crew names.
+
 ## Images
 
 <p align="center"><img src="img/run-example.gif" height="600px"></p>
