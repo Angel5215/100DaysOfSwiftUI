@@ -14,25 +14,16 @@ struct ContentView: View {
     @State private var petalWidth = 100.0
     
     var body: some View {
-        
-        print(petalOffset, petalWidth)
-        return VStack {
-            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
-                .fill(Color.red, style: FillStyle(eoFill: true))
-            
-            Text("Offset")
-            Slider(value: $petalOffset, in: -40...40).padding([.horizontal, .bottom])
-            
-            Text("Width")
-            Slider(value: $petalWidth, in: 0...100).padding([.horizontal, .bottom])
-        }
+        Capsule()
+            .strokeBorder(ImagePaint(image: Image("images"), scale: 0.1), lineWidth: 20)
+            .frame(width: 300, height: 200)
     }
 }
 
 struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        
+            
         path.move(to: CGPoint(x: rect.midX, y: rect.minY))
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
