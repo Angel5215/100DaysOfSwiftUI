@@ -36,9 +36,92 @@ struct ContentView: View {
                     Image(systemName: "5.circle")
                     Text("Color cycling circle with Metal")
                 }
+                
+                Group {
+                    NavigationLink(destination: MultiplyBlendModeView()) {
+                        Image(systemName: "6.circle")
+                        Text("Multiply blend mode")
+                    }
+                    
+                    NavigationLink(destination: ScreenBlendModeView()) {
+                        Image(systemName: "7.circle")
+                        Text("Screen blend mode")
+                    }
+                    
+                    NavigationLink(destination: SaturationBlurBlendModeView()) {
+                        Image(systemName: "8.circle")
+                        Text("Saturation and blur")
+                    }
+                }
             }
             .navigationBarTitle("Drawing")
         }
+    }
+}
+
+struct SaturationBlurBlendModeView: View {
+    
+    @State private var amount: CGFloat = 0.0
+
+    
+    var body: some View {
+        VStack {
+            Image("chicken")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+                .saturation(Double(amount))
+                .blur(radius: (1 - amount) * 20)
+            
+            Slider(value: $amount)
+                           .padding()
+        }
+        .navigationBarTitle("Saturation and blur", displayMode: .inline)
+    }
+}
+
+struct ScreenBlendModeView: View {
+    
+    @State private var amount: CGFloat = 0.0
+    
+    var body: some View {
+        VStack {
+            ZStack {
+                Circle()
+                    .fill(Color.red)
+                    .frame(width: 200 * amount)
+                    .offset(x: -50, y: -80)
+                    .blendMode(.screen)
+                
+                Circle()
+                    .fill(Color.green)
+                    .frame(width: 200 * amount)
+                    .offset(x: 50, y: -80)
+                    .blendMode(.screen)
+
+                Circle()
+                    .fill(Color.blue)
+                    .frame(width: 200 * amount)
+                    .blendMode(.screen)
+            }
+            .frame(width: 300, height: 300)
+            
+            Slider(value: $amount)
+                .padding()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("Screen blend mode", displayMode: .inline)
+    }
+}
+
+
+struct MultiplyBlendModeView: View {
+    var body: some View {
+        Image("chicken")
+            .colorMultiply(.red)
+            .navigationBarTitle("Multiply blend mode", displayMode: .inline)
     }
 }
 
