@@ -66,6 +66,9 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 40: Project 8, part two.
 - Day 41: Project 8, part three.
 - Day 42: Project 8, part four (**Wrap-up day**).
+- [Day 43](Drawing): Project 9, part one.
+- Day 44: Project 9, part two.
+- Day 45: Project 9, part three (**Wrap-up day**).
 
 ## Challenge days
 
