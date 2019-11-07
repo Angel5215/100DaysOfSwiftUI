@@ -10,7 +10,9 @@ This technique project takes a close look at drawing in SwiftUI, including creat
 - `CGAffineTransform`
 - `ImagePaint`
 - `drawingGroup()`
-
+- `animatableData`
+- `AnimatablePair`
+- Blend modes
 
 ## Images
 
@@ -38,3 +40,8 @@ This technique project takes a close look at drawing in SwiftUI, including creat
 
 - Using the `drawingGroup()` modifier we tell SwiftUI it should render the contents of the view into an off-screen image before putting it back onto the screen as a single rendered output, which is significantly faster. Behind the scenes, this modifier is powered by **Metal**, which is Apple's framework for working directly with the GPU for extremely fast graphics.
 
+- Blend modes allow us to control the way one view is rendered on top of another.
+
+- `AnimatablePair` is a type that contains two animatable values, and because both its values can be animated, the `AnimatablePair` can itself be animated. We can read individual values from the pair using `.first` and `.second`.
+
+- SwiftUI can read and write the animatable data for a shape regardless of what that data is or what it means, it doesn’t need to re-invoke the body property of our views 60 or even 120 times a second during an animation – it just changes the parts that actually are changing.
