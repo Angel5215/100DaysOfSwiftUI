@@ -6,6 +6,11 @@ This technique project takes a close look at drawing in SwiftUI, including creat
 ## Topics
 
 - `Path`
+- `Shape`, `InsettableShape`
+- `CGAffineTransform`
+- `ImagePaint`
+- `drawingGroup()`
+
 
 ## Images
 
@@ -26,3 +31,10 @@ This technique project takes a close look at drawing in SwiftUI, including creat
 - Shapes are also views.
 
 - SwiftUI 0 degrees is not straight upwards, but instead directly to the right. Shapes measure their coordinates from the bottom-left corner rather than the top-left corner, which means SwiftUI goes the other way around from one angle to the other.
+
+- `Color` conforms to `View` but also to the `ShapeStyle` protocol, which means it can be used for fills, strokes and borders when drawing.
+
+- `Image` views can also be used for fills, strokes and borders through the `ImagePaint` type.                
+
+- Using the `drawingGroup()` modifier we tell SwiftUI it should render the contents of the view into an off-screen image before putting it back onto the screen as a single rendered output, which is significantly faster. Behind the scenes, this modifier is powered by **Metal**, which is Apple's framework for working directly with the GPU for extremely fast graphics.
+

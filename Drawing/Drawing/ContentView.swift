@@ -9,18 +9,96 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var petalOffset = -20.0
-    @State private var petalWidth = 100.0
+    var body: some View {
+        NavigationView {
+            List {
+                NavigationLink(destination: TriangleView()) {
+                    Image(systemName: "1.circle")
+                    Text("Triangle")
+                }
+                
+                NavigationLink(destination: ArcView()) {
+                    Image(systemName: "2.circle")
+                    Text("Arc")
+                }
+                
+                NavigationLink(destination: PetalView()) {
+                    Image(systemName: "3.circle")
+                    Text("Flower")
+                }
+                
+                NavigationLink(destination: ImagePaintView()) {
+                    Image(systemName: "4.circle")
+                    Text("ImagePaint border")
+                }
+                
+                NavigationLink(destination: ColorCyclingView()) {
+                    Image(systemName: "5.circle")
+                    Text("Color cycling circle with Metal")
+                }
+            }
+            .navigationBarTitle("Drawing")
+        }
+    }
+}
+
+struct ColorCyclingView: View {
     @State private var colorCycle = 0.0
 
     var body: some View {
         VStack {
             ColorCyclingCircle(amount: self.colorCycle)
                 .frame(width: 300, height: 300)
-
             Slider(value: $colorCycle)
         }
+        .navigationBarTitle("Color Cycling Circle", displayMode: .inline)
+    }
+}
+
+struct ImagePaintView: View {
+    var body: some View {
+        Capsule()
+            .strokeBorder(ImagePaint(image: Image("images"), scale: 0.1), lineWidth: 20)
+            .frame(width: 300, height: 200)
+            .navigationBarTitle("ImagePaint border", displayMode: .inline)
+    }
+}
+
+struct TriangleView: View {
+    var body: some View {
+        Triangle()
+            .fill(Color.red)
+            .frame(width: 300, height: 300)
+            .navigationBarTitle("Triangle", displayMode: .inline)
+    }
+}
+
+struct ArcView: View {
+    var body: some View {
+        Arc(startAngle: .degrees(0), endAngle: .degrees(110), clockwise: true)
+            .strokeBorder(Color.blue, lineWidth: 40)
+            .frame(width: 300, height: 300)
+            .navigationBarTitle("Arc", displayMode: .inline)
+    }
+}
+
+struct PetalView: View {
+    
+    @State private var petalOffset = -20.0
+    @State private var petalWidth = 100.0
+    
+    var body: some View {
+        VStack {
+            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
+                .fill(Color.red, style: FillStyle(eoFill: true))
+            
+            Text("Offset")
+            Slider(value: $petalOffset, in: -40...40).padding([.horizontal, .bottom])
+            
+            Text("Width")
+            Slider(value: $petalWidth, in: 0...100).padding([.horizontal, .bottom])
+        }
+        .navigationBarTitle("Flower", displayMode: .inline)
     }
 }
 
