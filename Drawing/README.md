@@ -14,6 +14,14 @@ This technique project takes a close look at drawing in SwiftUI, including creat
 - `AnimatablePair`
 - Blend modes
 
+## Challenges
+
+1. Create an `Arrow` shape made from a rectangle and a triangle – having it point straight up is fine.
+
+2. Make the line thickness of your `Arrow` shape animatable.
+
+3. Create a `ColorCyclingRectangle` shape that is the rectangular cousin of `ColorCyclingCircle`, allowing us to control the position of the gradient using a property.
+
 ## Images
 
 <p align="center"><img src="img/run-example.gif" height="600px"></p>
