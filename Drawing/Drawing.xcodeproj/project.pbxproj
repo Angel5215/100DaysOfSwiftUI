@@ -13,6 +13,8 @@
 		FAED544723710821006F14CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAED544623710821006F14CD /* Assets.xcassets */; };
 		FAED544A23710821006F14CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAED544923710821006F14CD /* Preview Assets.xcassets */; };
 		FAED544D23710821006F14CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAED544B23710821006F14CD /* LaunchScreen.storyboard */; };
+		FAF6ACB923751E4E0075C8AE /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6ACB823751E4E0075C8AE /* Arrow.swift */; };
+		FAF6ACBB23752D730075C8AE /* ColorCyclingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6ACBA23752D730075C8AE /* ColorCyclingRectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FAED544923710821006F14CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAED544C23710821006F14CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAED544E23710821006F14CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF6ACB823751E4E0075C8AE /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		FAF6ACBA23752D730075C8AE /* ColorCyclingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				FAED544023710820006F14CD /* AppDelegate.swift */,
 				FAED544223710820006F14CD /* SceneDelegate.swift */,
 				FAED544423710820006F14CD /* ContentView.swift */,
+				FAF6ACB823751E4E0075C8AE /* Arrow.swift */,
+				FAF6ACBA23752D730075C8AE /* ColorCyclingRectangle.swift */,
 				FAED544623710821006F14CD /* Assets.xcassets */,
 				FAED544B23710821006F14CD /* LaunchScreen.storyboard */,
 				FAED544E23710821006F14CD /* Info.plist */,
@@ -147,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAED544123710820006F14CD /* AppDelegate.swift in Sources */,
+				FAF6ACB923751E4E0075C8AE /* Arrow.swift in Sources */,
 				FAED544323710820006F14CD /* SceneDelegate.swift in Sources */,
+				FAF6ACBB23752D730075C8AE /* ColorCyclingRectangle.swift in Sources */,
 				FAED544523710820006F14CD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

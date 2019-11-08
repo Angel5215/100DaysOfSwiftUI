@@ -67,6 +67,16 @@ struct ContentView: View {
                         Image(systemName: "11.circle")
                         Text("Spirograph")
                     }
+                    
+                    NavigationLink(destination: ArrowView()) {
+                        Image(systemName: "gamecontroller")
+                        Text("Arrow challenge")
+                    }
+                    
+                    NavigationLink(destination: ColorCyclingRectangleView ()) {
+                        Image(systemName: "gamecontroller")
+                        Text("Cycling rectangle challenge")
+                    }
                 }
             }
             .navigationBarTitle("Drawing")
