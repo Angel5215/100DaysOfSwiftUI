@@ -14,7 +14,7 @@ enum Mode: String, CaseIterable {
     /// Practice the multiplication table of an specific number.
     case single
     /// Practice multiplication tables up to a selected number.
-    case upTo
+    case multiple
 }
 
 /// Game let players select how many questions they want to be asked.
