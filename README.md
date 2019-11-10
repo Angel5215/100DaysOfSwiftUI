@@ -55,7 +55,7 @@ Repository made to follow 100 Days of SwiftUI.
 
 ### Day 35: Consolidation III
 
-- Day 35: Milestone: Projects 4-6 **(TODO)**.
+- Day 35: Milestone: Projects 4-6 **(WIP @ `challenge/consolidation_iii_day_35` branch)**.
 
 ### Days 36-43: Scaling up to bigger apps
 
@@ -71,13 +71,19 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 45: Project 9, part three.
 - Day 46: Project 9, part four (**Wrap-up day**).
 
+### Days 47-48: Consolidation IV.
+
+- Day 47: Milestone: Projects 7-9 **(TODO)**
+- Day 48: [Expanding your horizons](https://vimeo.com/295238750). 
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
 
 - [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
 - [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
-- Challenge 3. **(TODO)**
+- Challenge 3. **(WIP @ `challenge/consolidation_iii_day_35` branch)**
+- Challenge 4. **(TODO)**
 
 ## Wrap-up challenges
 
