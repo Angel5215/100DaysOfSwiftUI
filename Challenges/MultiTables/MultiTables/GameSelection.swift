@@ -14,6 +14,7 @@ struct GameSelectionView: View {
     @State private var currentMode = Mode.single
     @State private var numberOfQuestions = QuestionSelection.five
     @State private var currentNumber = 6
+    @State private var isGameActive = false
     
     // MARK: - Properties
     let availableModes = Mode.allCases
@@ -49,16 +50,13 @@ struct GameSelectionView: View {
                 }
                 
                 Button("Start game") {
-                    let questions = QuestionGenerator.questions(for: self.currentNumber,
-                                                                mode: self.currentMode,
-                                                                limitedTo: self.numberOfQuestions)
-                    print("Count: \(questions.count)")
-                    for question in questions {
-                        print(">> \(question)")
-                    }
+                    self.isGameActive.toggle()
                 }
             }
             .navigationBarTitle("MultiTables", displayMode: .inline)
+            .sheet(isPresented: $isGameActive) {
+                GameView(number: self.currentNumber, mode: self.currentMode, limitedTo: self.numberOfQuestions)
+            }
         }
     }
 }

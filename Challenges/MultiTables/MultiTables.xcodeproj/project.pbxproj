@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4803842378AC6700315702 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4803832378AC6700315702 /* GameView.swift */; };
+		FA4803862378BD9500315702 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4803852378BD9500315702 /* Color+Random.swift */; };
+		FA4803882378BDC300315702 /* NumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4803872378BDC300315702 /* NumberButton.swift */; };
 		FABC2298237681820094B436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABC2297237681820094B436 /* AppDelegate.swift */; };
 		FABC229A237681820094B436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABC2299237681820094B436 /* SceneDelegate.swift */; };
 		FABC229C237681820094B436 /* GameSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABC229B237681820094B436 /* GameSelection.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4803832378AC6700315702 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		FA4803852378BD9500315702 /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
+		FA4803872378BDC300315702 /* NumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
 		FABC2294237681820094B436 /* MultiTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABC2297237681820094B436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABC2299237681820094B436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,12 +71,15 @@
 				FABC2297237681820094B436 /* AppDelegate.swift */,
 				FABC2299237681820094B436 /* SceneDelegate.swift */,
 				FABC229B237681820094B436 /* GameSelection.swift */,
+				FA4803832378AC6700315702 /* GameView.swift */,
+				FA4803872378BDC300315702 /* NumberButton.swift */,
 				FABF0D4E2377F9370096E758 /* Question.swift */,
 				FABF0D502377F9570096E758 /* QuestionGenerator.swift */,
 				FABF0D4C2377EA0F0096E758 /* Helper.swift */,
 				FABC229D237681830094B436 /* Assets.xcassets */,
 				FABC22A2237681830094B436 /* LaunchScreen.storyboard */,
 				FABC22A5237681830094B436 /* Info.plist */,
+				FA4803852378BD9500315702 /* Color+Random.swift */,
 				FABC229F237681830094B436 /* Preview Content */,
 			);
 			path = MultiTables;
@@ -155,12 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4803862378BD9500315702 /* Color+Random.swift in Sources */,
 				FABF0D4F2377F9370096E758 /* Question.swift in Sources */,
 				FABC2298237681820094B436 /* AppDelegate.swift in Sources */,
 				FABC229A237681820094B436 /* SceneDelegate.swift in Sources */,
 				FABF0D4D2377EA0F0096E758 /* Helper.swift in Sources */,
 				FABC229C237681820094B436 /* GameSelection.swift in Sources */,
+				FA4803882378BDC300315702 /* NumberButton.swift in Sources */,
 				FABF0D512377F9570096E758 /* QuestionGenerator.swift in Sources */,
+				FA4803842378AC6700315702 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
