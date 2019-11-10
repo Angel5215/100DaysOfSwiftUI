@@ -16,5 +16,5 @@ struct Question: CustomStringConvertible {
 
     /// Use any `Question` inside String interpolation, this property ensures it will
     /// be printed in a nice format.
-    var description: String { "\(firstNumber) ✖ \(secondNumber)" }
+    var description: String { "\(firstNumber) ✕ \(secondNumber)" }
 }
