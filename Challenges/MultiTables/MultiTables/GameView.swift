@@ -40,10 +40,6 @@ struct GameView: View {
                     
                     ForEach(generateRandomAnswers(for: questions[currentQuestion]), id: \.self) { answer in
                         NumberButton(number: answer, isCorrectAnswer: answer == self.questions[self.currentQuestion].result) {
-                            guard self.currentQuestion != self.questions.count - 1 else {
-                                self.isGameFinished = true
-                                return
-                            }
                             self.numberButtonTapped(answer: $0)
                         }
                     }
@@ -109,6 +105,12 @@ struct GameView: View {
         } else {
             score -= 1
         }
+        
+        guard self.currentQuestion != self.questions.count - 1 else {
+            isGameFinished = true
+            return
+        }
+        
         currentQuestion += 1
     }
 }

@@ -14,12 +14,13 @@ struct NumberButton: View {
     let isCorrectAnswer: Bool
     var completionHandler: ((Int) -> Void)? = nil
     
-    @State private var scaleAmount: CGFloat = 0
+    @State private var scaleAmount: CGFloat = 0.0001
+    @State private var translationAmount: CGFloat = 0
     
     var body: some View {
         Button(action: {
             withAnimation(Animation.easeInOut(duration: 0.5)) {
-                self.scaleAmount = 3
+                self.scaleAmount = 100
                 self.completionHandler?(self.number)
             }
         }, label: {
@@ -41,6 +42,11 @@ struct NumberButton: View {
                     .scaleEffect(scaleAmount, anchor: .center)
             }
         })
+        .offset(x: translationAmount, y: 0)
+        .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+        .onAppear {
+            self.translationAmount = CGFloat.random(in: -50...50)
+        }
     }
 }
 
