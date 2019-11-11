@@ -55,7 +55,7 @@ Repository made to follow 100 Days of SwiftUI.
 
 ### Day 35: Consolidation III
 
-- Day 35: Milestone: Projects 4-6 **(WIP @ `challenge/consolidation_iii_day_35` branch)**.
+- [Day 35](Challenges/MultiTables): Milestone: Projects 4-6.
 
 ### Days 36-43: Scaling up to bigger apps
 
@@ -82,7 +82,7 @@ The projects in this section are completely started from scratch and are designe
 
 - [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
 - [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
-- Challenge 3. **(WIP @ `challenge/consolidation_iii_day_35` branch)**
+- [Challenge 3](Challenges/MultiTables). Multiplication Tables practice.
 - Challenge 4. **(TODO)**
 
 ## Wrap-up challenges
