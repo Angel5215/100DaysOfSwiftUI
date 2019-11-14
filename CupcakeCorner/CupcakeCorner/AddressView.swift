@@ -10,15 +10,15 @@ import SwiftUI
 
 struct AddressView: View {
     
-    @ObservedObject var order: Order
+    @ObservedObject var order: CCOrder
     
     var body: some View {
         Form {
             Section {
-                TextField("Name", text: $order.name)
-                TextField("Street Address", text: $order.streetAddress)
-                TextField("City", text: $order.city)
-                TextField("Zip", text: $order.zip)
+                TextField("Name", text: $order.current.name)
+                TextField("Street Address", text: $order.current.streetAddress)
+                TextField("City", text: $order.current.city)
+                TextField("Zip", text: $order.current.zip)
             }
 
             Section {
@@ -26,7 +26,7 @@ struct AddressView: View {
                     Text("Check out")
                 }
             }
-            .disabled(order.hasValidAddress == false)
+            .disabled(order.current.hasValidAddress == false)
         }
         .navigationBarTitle("Delivery details", displayMode: .inline)
     }
@@ -34,6 +34,6 @@ struct AddressView: View {
 
 struct AddressView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressView(order: Order())
+        AddressView(order: CCOrder())
     }
 }
