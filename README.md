@@ -76,6 +76,13 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 47: Milestone: Projects 7-9 **(TODO)**
 - Day 48: [Expanding your horizons](https://vimeo.com/295238750). 
 
+### Days 49-58: Focus on data
+
+- [Day 49](CupcakeCorner): Project 10, part one.
+- Day 50: Project 10, part two.
+- Day 51: Project 10, part three.
+- Day 52: Project 10, part four (**Wrap-up day**).
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
@@ -97,4 +104,5 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 34: `challenge/project_six_day_34`
 - Day 38: `challenge/project_seven_day_38`
 - Day 42: `challenge/project_eight_day_42` 
-- Day 46: `challenge/project_nine_day_46` 
+- Day 46: `challenge/project_nine_day_46`
+- Day 52: `challenge/project_ten_day_52`
