@@ -7,6 +7,7 @@ This is an app to track which books you’ve read and what you thought of them.
 
 - Core Data
 - `@Binding` property wrapper
+- `@FetchRequest` property wrapper
 
 ## Images
 
@@ -18,3 +19,6 @@ This is an app to track which books you’ve read and what you thought of them.
 
 
 - `AnyView` is a type-erased wrapper. It conforms to the `View` protocol and contains inside a view of a specific type. However, it doesn't expose what it contains, so SwiftUI only sees that it returns `AnyView`. This is where the name **type erasure** comes from: `AnyView` effectively hides – or erases – the type of the views it contains.
+
+- Retrieving information from Core Data is done using a fetch request – we describe what we want, how it should sorted, and whether any filters should be used, and Core Data sends back all the matching data.
+
