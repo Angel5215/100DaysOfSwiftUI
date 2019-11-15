@@ -82,6 +82,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 50: Project 10, part two.
 - Day 51: Project 10, part three.
 - Day 52: Project 10, part four (**Wrap-up day**).
+- [Day 53](Bookworm). Project 11, part one.
 
 ## Challenge days
 
