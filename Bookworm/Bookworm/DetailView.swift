@@ -41,6 +41,8 @@ struct DetailView: View {
                 Text(self.book.review ?? "No review")
                     .padding()
                 
+                Text("Added: \(self.formatDate(self.book.date))")
+                
                 RatingView(rating: .constant(Int(self.book.rating)))
                     .font(.largeTitle)
                 
@@ -67,6 +69,16 @@ struct DetailView: View {
         moc.delete(book)
         try? self.moc.save()
         presentationMode.wrappedValue.dismiss()
+    }
+    
+    private func formatDate(_ date: Date?) -> String {
+        guard let actualDate = date else {
+            return "Unknown"
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        return dateFormatter.string(from: actualDate)
     }
 }
 

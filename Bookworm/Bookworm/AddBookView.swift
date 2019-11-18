@@ -51,15 +51,31 @@ struct AddBookView: View {
                         newBook.author = self.author
                         newBook.rating = Int16(self.rating)
                         newBook.genre = self.genre
-                        newBook.review = self.review
+                        
+                        if self.review.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                            newBook.review = "No review"
+                        } else {
+                            newBook.review = self.review
+                        }
+                        
+                        newBook.date = Date()
 
                         try? self.moc.save()
                         self.presentationMode.wrappedValue.dismiss()
                     }
+                    .disabled(isFormCorrectlyFilled())
                 }
             }
             .navigationBarTitle("Add Book")
         }
+    }
+    
+    private func isFormCorrectlyFilled() -> Bool {
+        let isTitleFilled = title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        let isAuthorFilled = author.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        let isGenreFilled = genre.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        
+        return isTitleFilled || isAuthorFilled || isGenreFilled
     }
 }
 
