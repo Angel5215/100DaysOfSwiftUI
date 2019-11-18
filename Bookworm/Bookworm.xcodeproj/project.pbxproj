@@ -10,6 +10,7 @@
 		FA22D0AD238128D90066F138 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D0AC238128D90066F138 /* AddBookView.swift */; };
 		FA22D0AF23812CBA0066F138 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D0AE23812CBA0066F138 /* RatingView.swift */; };
 		FA22D0B123812F600066F138 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D0B023812F600066F138 /* EmojiRatingView.swift */; };
+		FA30081823822CC1002715F7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30081723822CC1002715F7 /* DetailView.swift */; };
 		FA8F7D5A237E5B3500EBEF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7D59237E5B3500EBEF99 /* AppDelegate.swift */; };
 		FA8F7D5C237E5B3500EBEF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7D5B237E5B3500EBEF99 /* SceneDelegate.swift */; };
 		FA8F7D5F237E5B3600EBEF99 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA8F7D5D237E5B3600EBEF99 /* Bookworm.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 		FA22D0AC238128D90066F138 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		FA22D0AE23812CBA0066F138 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		FA22D0B023812F600066F138 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		FA30081723822CC1002715F7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FA8F7D56237E5B3500EBEF99 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8F7D59237E5B3500EBEF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8F7D5B237E5B3500EBEF99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				FA8F7D59237E5B3500EBEF99 /* AppDelegate.swift */,
 				FA8F7D5B237E5B3500EBEF99 /* SceneDelegate.swift */,
 				FA8F7D60237E5B3600EBEF99 /* ContentView.swift */,
+				FA30081723822CC1002715F7 /* DetailView.swift */,
 				FA22D0AE23812CBA0066F138 /* RatingView.swift */,
 				FA22D0AC238128D90066F138 /* AddBookView.swift */,
 				FA22D0B023812F600066F138 /* EmojiRatingView.swift */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8F7D5A237E5B3500EBEF99 /* AppDelegate.swift in Sources */,
+				FA30081823822CC1002715F7 /* DetailView.swift in Sources */,
 				FA8F7D5F237E5B3600EBEF99 /* Bookworm.xcdatamodeld in Sources */,
 				FA22D0B123812F600066F138 /* EmojiRatingView.swift in Sources */,
 				FA8F7D61237E5B3600EBEF99 /* ContentView.swift in Sources */,
