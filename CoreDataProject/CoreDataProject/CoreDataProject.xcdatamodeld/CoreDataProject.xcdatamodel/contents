@@ -5,7 +5,16 @@
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Wizard" representedClassName="Wizard" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <elements>
         <element name="Movie" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Wizard" positionX="-54" positionY="18" width="128" height="58"/>
     </elements>
 </model>

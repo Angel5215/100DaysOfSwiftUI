@@ -8,6 +8,12 @@ Technique project to explore Core Data in more detail and its integration with S
 - Core Data
 - Why `\.self` works inside a `ForEach`
 - `Identifiable`, `Hashable`
+- Managed Object
+- `@FetchRequest`
+- `@NSManaged`
+- `hasChanges`
+- Core data constraints
+- `NSMergeByPropertyObjectTrumpMergePolicy`
 
 ## Images
 
@@ -23,3 +29,18 @@ Technique project to explore Core Data in more detail and its integration with S
 
 - When Xcode generates a class for managed objects, it makes that class conform to `Hashable`. 
 
+- When creating a new Core Data entity, Xcode generates a **managed object class** automatically when we build our code. We can use instances of this class with `@FetchRequest` to show data in our UI. 
+
+- When we write or read the value of a property that is `@NSManaged`, Core Data catches that and handles it internally. 
+
+- It is common to bulk saves together so that you save everything at once, which has a lower performance impact when using `NSManagedObjectContext`. You should always wrap calls to `save()` in a check first:
+
+```swift
+if self.moc.hasChanges {
+    try? self.moc.save()
+}
+```
+
+- Core Data give us **constraints** - for example, we can make one attribute constrained so that it must always be unique. When we try to save objects, Core Data will resolve duplicates so that only one piece of data gets written. We can even choose how it should handle merging data when some data clashes with a constraint.
+
+- Using `NSMergeByPropertyObjectTrumpMergePolicy`, Core Data will try to overwrite the version in its databse using properties from the new version. 
