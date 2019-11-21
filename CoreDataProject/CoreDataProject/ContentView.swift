@@ -19,12 +19,48 @@ struct ContentView: View {
                 NavigationLink("Core Data constraints", destination: UniqueConstraintsView())
                 
                 NavigationLink("Filtering with NSPredicate", destination: FilteringView())
+                
+                NavigationLink("Dynamically filtering FetchRequest", destination: DynamicFilteringView())
             }
             .navigationBarTitle("Core Data")
         }
     }
 }
 
+// MARK: - First example
+struct UniqueConstraintsView: View {
+    let students = [
+        Student(name: "Harry Potter"),
+        Student(name: "Hermione Granger")
+    ]
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Wizard.entity(), sortDescriptors: []) var wizards: FetchedResults<Wizard>
+    
+    var body: some View {
+        VStack {
+            List(wizards, id: \.self) { wizard in
+                Text(wizard.name ?? "Unknown")
+            }
+            
+            Button("Add") {
+                let wizard = Wizard(context: self.moc)
+                wizard.name = "Harry Potter"
+            }
+            
+            Button("Save") {
+                do {
+                    try self.moc.save()
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        .navigationBarTitle("Core Data constraints", displayMode: .inline)
+    }
+}
+
+// MARK: - Second example
 struct FilteringView: View {
     
     @Environment(\.managedObjectContext) var moc
@@ -62,35 +98,60 @@ struct FilteringView: View {
     }
 }
 
-struct UniqueConstraintsView: View {
-    let students = [
-        Student(name: "Harry Potter"),
-        Student(name: "Hermione Granger")
-    ]
+// MARK: - Third example
+struct DynamicFilteringView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Wizard.entity(), sortDescriptors: []) var wizards: FetchedResults<Wizard>
+    @State private var lastNameFilter = "A"
     
     var body: some View {
         VStack {
-            List(wizards, id: \.self) { wizard in
-                Text(wizard.name ?? "Unknown")
+            FilteredList(filter: lastNameFilter)
+
+            Button("Add Examples") {
+                let taylor = Singer(context: self.moc)
+                taylor.firstName = "Taylor"
+                taylor.lastName = "Swift"
+
+                let ed = Singer(context: self.moc)
+                ed.firstName = "Ed"
+                ed.lastName = "Sheeran"
+
+                let adele = Singer(context: self.moc)
+                adele.firstName = "Adele"
+                adele.lastName = "Adkins"
+
+                try? self.moc.save()
             }
-            
-            Button("Add") {
-                let wizard = Wizard(context: self.moc)
-                wizard.name = "Harry Potter"
+
+            Button("Show A") {
+                self.lastNameFilter = "A"
             }
-            
-            Button("Save") {
-                do {
-                    try self.moc.save()
-                } catch {
-                    print(error.localizedDescription)
-                }
+
+            Button("Show S") {
+                self.lastNameFilter = "S"
             }
         }
-        .navigationBarTitle("Core Data constraints", displayMode: .inline)
+        .navigationBarTitle("Dynamically filtering FetchRequest", displayMode: .inline)
+    }
+}
+
+
+struct FilteredList: View {
+    
+    var fetchRequest: FetchRequest<Singer>
+    
+    init(filter: String) {
+        let predicate = NSPredicate(format: "lastName BEGINSWITH %@", filter)
+        fetchRequest = FetchRequest<Singer>(entity: Singer.entity(),
+                                            sortDescriptors: [],
+                                            predicate: predicate)
+    }
+    
+    var body: some View {
+        List(fetchRequest.wrappedValue, id: \.self) { singer in
+            Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
+        }
     }
 }
 

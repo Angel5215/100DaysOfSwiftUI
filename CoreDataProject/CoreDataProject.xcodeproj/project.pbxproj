@@ -16,6 +16,8 @@
 		FA65C6DA2384ED8000CB1FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA65C6D82384ED8000CB1FAB /* LaunchScreen.storyboard */; };
 		FA65C6E72384F5A600CB1FAB /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65C6E52384F5A600CB1FAB /* Movie+CoreDataClass.swift */; };
 		FA65C6E82384F5A600CB1FAB /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65C6E62384F5A600CB1FAB /* Movie+CoreDataProperties.swift */; };
+		FA747BD62386640F001F6B72 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA747BD42386640F001F6B72 /* Singer+CoreDataClass.swift */; };
+		FA747BD72386640F001F6B72 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA747BD52386640F001F6B72 /* Singer+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FA65C6DB2384ED8000CB1FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA65C6E52384F5A600CB1FAB /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA65C6E62384F5A600CB1FAB /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA747BD42386640F001F6B72 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA747BD52386640F001F6B72 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		FA65C6C92384ED7F00CB1FAB /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				FA747BD42386640F001F6B72 /* Singer+CoreDataClass.swift */,
+				FA747BD52386640F001F6B72 /* Singer+CoreDataProperties.swift */,
 				FA65C6E52384F5A600CB1FAB /* Movie+CoreDataClass.swift */,
 				FA65C6E62384F5A600CB1FAB /* Movie+CoreDataProperties.swift */,
 				FA65C6CA2384ED7F00CB1FAB /* AppDelegate.swift */,
@@ -155,10 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA747BD62386640F001F6B72 /* Singer+CoreDataClass.swift in Sources */,
 				FA65C6CB2384ED7F00CB1FAB /* AppDelegate.swift in Sources */,
 				FA65C6CD2384ED7F00CB1FAB /* SceneDelegate.swift in Sources */,
 				FA65C6D22384ED7F00CB1FAB /* ContentView.swift in Sources */,
 				FA65C6E72384F5A600CB1FAB /* Movie+CoreDataClass.swift in Sources */,
+				FA747BD72386640F001F6B72 /* Singer+CoreDataProperties.swift in Sources */,
 				FA65C6E82384F5A600CB1FAB /* Movie+CoreDataProperties.swift in Sources */,
 				FA65C6D02384ED7F00CB1FAB /* CoreDataProject.xcdatamodeld in Sources */,
 			);
