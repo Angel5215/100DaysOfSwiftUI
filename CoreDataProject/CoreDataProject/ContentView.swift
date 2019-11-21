@@ -6,6 +6,7 @@
 //  Copyright © 2019 Ángel Vázquez. All rights reserved.
 //
 
+import CoreData
 import SwiftUI
 
 struct Student: Hashable {
@@ -106,7 +107,9 @@ struct DynamicFilteringView: View {
     
     var body: some View {
         VStack {
-            FilteredList(filter: lastNameFilter)
+            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+                Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
+            }
 
             Button("Add Examples") {
                 let taylor = Singer(context: self.moc)
@@ -137,20 +140,21 @@ struct DynamicFilteringView: View {
 }
 
 
-struct FilteredList: View {
+struct FilteredList<T: NSManagedObject, Content: View>: View {
     
-    var fetchRequest: FetchRequest<Singer>
+    var fetchRequest: FetchRequest<T>
+    var list: FetchedResults<T> { fetchRequest.wrappedValue }
     
-    init(filter: String) {
-        let predicate = NSPredicate(format: "lastName BEGINSWITH %@", filter)
-        fetchRequest = FetchRequest<Singer>(entity: Singer.entity(),
-                                            sortDescriptors: [],
-                                            predicate: predicate)
+    let content: (T) -> Content
+    
+    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
+        fetchRequest = FetchRequest<T>(entity: T.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+        self.content = content
     }
     
     var body: some View {
-        List(fetchRequest.wrappedValue, id: \.self) { singer in
-            Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
+        List(list, id: \.self) { item in
+            self.content(item)
         }
     }
 }
