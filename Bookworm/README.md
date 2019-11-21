@@ -22,3 +22,4 @@ This is an app to track which books you’ve read and what you thought of them.
 
 - Retrieving information from Core Data is done using a fetch request – we describe what we want, how it should sorted, and whether any filters should be used, and Core Data sends back all the matching data.
 
+- When we place an object into the environment for a view, it becomes accessible to that view and any views that can call it an ancestor.
