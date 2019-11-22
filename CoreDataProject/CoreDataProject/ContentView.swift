@@ -106,42 +106,104 @@ struct DynamicFilteringView: View {
     
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
+    @State private var predicate = Predicate.beginsWith
+    @State private var sortDescriptor = SortDescriptor.firstName
+    
+    private let availablePredicates: [Predicate] = Predicate.allCases
+    private let letters = ["A", "S", "M"]
+    private let availableSortDescriptors = SortDescriptor.allCases
+    
+    private var sortDescriptors: [NSSortDescriptor] {
+        switch sortDescriptor {
+        case .lastName:
+            return [NSSortDescriptor(key: "lastName", ascending: false)]
+        case .lastNameAscending:
+            return [NSSortDescriptor(key: "lastName", ascending: true)]
+        case .firstName:
+            return [NSSortDescriptor(key: "firstName", ascending: false)]
+        case .firstNameAscending:
+            return [NSSortDescriptor(key: "firstName", ascending: true)]
+        }
+    }
     
     var body: some View {
-        VStack {
-            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+        Group {
+            Form {
+                Section(header: Text("Filter configuration")) {
+                    
+                    Picker(selection: $predicate, label: Text("Predicate")) {
+                        ForEach(availablePredicates, id: \.self) { predicate in
+                            Text(predicate.rawValue.uppercased())
+                        }
+                    }
+                    
+                    Picker("Last name filter", selection: $lastNameFilter) {
+                        ForEach(letters, id: \.self) { letter in
+                            Text(letter)
+                        }
+                    }
+                    
+                    Picker("Sort descriptor", selection: $sortDescriptor) {
+                        ForEach(availableSortDescriptors, id: \.self) { descriptor in
+                            Text(descriptor.rawValue.uppercased())
+                        }
+                    }
+                    
+                    Text("lastName \(predicate.rawValue.uppercased()) \(lastNameFilter)")
+                }
+                
+                
+                
+                Button("Add Examples") {
+                    let taylor = Singer(context: self.moc)
+                    taylor.firstName = "Taylor"
+                    taylor.lastName = "Swift"
+
+                    let ed = Singer(context: self.moc)
+                    ed.firstName = "Ed"
+                    ed.lastName = "Sheeran"
+
+                    let adele = Singer(context: self.moc)
+                    adele.firstName = "Adele"
+                    adele.lastName = "Adkins"
+
+                    try? self.moc.save()
+                }
+            }
+            
+            
+            Text("Filtered list")
+                .font(.headline)
+            
+            FilteredList(filterKey: "lastName", filterValue: lastNameFilter, predicate: predicate, sortDescriptors: sortDescriptors) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
-
-            Button("Add Examples") {
-                let taylor = Singer(context: self.moc)
-                taylor.firstName = "Taylor"
-                taylor.lastName = "Swift"
-
-                let ed = Singer(context: self.moc)
-                ed.firstName = "Ed"
-                ed.lastName = "Sheeran"
-
-                let adele = Singer(context: self.moc)
-                adele.firstName = "Adele"
-                adele.lastName = "Adkins"
-
-                try? self.moc.save()
-            }
-
-            Button("Show A") {
-                self.lastNameFilter = "A"
-            }
-
-            Button("Show S") {
-                self.lastNameFilter = "S"
-            }
+            .frame(maxHeight: 260)
         }
         .navigationBarTitle("Dynamically filtering FetchRequest", displayMode: .inline)
     }
 }
 
 // MARK: - Generic Filtered List
+enum Predicate: String, CaseIterable {
+    case beginsWith = "BEGINSWITH"
+    case beginsWithCaseInsensitive = "BEGINSWITH[c]"
+    case contains = "CONTAINS"
+    case containsCaseInsensitive = "CONTAINS[c]"
+    case lessThan = "<"
+    case greaterThan = ">"
+    case equals = "=="
+    case lessThanOrEqual = "<="
+    case greaterThanOrEqual = ">="
+}
+
+enum SortDescriptor: String, CaseIterable {
+    case lastName
+    case lastNameAscending
+    case firstName
+    case firstNameAscending
+}
+
 struct FilteredList<T: NSManagedObject, Content: View>: View {
     
     var fetchRequest: FetchRequest<T>
@@ -149,8 +211,12 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
     
     let content: (T) -> Content
     
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        fetchRequest = FetchRequest<T>(entity: T.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+    init(filterKey: String,
+         filterValue: String,
+         predicate: Predicate,
+         sortDescriptors: [NSSortDescriptor] = [],
+         @ViewBuilder content: @escaping (T) -> Content) {
+        fetchRequest = FetchRequest<T>(entity: T.entity(), sortDescriptors: sortDescriptors, predicate: NSPredicate(format: "%K \(predicate.rawValue) %@", filterKey, filterValue))
         self.content = content
     }
     
