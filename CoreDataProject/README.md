@@ -18,7 +18,16 @@ Technique project to explore Core Data in more detail and its integration with S
 
 ## Images
 
-<p align="center"><img src="img/run-example.gif" height="600px"></p>
+<table>
+    <tr>
+        <th>Image 1</th>
+        <th>Image 2</th>
+    </tr>
+    <tr>
+        <td><p align="center"><img src="img/run-example.gif" height="600px"></p></td>
+        <td><p align="center"><img src="img/run-example-2.gif" height="600px"></p></td>
+    </tr>
+</table>
 
 ## Notes
 

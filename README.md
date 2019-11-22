@@ -76,7 +76,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 47: Milestone: Projects 7-9 **(TODO)**
 - Day 48: [Expanding your horizons](https://vimeo.com/295238750). 
 
-### Days 49-58: Focus on data
+### Days 49-59: Focus on data
 
 - [Day 49](CupcakeCorner): Project 10, part one.
 - Day 50: Project 10, part two.
@@ -86,6 +86,14 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 54: Project 11, part two.
 - Day 55: Project 11, part three.
 - Day 56: Project 11, part four (**Wrap-up day**).
+- [Day 57](CoreDataProject): Project 12, part one.
+- Day 58: Project 12, part two.
+- Day 59: Project 12, part three (**Wrap-up day**).
+
+## Day 60: Consolidation V.
+
+- - Day 60: Milestone: Projects 10-12 **(TODO)**
+
 
 ## Challenge days
 
@@ -95,6 +103,7 @@ The projects in this section are completely started from scratch and are designe
 - [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
 - [Challenge 3](Challenges/MultiTables). Multiplication Tables practice.
 - Challenge 4. **(TODO)**
+- Challenge 5. **(TODO)**
 
 ## Wrap-up challenges
 
@@ -111,3 +120,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 46: `challenge/project_nine_day_46`
 - Day 52: `challenge/project_ten_day_52`
 - Day 56: `challenge/project_eleven_day_56`
+- Day 59: `challenge/project_twelve_day_59`
