@@ -73,7 +73,7 @@ Repository made to follow 100 Days of SwiftUI.
 
 ### Days 47-48: Consolidation IV.
 
-- Day 47: Milestone: Projects 7-9 **(TODO)**
+- Day 47: Milestone: Projects 7-9 **(WIP)**
 - Day 48: [Expanding your horizons](https://vimeo.com/295238750). 
 
 ### Days 49-59: Focus on data
@@ -90,9 +90,14 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 58: Project 12, part two.
 - Day 59: Project 12, part three (**Wrap-up day**).
 
-## Day 60: Consolidation V.
+## Days 60-61: Consolidation V.
 
-- - Day 60: Milestone: Projects 10-12 **(TODO)**
+- Day 60: Milestone: Projects 10-12 **(WIP)**
+- Day 61: Time for Core Data.
+
+## Days 62-72: Views and view controllers
+
+- [Day 62](Instafilter): Project 13, part one.
 
 
 ## Challenge days
@@ -102,8 +107,8 @@ The projects in this section are completely started from scratch and are designe
 - [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
 - [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
 - [Challenge 3](Challenges/MultiTables). Multiplication Tables practice.
-- Challenge 4. **(TODO)**
-- Challenge 5. **(TODO)**
+- Challenge 4. **(WIP at `challenge/consolidation_iv_day_47`)**
+- Challenge 5. **(WIP at `challenge/consolidation_v_day_60`)**
 
 ## Wrap-up challenges
 
