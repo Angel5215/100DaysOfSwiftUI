@@ -16,18 +16,19 @@ Technique project to explore Core Data in more detail and its integration with S
 - `NSMergeByPropertyObjectTrumpMergePolicy`
 - `NSPredicate`, `NSCompoundPredicate`
 
+## Challenges
+
+Modify the `FilteredList` view we made:
+
+1. Make it accept an array of `NSSortDescriptor` objects to get used in its fetch request.
+
+2. Make it accept a string parameter that controls which predicate is applied. You can use Swift’s string interpolation to place this in the predicate.
+
+3. Modify the predicate string parameter to be an enum such as `.beginsWith`, then make that enum get resolved to a string inside the initializer.
+
 ## Images
 
-<table>
-    <tr>
-        <th>Image 1</th>
-        <th>Image 2</th>
-    </tr>
-    <tr>
-        <td><p align="center"><img src="img/run-example.gif" height="600px"></p></td>
-        <td><p align="center"><img src="img/run-example-2.gif" height="600px"></p></td>
-    </tr>
-</table>
+<p align="center"><img src="img/challenge.gif" height="600px"></p>
 
 ## Notes
 
