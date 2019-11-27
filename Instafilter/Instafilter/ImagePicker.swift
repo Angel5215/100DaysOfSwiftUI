@@ -10,15 +10,29 @@ import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     
-    
+    // MARK: - Typealiases
     typealias UIViewControllerType = UIImagePickerController
     
-    @Binding var image: UIImage?
+    // MARK: - Properties
     @Environment(\.presentationMode) var presentationMode
+    @Binding var image: UIImage?
     
-    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        
-        var parent: ImagePicker
+    // MARK: - UIViewControllerRepresentable
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: ImagePicker.UIViewControllerType, context: UIViewControllerRepresentableContext<ImagePicker>) { }
+    
+    func makeCoordinator() -> ImagePicker.Coordinator {
+        Coordinator(self)
+    }
+    
+    // MARK: - Coordinator
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        let parent: ImagePicker
         
         init(_ parent: ImagePicker) {
             self.parent = parent
@@ -30,19 +44,5 @@ struct ImagePicker: UIViewControllerRepresentable {
             }
             parent.presentationMode.wrappedValue.dismiss()
         }
-    }
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
-        return picker
-    }
-    
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
-        
-    }
-    
-    func makeCoordinator() -> ImagePicker.Coordinator {
-        Coordinator(self)
     }
 }
