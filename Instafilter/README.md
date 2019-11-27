@@ -8,6 +8,7 @@ This app lets users import photos from their library, then modify them using var
 - Core Image
 - Integrating SwiftUI with UIKit
 - Creating Custom bindings in SwiftUI
+- `UIViewControllerRepresentable`
 
 ## Images
 
@@ -21,3 +22,9 @@ This app lets users import photos from their library, then modify them using var
 
 - Using a property observer with a `@State` property does not normally trigger its actions because `@State` has a `nonmutating` setter.
 
+- Wrapping a UIKit view controller requires  us to create a struct that conforms to `UIViewControllerRepresentable` that contains two methods: 
+
+    - `makeUIViewController()`: Responsible for creating the initial view controller.
+    - `updateUIViewController()`: Designed to let us update the view controller when some SwiftUI state changes.
+
+- SwiftUI **coordinators** are designed to act as delegates for UIKit view controllers.
