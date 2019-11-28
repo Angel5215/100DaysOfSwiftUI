@@ -14,6 +14,7 @@
 		FA7BC0FF238A3DF8001E2115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7BC0FE238A3DF8001E2115 /* Assets.xcassets */; };
 		FA7BC102238A3DF8001E2115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7BC101238A3DF8001E2115 /* Preview Assets.xcassets */; };
 		FA7BC105238A3DF8001E2115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7BC103238A3DF8001E2115 /* LaunchScreen.storyboard */; };
+		FACCDF7C238F943300EBCA5A /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCDF7B238F943300EBCA5A /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA7BC101238A3DF8001E2115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA7BC104238A3DF8001E2115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA7BC106238A3DF8001E2115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACCDF7B238F943300EBCA5A /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FA7BC0F8238A3DF8001E2115 /* AppDelegate.swift */,
 				FA7BC0FA238A3DF8001E2115 /* SceneDelegate.swift */,
 				FA7BC0FC238A3DF8001E2115 /* ContentView.swift */,
+				FACCDF7B238F943300EBCA5A /* ImageSaver.swift */,
 				FA6FBDC5238B76AB0016E107 /* ImagePicker.swift */,
 				FA7BC0FE238A3DF8001E2115 /* Assets.xcassets */,
 				FA7BC103238A3DF8001E2115 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				FA7BC0F9238A3DF8001E2115 /* AppDelegate.swift in Sources */,
 				FA6FBDC6238B76AB0016E107 /* ImagePicker.swift in Sources */,
+				FACCDF7C238F943300EBCA5A /* ImageSaver.swift in Sources */,
 				FA7BC0FB238A3DF8001E2115 /* SceneDelegate.swift in Sources */,
 				FA7BC0FD238A3DF8001E2115 /* ContentView.swift in Sources */,
 			);
