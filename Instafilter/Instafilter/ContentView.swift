@@ -64,7 +64,7 @@ struct ContentView: View {
                 }.padding(.vertical)
                 
                 HStack {
-                    Button("Change filter") {
+                    Button("Filter: \(transformFilterName(currentFilter.name))") {
                         self.showingFilterSheet = true
                     }
                     
@@ -146,6 +146,18 @@ struct ContentView: View {
         showingErrorAlert = true
         errorAlertTitle = title
         errorAlertMessage = message
+    }
+    
+    func transformFilterName(_ name: String) -> String {
+        let tempName = name.replacingOccurrences(of: "CI", with: "")
+        let finalName = tempName.reduce("") { result, character -> String in
+            if character.isUppercase {
+                return result + " " + String(character)
+            } else {
+                return result + String(character)
+            }
+        }
+        return finalName.trimmingCharacters(in: .whitespaces)
     }
 }
 
