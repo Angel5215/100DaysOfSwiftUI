@@ -98,7 +98,11 @@ Repository made to follow 100 Days of SwiftUI.
 ## Days 62-72: Views and view controllers
 
 - [Day 62](Instafilter): Project 13, part one.
-
+- Day 63: Project 13, part two.
+- Day 64: Project 13, part three. 
+- Day 65: Project 13, part four.
+- Day 66: Project 13, part five.
+- Day 67: Project 13, part six (**Wrap-up day**).
 
 ## Challenge days
 
@@ -126,3 +130,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 52: `challenge/project_ten_day_52`
 - Day 56: `challenge/project_eleven_day_56`
 - Day 59: `challenge/project_twelve_day_59`
+- Day 67: `challenge/project_thirteen_day_67`

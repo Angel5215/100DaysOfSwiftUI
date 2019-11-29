@@ -12,6 +12,8 @@ This app lets users import photos from their library, then modify them using var
 
 ## Images
 
+<p align="center"><img src="img/run-example.gif" height="600px"></p>
+
 ## Notes
 
 - Core Image is Apple's high-performance framework for manipulating images. It provides things like blurs, color shifts, pixellation and more. It is optimized to take full advantage of the GPU on iOS devices.
