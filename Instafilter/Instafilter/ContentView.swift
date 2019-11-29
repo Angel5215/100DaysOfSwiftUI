@@ -19,6 +19,10 @@ struct ContentView: View {
     @State private var showingFilterSheet = false
     @State private var processedImage: UIImage?
     
+    @State private var showingErrorAlert = false
+    @State private var errorAlertTitle = ""
+    @State private var errorAlertMessage = ""
+    
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     let context = CIContext()
     
@@ -67,7 +71,10 @@ struct ContentView: View {
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
+                        guard let processedImage = self.processedImage else {
+                            self.showError(title: "Error", message: "Please select an image first.")
+                            return
+                        }
 
                         let imageSaver = ImageSaver()
                         
@@ -76,7 +83,7 @@ struct ContentView: View {
                         }
 
                         imageSaver.errorHandler = {
-                            print("Oops: \($0.localizedDescription)")
+                            self.showError(title: "Error", message: "An error ocurred: \($0.localizedDescription)")
                         }
                         
                         imageSaver.writeToPhotoAlbum(image: processedImage)
@@ -100,6 +107,11 @@ struct ContentView: View {
                 .default(Text("Vignette")) { self.setFilter(CIFilter.vignette()) },
                 .cancel()
             ])
+        }
+        .alert(isPresented: $showingErrorAlert) {
+            Alert(title: Text(errorAlertTitle),
+                  message: Text(errorAlertMessage),
+                  dismissButton: .default(Text("OK")))
         }
     }
     
@@ -128,6 +140,12 @@ struct ContentView: View {
             image = Image(uiImage: uiImage)
             processedImage = uiImage
         }
+    }
+    
+    func showError(title: String, message: String) {
+        showingErrorAlert = true
+        errorAlertTitle = title
+        errorAlertMessage = message
     }
 }
 
