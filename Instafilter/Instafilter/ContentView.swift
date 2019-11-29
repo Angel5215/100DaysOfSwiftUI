@@ -14,6 +14,8 @@ struct ContentView: View {
     
     @State private var image: Image?
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 0.5
+    @State private var filterScale = 0.5
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var showingFilterSheet = false
@@ -34,6 +36,26 @@ struct ContentView: View {
             },
             set: {
                 self.filterIntensity = $0
+                self.applyProcessing()
+            }
+        )
+        
+        let radius = Binding<Double>(
+            get: {
+                return self.filterRadius
+            },
+            set: { newRadius in
+                self.filterRadius = newRadius
+                self.applyProcessing()
+            }
+        )
+        
+        let scale = Binding<Double>(
+            get: {
+                return self.filterScale
+            },
+            set: { newScale in
+                self.filterScale = newScale
                 self.applyProcessing()
             }
         )
@@ -61,7 +83,17 @@ struct ContentView: View {
                 HStack {
                     Text("Intensity")
                     Slider(value: intensity)
-                }.padding(.vertical)
+                }.padding(.top)
+                
+                HStack {
+                    Text("Scale")
+                    Slider(value: scale)
+                }
+                
+                HStack {
+                    Text("Radius")
+                    Slider(value: radius)
+                }.padding(.bottom)
                 
                 HStack {
                     Button("Filter: \(transformFilterName(currentFilter.name))") {
@@ -105,6 +137,7 @@ struct ContentView: View {
                 .default(Text("Sepia Tone")) { self.setFilter(CIFilter.sepiaTone()) },
                 .default(Text("Unsharp Mask")) { self.setFilter(CIFilter.unsharpMask()) },
                 .default(Text("Vignette")) { self.setFilter(CIFilter.vignette()) },
+                .default(Text("Gloom")) { self.setFilter(CIFilter.gloom()) },
                 .cancel()
             ])
         }
@@ -130,8 +163,8 @@ struct ContentView: View {
     func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
         if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
-        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterScale * 10, forKey: kCIInputScaleKey) }
         
         guard let outputImage = currentFilter.outputImage else { return }
         
