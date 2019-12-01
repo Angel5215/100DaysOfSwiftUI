@@ -30,23 +30,23 @@ struct ContentView: View {
         User(firstName: "Kristine", lastName: "Kochanski"),
         User(firstName: "David", lastName: "Lister"),
     ].sorted()
+    
+    enum LoadingState {
+        case loading, success, failed
+    }
+    
+    var loadingState = LoadingState.loading
 
     var body: some View {
-        Text("Hello World")
-            .onTapGesture {
-                let str = "Test message"
-                
-                // PATH-TO-DOCUMENTS/message.txt
-                let url = FileManager.default.documentsDirectory.appendingPathComponent("message.txt")
-                
-                do {
-                    try str.write(to: url, atomically: true, encoding: .utf8)
-                    let input = try String(contentsOf: url)
-                    print(input)
-                } catch {
-                    print(error.localizedDescription)
-                }
+        Group {
+            if loadingState == .loading {
+                LoadingView()
+            } else if loadingState == .success {
+                SuccessView()
+            } else if loadingState == .failed {
+                FailedView()
             }
+        }
     }
     
     func getDocumentsDirectory() -> URL {
@@ -55,6 +55,25 @@ struct ContentView: View {
         
         // just send back the first one, which ought to be the only one
         return paths[0]
+    }
+}
+
+struct LoadingView: View {
+    var body: some View {
+        Text("Loading...")
+            
+    }
+}
+
+struct SuccessView: View {
+    var body: some View {
+        Text("Success!")
+    }
+}
+
+struct FailedView: View {
+    var body: some View {
+        Text("Failed.")
     }
 }
 
