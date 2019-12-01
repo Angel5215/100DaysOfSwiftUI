@@ -18,6 +18,12 @@ struct User: Identifiable, Comparable {
     }
 }
 
+extension FileManager {
+    var documentsDirectory: URL {
+        urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+}
+
 struct ContentView: View {
     let users = [
         User(firstName: "Arnold", lastName: "Rimmer"),
@@ -26,9 +32,29 @@ struct ContentView: View {
     ].sorted()
 
     var body: some View {
-        List(users) { user in
-            Text("\(user.lastName), \(user.firstName)")
-        }
+        Text("Hello World")
+            .onTapGesture {
+                let str = "Test message"
+                
+                // PATH-TO-DOCUMENTS/message.txt
+                let url = FileManager.default.documentsDirectory.appendingPathComponent("message.txt")
+                
+                do {
+                    try str.write(to: url, atomically: true, encoding: .utf8)
+                    let input = try String(contentsOf: url)
+                    print(input)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        // find all possible documents directories
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        // just send back the first one, which ought to be the only one
+        return paths[0]
     }
 }
 
