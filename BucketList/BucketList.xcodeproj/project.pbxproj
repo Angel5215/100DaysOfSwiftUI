@@ -13,6 +13,7 @@
 		FAA6340823934F780003F3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA6340723934F780003F3A0 /* Assets.xcassets */; };
 		FAA6340B23934F780003F3A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA6340A23934F780003F3A0 /* Preview Assets.xcassets */; };
 		FAA6340E23934F780003F3A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA6340C23934F780003F3A0 /* LaunchScreen.storyboard */; };
+		FAA63416239360330003F3A0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA63415239360330003F3A0 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FAA6340A23934F780003F3A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAA6340D23934F780003F3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA6340F23934F780003F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA63415239360330003F3A0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FAA6340123934F770003F3A0 /* AppDelegate.swift */,
 				FAA6340323934F770003F3A0 /* SceneDelegate.swift */,
 				FAA6340523934F770003F3A0 /* ContentView.swift */,
+				FAA63415239360330003F3A0 /* MapView.swift */,
 				FAA6340723934F780003F3A0 /* Assets.xcassets */,
 				FAA6340C23934F780003F3A0 /* LaunchScreen.storyboard */,
 				FAA6340F23934F780003F3A0 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA6340223934F770003F3A0 /* AppDelegate.swift in Sources */,
+				FAA63416239360330003F3A0 /* MapView.swift in Sources */,
 				FAA6340423934F770003F3A0 /* SceneDelegate.swift in Sources */,
 				FAA6340623934F770003F3A0 /* ContentView.swift in Sources */,
 			);
