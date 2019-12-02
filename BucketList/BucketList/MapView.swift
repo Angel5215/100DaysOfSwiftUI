@@ -11,50 +11,57 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
+    // MARK: - Custom properties
+    @Binding var centerCoordinate: CLLocationCoordinate2D
+    var annotations: [MKPointAnnotation]
+    
     // MARK: - UIViewRepresentable
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
-        
-        let annotation = MKPointAnnotation()
-        annotation.title = "London"
-        annotation.subtitle = "Capital of England"
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: 0.13)
-        mapView.addAnnotation(annotation)
-        
         return mapView
     }
-    
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-        
+
+    func updateUIView(_ view: MKMapView, context: Context) {
+        if annotations.count != view.annotations.count {
+            view.removeAnnotations(view.annotations)
+            view.addAnnotations(annotations)
+        }
     }
-    
-    func makeCoordinator() -> MapView.Coordinator {
+
+    func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
     // MARK: - Coordinator
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
-        
+
         init(_ parent: MapView) {
             self.parent = parent
         }
         
         func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-            print(mapView.centerCoordinate)
-        }
-        
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
-            view.canShowCallout = true
-            return view
+            parent.centerCoordinate = mapView.centerCoordinate
         }
     }
 }
 
+// MARK: - Preview
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate),
+                annotations: [MKPointAnnotation.example])
+    }
+}
+
+// MARK: - Custom data
+extension MKPointAnnotation {
+    static var example: MKPointAnnotation {
+        let annotation = MKPointAnnotation()
+        annotation.title = "London"
+        annotation.subtitle = "Home to the 2012 Summer Olympics"
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
+        return annotation
     }
 }
