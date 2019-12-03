@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA6B0B2C239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B0B2B239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift */; };
 		FA6B0B2E2396193700F4B025 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B0B2D2396193700F4B025 /* EditView.swift */; };
+		FA6B0B3023961C1A00F4B025 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B0B2F23961C1A00F4B025 /* Result.swift */; };
 		FAA6340223934F770003F3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6340123934F770003F3A0 /* AppDelegate.swift */; };
 		FAA6340423934F770003F3A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6340323934F770003F3A0 /* SceneDelegate.swift */; };
 		FAA6340623934F770003F3A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6340523934F770003F3A0 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		FA6B0B2B239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		FA6B0B2D2396193700F4B025 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		FA6B0B2F23961C1A00F4B025 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FAA633FE23934F770003F3A0 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA6340123934F770003F3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA6340323934F770003F3A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				FAA6340123934F770003F3A0 /* AppDelegate.swift */,
 				FAA6340323934F770003F3A0 /* SceneDelegate.swift */,
 				FAA6340523934F770003F3A0 /* ContentView.swift */,
+				FA6B0B2F23961C1A00F4B025 /* Result.swift */,
 				FAA63415239360330003F3A0 /* MapView.swift */,
 				FA6B0B2B239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift */,
 				FA6B0B2D2396193700F4B025 /* EditView.swift */,
@@ -159,6 +162,7 @@
 				FAA63416239360330003F3A0 /* MapView.swift in Sources */,
 				FA6B0B2E2396193700F4B025 /* EditView.swift in Sources */,
 				FAA6340423934F770003F3A0 /* SceneDelegate.swift in Sources */,
+				FA6B0B3023961C1A00F4B025 /* Result.swift in Sources */,
 				FA6B0B2C239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				FAA6340623934F770003F3A0 /* ContentView.swift in Sources */,
 			);
