@@ -18,60 +18,36 @@ struct ContentView: View {
     @State private var locations = [CodableMKPointAnnotation]()
     @State private var showingEditScreen = false
     @State private var isUnlocked = false
+    @State private var showingAuthenticationError = false
+    @State private var authenticationErrorMessage = ""
     
     
     var body: some View {
-        ZStack {
+        Group {
             if isUnlocked {
-                MapView(centerCoordinate: $centerCoordinate,
-                        selectedPlace: $selectedPlace,
-                        showingPlaceDetails: $showingPlaceDetails,
-                        annotations: locations)
-                    .edgesIgnoringSafeArea(.all)
-                
-                Circle()
-                    .fill(Color.blue)
-                    .opacity(0.3)
-                    .frame(width: 32, height: 32)
-                
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        
-                        Button(action: {
-                            let newLocation = CodableMKPointAnnotation()
-                            newLocation.coordinate = self.centerCoordinate
-                            newLocation.title = "Example location"
-                            self.locations.append(newLocation)
-                            self.selectedPlace = newLocation
-                            self.showingEditScreen = true
-                        }, label: {
-                            Image(systemName: "plus")
-                        })
-                            .padding()
-                            .background(Color.black.opacity(0.75))
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .clipShape(Circle())
-                            .padding(.trailing)
-                    }
+                UnlockedView(centerCoordinate: $centerCoordinate,
+                             selectedPlace: $selectedPlace,
+                             showingPlaceDetails: $showingPlaceDetails,
+                             locations: $locations,
+                             showingEditScreen: $showingEditScreen)
+                .alert(isPresented: $showingPlaceDetails) {
+                    Alert(title: Text(selectedPlace?.title ?? "Unknown"),
+                          message: Text(selectedPlace?.subtitle ?? "Missing place information."),
+                          primaryButton: .default(Text("OK")),
+                          secondaryButton: .default(Text("Edit")) {
+                        self.showingEditScreen = true
+                    })
                 }
             } else {
-                Button("Unlock Places") {
-                    self.authenticate()
+                LockedView(action: authenticate)
+                .alert(isPresented: $showingAuthenticationError) {
+                    Alert(title: Text("Authentication error"),
+                          message: Text("Error: \(authenticationErrorMessage)"),
+                          dismissButton: .default(Text("OK")))
                 }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .clipShape(Capsule())
             }
         }
-        .alert(isPresented: $showingPlaceDetails) {
-            Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
-                self.showingEditScreen = true
-            })
-        }
+        
         .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
             if self.selectedPlace != nil {
                 EditView(placemark: self.selectedPlace!)
@@ -119,12 +95,14 @@ struct ContentView: View {
                     if success {
                         self.isUnlocked = true
                     } else {
-                        // error
+                        self.showingAuthenticationError = true
+                        self.authenticationErrorMessage = authenticationError?.localizedDescription ?? "Unknown error"
                     }
                 }
             }
         } else {
-            // no biometrics
+            self.showingAuthenticationError = true
+            self.authenticationErrorMessage = "No biometrics available"
         }
     }
 }
