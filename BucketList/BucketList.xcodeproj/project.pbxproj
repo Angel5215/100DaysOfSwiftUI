@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2F67E12398A109006B2F18 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F67E02398A109006B2F18 /* MKPointAnnotation-Codable.swift */; };
 		FA6B0B2C239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B0B2B239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift */; };
 		FA6B0B2E2396193700F4B025 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B0B2D2396193700F4B025 /* EditView.swift */; };
 		FA6B0B3023961C1A00F4B025 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B0B2F23961C1A00F4B025 /* Result.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2F67E02398A109006B2F18 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 		FA6B0B2B239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		FA6B0B2D2396193700F4B025 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		FA6B0B2F23961C1A00F4B025 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				FA6B0B2F23961C1A00F4B025 /* Result.swift */,
 				FAA63415239360330003F3A0 /* MapView.swift */,
 				FA6B0B2B239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift */,
+				FA2F67E02398A109006B2F18 /* MKPointAnnotation-Codable.swift */,
 				FA6B0B2D2396193700F4B025 /* EditView.swift */,
 				FAA6340723934F780003F3A0 /* Assets.xcassets */,
 				FAA6340C23934F780003F3A0 /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 				FAA6340423934F770003F3A0 /* SceneDelegate.swift in Sources */,
 				FA6B0B3023961C1A00F4B025 /* Result.swift in Sources */,
 				FA6B0B2C239618B800F4B025 /* MKPointAnnotation-ObservableObject.swift in Sources */,
+				FA2F67E12398A109006B2F18 /* MKPointAnnotation-Codable.swift in Sources */,
 				FAA6340623934F770003F3A0 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
