@@ -103,6 +103,12 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 65: Project 13, part four.
 - Day 66: Project 13, part five.
 - Day 67: Project 13, part six (**Wrap-up day**).
+- [Day 68](BucketList): Project 14, part one.
+- Day 69: Project 14, part two.
+- Day 70: Project 14, part three. 
+- Day 71: Project 14, part four.
+- Day 72: Project 14, part five.
+- Day 73: Project 14, part six (**Wrap-up day**).
 
 ## Challenge days
 
@@ -131,3 +137,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 56: `challenge/project_eleven_day_56`
 - Day 59: `challenge/project_twelve_day_59`
 - Day 67: `challenge/project_thirteen_day_67`
+- Day 73: `challenge/project_fourteen_day_73`
