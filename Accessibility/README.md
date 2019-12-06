@@ -26,6 +26,8 @@
 
 - You can group several related views into a single accessibility element passing `.combine` to the `accessibilityElement(children:)` modifier. You can also pass `.ignore` and provide a custom accessibility label to avoid the pause between child elements (this sounds more natural because the entire label is read at once without pauses).
 
+- VoiceOver can also read values from interface controls such as sliders but they often don't fit with what you need. You can provide a custom **accessibility value** using the `.accessbility(value:)` modifier to override the default one.
+
 
 
 
