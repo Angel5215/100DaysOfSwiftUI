@@ -95,7 +95,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 60: Milestone: Projects 10-12 **(WIP)**
 - Day 61: Time for Core Data.
 
-## Days 62-72: Views and view controllers
+## Days 62-73: Views and view controllers
 
 - [Day 62](Instafilter): Project 13, part one.
 - Day 63: Project 13, part two.
@@ -109,6 +109,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 71: Project 14, part four.
 - Day 72: Project 14, part five.
 - Day 73: Project 14, part six (**Wrap-up day**).
+- [Day 74](Accessibility): Project 15, part one.
 
 ## Challenge days
 
