@@ -39,14 +39,18 @@ struct ContentView: View {
                 VStack {
                     Text("Desired amount of sleep")
                         .font(.headline)
+                        .accessibility(hidden: true)
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
                         Text("\(sleepAmount, specifier: "%g") hours")
                     }
+                    .accessibility(label: Text("Desired amount of sleep"))
+                    .accessibility(value: Text("\(sleepAmount, specifier: "%g") hours"))
                 }
                 
                 VStack {
                     Text("Daily coffee intake")
                         .font(.headline)
+                        .accessibility(hidden: true)
                     Stepper(value: $coffeeAmount, in: 1...20) {
                         if coffeeAmount == 1 {
                             Text("1 cup")
@@ -54,6 +58,8 @@ struct ContentView: View {
                             Text("\(coffeeAmount) cups")
                         }
                     }
+                    .accessibility(label: Text("Daily coffee intake"))
+                    .accessibility(value: Text(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups"))
                 }
             }
             .navigationBarTitle("BetterRest")
