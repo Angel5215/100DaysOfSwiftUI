@@ -40,4 +40,14 @@ struct Mission: Codable, Identifiable {
             return "N/A"
         }
     }
+    
+    var accessibilityFormattedLaunchDate: String {
+        if let launchDate = launchDate {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            return formatter.string(from: launchDate)
+        } else {
+            return "Not available"
+        }
+    }
 }

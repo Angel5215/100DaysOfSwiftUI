@@ -37,7 +37,7 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
-                    Image(self.mission.image)
+                    Image(decorative: self.mission.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.7)
@@ -54,6 +54,8 @@ struct MissionView: View {
                             .font(.title)
                         Spacer()
                     }
+                    .accessibilityElement(children: .ignore)
+                    .accessibility(label: Text("Crew: \(self.astronauts.count) members"))
                     
                     ForEach(self.astronauts, id: \.role) { crewMember in
                         NavigationLink(destination: AstronautView(astronaut: crewMember.astronaut)) {
@@ -84,7 +86,9 @@ struct MissionView: View {
                                 }
                             }
                             .padding(.horizontal)
+                            .accessibility(hint: Text("Double tap for more details."))
                         }
+                            
                         .buttonStyle(PlainButtonStyle())
                     }
                     
