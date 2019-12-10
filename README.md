@@ -90,12 +90,12 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 58: Project 12, part two.
 - Day 59: Project 12, part three (**Wrap-up day**).
 
-## Days 60-61: Consolidation V.
+### Days 60-61: Consolidation V.
 
 - Day 60: Milestone: Projects 10-12 **(WIP)**
 - Day 61: Time for Core Data.
 
-## Days 62-76: Views and view controllers
+### Days 62-76: Views and view controllers
 
 - [Day 62](Instafilter): Project 13, part one.
 - Day 63: Project 13, part two.
@@ -113,6 +113,11 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 75: Project 15, part two. This day modifies previous projects, to review these changes checkout the `project15/accessibility_changes` branch.
 - Day 76. Project 15, part three. (**Wrap-up day**).
 
+### Days 77-78: Consolidation VI
+
+- Day 77: Milestone: Projects 13-15 **(TODO)**
+- Day 78: Time for MapKit **(TODO)**.
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
@@ -122,6 +127,7 @@ The projects in this section are completely started from scratch and are designe
 - [Challenge 3](Challenges/MultiTables). Multiplication Tables practice.
 - Challenge 4. **(WIP at `challenge/consolidation_iv_day_47`)**
 - Challenge 5. **(WIP at `challenge/consolidation_v_day_60`)**
+- Challenge 6. **TODO**
 
 ## Wrap-up challenges
 
