@@ -15,14 +15,26 @@ class User: ObservableObject {
 // MARK: - Views
 struct ContentView: View {
     
-    let user = User()
+    @State private var selectedTab = 0
     
     var body: some View {
-        VStack {
-            EditView()
-            DisplayView()
+        TabView(selection: $selectedTab) {
+            Text("Tab 1")
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("One")
+                }
+                .onTapGesture {
+                    self.selectedTab = 1
+                }
+                .tag(0)
+            Text("Tab 2")
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Two")
+                }
+                .tag(1)
         }
-        .environmentObject(user)
     }
 }
 
