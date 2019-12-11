@@ -8,12 +8,42 @@
 
 import SwiftUI
 
+class User: ObservableObject {
+    @Published var name = "Taylor Swift"
+}
+
+// MARK: - Views
 struct ContentView: View {
+    
+    let user = User()
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            EditView()
+            DisplayView()
+        }
+        .environmentObject(user)
     }
 }
 
+struct EditView: View {
+    @EnvironmentObject var user: User
+    
+    var body: some View {
+        TextField("Name", text: $user.name)
+    }
+}
+
+struct DisplayView: View {
+    @EnvironmentObject var user: User
+    
+    var body: some View {
+        Text(user.name)
+    }
+}
+
+
+// MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

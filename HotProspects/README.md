@@ -5,7 +5,7 @@ This is an app to track who you meet at conferences. It will show a QR code taht
 
 ## Topics
 
-- Environment
+- Environment (`@EnvironmentObject`)
 - Notifications
 - Tab bars
 - Context menus
@@ -16,3 +16,6 @@ This is an app to track who you meet at conferences. It will show a QR code taht
 
 ## Notes
 
+- `@EnvironmentObject` let us place an object into the enviroment so that any child view can automatically have access to it.
+
+- 
