@@ -16,30 +16,30 @@ enum NetworkError: Error {
     case badURL, requestFailed, unknown
 }
 
+class DelayedUpdater: ObservableObject {
+
+    var value = 0 {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    init() {
+        for i in 1...10 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
+                self.value += 1
+            }
+        }
+    }
+}
+
 // MARK: - Views
 struct ContentView: View {
     
-    @State private var selectedTab = 0
+    @ObservedObject var updater = DelayedUpdater()
     
     var body: some View {
-        Text("Hello, World!")
-            .onAppear {
-                self.fetchData(from: "https://www.apple.com/") { result in
-                    switch result {
-                    case .success(let str):
-                        print(str)
-                    case .failure(let error):
-                        switch error {
-                        case .badURL:
-                            print("Bad URL")
-                        case .requestFailed:
-                            print("Bad URL")
-                        case .unknown:
-                            print("Unknown error")
-                        }
-                    }
-                }
-            }
+        Text("Value is \(updater.value)")
     }
     
     func fetchData(from urlString: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
