@@ -39,7 +39,13 @@ struct ContentView: View {
     @ObservedObject var updater = DelayedUpdater()
     
     var body: some View {
-        Text("Value is \(updater.value)")
+        Image("example")
+            .interpolation(.none)
+            .resizable()
+            .scaledToFit()
+            .frame(maxHeight: .infinity)
+            .background(Color.black)
+            .edgesIgnoringSafeArea(.all)
     }
     
     func fetchData(from urlString: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
