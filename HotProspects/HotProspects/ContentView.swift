@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 class User: ObservableObject {
     @Published var name = "Taylor Swift"
@@ -41,6 +42,31 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            
+            Button("Request permission") {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+            
+            Button("Schedule notification") {
+                let content = UNMutableNotificationContent()
+                content.title = "Feed the cat"
+                content.subtitle = "It looks hungry"
+                content.sound = UNNotificationSound.default
+                
+                // triggers 5 seconds from now
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request)
+            }
+            
             Text("Hello, World!")
                 .padding()
                 .background(backgroundColor)
