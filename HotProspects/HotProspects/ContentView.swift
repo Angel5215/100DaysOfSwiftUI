@@ -6,6 +6,7 @@
 //  Copyright © 2019 Ángel Vázquez. All rights reserved.
 //
 
+import SamplePackage
 import SwiftUI
 import UserNotifications
 
@@ -40,64 +41,97 @@ struct ContentView: View {
     @ObservedObject var updater = DelayedUpdater()
     @State private var backgroundColor = Color.red
     
+    let possibleNumbers = Array(1...60)
+    var results: String {
+        let selected = possibleNumbers.random(7).sorted()
+        let strings = selected.map(String.init)
+        return strings.joined(separator: ", ")
+    }
+    
+    
     var body: some View {
         VStack {
             
-            Button("Request permission") {
-                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                    if success {
-                        print("All set!")
-                    } else if let error = error {
-                        print(error.localizedDescription)
+            Spacer()
+            
+            Group {
+                Text("Local notifications")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Button("Request permission") {
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                        if success {
+                            print("All set!")
+                        } else if let error = error {
+                            print(error.localizedDescription)
+                        }
                     }
+                }
+                
+                Button("Schedule notification") {
+                    let content = UNMutableNotificationContent()
+                    content.title = "Feed the cat"
+                    content.subtitle = "It looks hungry"
+                    content.sound = UNNotificationSound.default
+                    
+                    // triggers 5 seconds from now
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    
+                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                    
+                    UNUserNotificationCenter.current().add(request)
                 }
             }
             
-            Button("Schedule notification") {
-                let content = UNMutableNotificationContent()
-                content.title = "Feed the cat"
-                content.subtitle = "It looks hungry"
-                content.sound = UNNotificationSound.default
+            Spacer()
+            
+            Group {
+                Text("Context menus")
+                    .font(.title)
+                    .fontWeight(.bold)
                 
-                // triggers 5 seconds from now
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                Text("Hello, World!")
+                    .padding()
+                    .background(backgroundColor)
                 
-                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                
-                UNUserNotificationCenter.current().add(request)
+                Text("Change Color")
+                    .padding()
+                    .contextMenu {
+                        Button(action: {
+                            self.backgroundColor = .red
+                        }) {
+                            Text("Red")
+                            Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.red)
+                        }
+                        
+                        Button(action: {
+                            self.backgroundColor = .green
+                        }) {
+                            Text("Green")
+                        }
+                        
+                        Button(action: {
+                            self.backgroundColor = .blue
+                        }) {
+                            Text("Blue")
+                        }
+                }
             }
             
-            Text("Hello, World!")
-                .padding()
-                .background(backgroundColor)
-            
-            Text("Change Color")
-                .padding()
-                .contextMenu {
-                    Button(action: {
-                        self.backgroundColor = .red
-                    }) {
-                        Text("Red")
-                        Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.red)
-                    }
-                    
-                    Button(action: {
-                        self.backgroundColor = .green
-                    }) {
-                        Text("Green")
-                    }
-                    
-                    Button(action: {
-                        self.backgroundColor = .blue
-                    }) {
-                        Text("Blue")
-                    }
+            Spacer()
+          
+            Group {
+                Text("Swift Package dependencies")
+                .font(.title)
+                .fontWeight(.bold)
+                
+                Text(results)
             }
             
-            Text("\(updater.value)")
+            Spacer()
+
         }
-        
     }
     
     func fetchData(from urlString: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
