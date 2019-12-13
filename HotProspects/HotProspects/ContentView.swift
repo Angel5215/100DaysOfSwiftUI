@@ -17,7 +17,7 @@ enum NetworkError: Error {
 }
 
 class DelayedUpdater: ObservableObject {
-
+    
     var value = 0 {
         willSet {
             objectWillChange.send()
@@ -37,15 +37,41 @@ class DelayedUpdater: ObservableObject {
 struct ContentView: View {
     
     @ObservedObject var updater = DelayedUpdater()
+    @State private var backgroundColor = Color.red
     
     var body: some View {
-        Image("example")
-            .interpolation(.none)
-            .resizable()
-            .scaledToFit()
-            .frame(maxHeight: .infinity)
-            .background(Color.black)
-            .edgesIgnoringSafeArea(.all)
+        VStack {
+            Text("Hello, World!")
+                .padding()
+                .background(backgroundColor)
+            
+            Text("Change Color")
+                .padding()
+                .contextMenu {
+                    Button(action: {
+                        self.backgroundColor = .red
+                    }) {
+                        Text("Red")
+                        Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.red)
+                    }
+                    
+                    Button(action: {
+                        self.backgroundColor = .green
+                    }) {
+                        Text("Green")
+                    }
+                    
+                    Button(action: {
+                        self.backgroundColor = .blue
+                    }) {
+                        Text("Blue")
+                    }
+            }
+            
+            Text("\(updater.value)")
+        }
+        
     }
     
     func fetchData(from urlString: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
