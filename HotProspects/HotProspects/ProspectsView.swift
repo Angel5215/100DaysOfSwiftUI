@@ -6,6 +6,7 @@
 //  Copyright © 2019 Ángel Vázquez. All rights reserved.
 //
 
+import CodeScanner
 import SwiftUI
 
 struct ProspectsView: View {
@@ -17,8 +18,10 @@ struct ProspectsView: View {
     
     // MARK: - Properties
     let filter: FilterType
-    
-    
+   
+    // MARK: - State properties
+    @State private var isShowingScanner = false
+
     // MARK: - Computed properties
     var title: String {
         switch filter {
@@ -59,14 +62,33 @@ struct ProspectsView: View {
             }
             .navigationBarTitle(title)
             .navigationBarItems(trailing: Button(action: {
-                let prospect = Prospect()
-                prospect.name = "Paul Hudson"
-                prospect.emailAddress = "paul@hackingwithswift.com"
-                self.prospects.people.append(prospect)
+                self.isShowingScanner = true
             }, label: {
                 Image(systemName: "qrcode.viewfinder")
                 Text("Scan")
             }))
+            .sheet(isPresented: $isShowingScanner) {
+                CodeScannerView(codeTypes: [.qr],
+                                simulatedData: "Paul Hudson\npaul@hackingwithswift.com",
+                                completion: self.handleScan)
+            }
+        }
+    }
+    
+    func handleScan(result: Result<String, CodeScannerView.ScanError>) {
+        self.isShowingScanner = false
+        
+        switch result {
+        case .success(let code):
+            let details = code.components(separatedBy: "\n")
+            guard details.count == 2 else { return }
+            
+            let person = Prospect()
+            person.name = details[0]
+            person.emailAddress = details[1]
+            self.prospects.people.append(person)
+        case .failure(let error):
+            print("Scanning failed: \(error.localizedDescription)")
         }
     }
 }
