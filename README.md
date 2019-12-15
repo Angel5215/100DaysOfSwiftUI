@@ -121,6 +121,10 @@ Repository made to follow 100 Days of SwiftUI.
 ## Days 79-89: Controlling UI flow
 
 - [Day 79](HotProspects): Project 16, part one.
+- [Day 80]: Project 16, part two.
+- [Day 81]: Project 16, part three.
+- [Day 82]: Project 16, part four.
+- [Day 83]: Project 16, part five.
 
 ## Challenge days
 
