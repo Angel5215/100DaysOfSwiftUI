@@ -13,6 +13,7 @@ class Prospect: Identifiable, Codable {
     var name = "Anonymous"
     var emailAddress = ""
     fileprivate(set) var isContacted = false
+    var dateAdded = Date()
 }
 
 class Prospects: ObservableObject {

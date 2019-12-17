@@ -17,11 +17,17 @@ struct ProspectsView: View {
         case none, contacted, uncontacted
     }
     
+    enum SortingType: CaseIterable {
+        case name, mostRecent
+    }
+    
     // MARK: - Properties
     let filter: FilterType
    
     // MARK: - State properties
     @State private var isShowingScanner = false
+    @State private var isShowingSortingActionSheet = false
+    @State private var sortingMethod = SortingType.mostRecent
 
     // MARK: - Computed properties
     var title: String {
@@ -36,13 +42,19 @@ struct ProspectsView: View {
     }
     
     var filteredProspects: [Prospect] {
-        switch filter {
-        case .none:
-            return prospects.people
-        case .contacted:
-            return prospects.people.filter { $0.isContacted }
-        case .uncontacted:
-            return prospects.people.filter { !$0.isContacted }
+        switch (filter, sortingMethod) {
+        case (.none, .name):
+            return prospects.people.sorted { $0.name < $1.name }
+        case (.none, .mostRecent):
+            return prospects.people.sorted { $0.dateAdded < $1.dateAdded }
+        case (.contacted, .name):
+            return prospects.people.filter { $0.isContacted }.sorted { $0.name < $1.name }
+        case (.contacted, .mostRecent):
+            return prospects.people.filter { $0.isContacted }.sorted { $0.dateAdded < $1.dateAdded }
+        case (.uncontacted, .name):
+            return prospects.people.filter { !$0.isContacted }.sorted { $0.name < $1.name }
+        case (.uncontacted, .mostRecent):
+            return prospects.people.filter { !$0.isContacted }.sorted { $0.dateAdded < $1.dateAdded }
         }
     }
     
@@ -79,7 +91,11 @@ struct ProspectsView: View {
                 }
             }
             .navigationBarTitle(title)
-            .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(leading: Button(action: {
+                self.isShowingSortingActionSheet = true
+            }, label: {
+                Text("Sort")
+            }), trailing: Button(action: {
                 self.isShowingScanner = true
             }, label: {
                 Image(systemName: "qrcode.viewfinder")
@@ -89,6 +105,13 @@ struct ProspectsView: View {
                 MyCodeScannerView(codeTypes: [.qr],
                                 simulatedData: "Paul Hudson\npaul@hackingwithswift.com",
                                 completion: self.handleScan)
+            }
+            .actionSheet(isPresented: $isShowingSortingActionSheet) {
+                ActionSheet(title: Text("Sort by..."), message: Text("Select an option to sort."), buttons: [
+                    .default(Text("Name")) { self.sortingMethod = .name },
+                    .default(Text("Most recent")) { self.sortingMethod = .mostRecent },
+                    .cancel()
+                ])
             }
         }
     }
