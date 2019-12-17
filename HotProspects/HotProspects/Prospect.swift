@@ -8,6 +8,12 @@
 
 import SwiftUI
 
+fileprivate extension FileManager {
+    static var documentsDirectory: URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+}
+
 class Prospect: Identifiable, Codable {
     let id = UUID()
     var name = "Anonymous"
@@ -23,8 +29,9 @@ class Prospects: ObservableObject {
     @Published private(set) var people: [Prospect]
     
     init() {
-        
-        if let data = UserDefaults.standard.data(forKey: Self.saveKey) {
+        let documentsDirectory = FileManager.documentsDirectory
+        let fileURL = documentsDirectory.appendingPathComponent(Self.saveKey)
+        if let data = try? Data(contentsOf: fileURL) {
             if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
                 self.people = decoded
                 return
@@ -40,8 +47,16 @@ class Prospects: ObservableObject {
     }
     
     private func save() {
-        if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(encoded, forKey: Self.saveKey)
+        let documentsDirectory = FileManager.documentsDirectory
+        let fileURL = documentsDirectory.appendingPathComponent(Self.saveKey)
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        if let encoded = try? jsonEncoder.encode(people) {
+            do {
+                try encoded.write(to: fileURL, options: [.atomicWrite, .completeFileProtection])
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
     
