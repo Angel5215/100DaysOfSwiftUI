@@ -53,11 +53,16 @@ struct ProspectsView: View {
         NavigationView {
             List {
                 ForEach(filteredProspects) { prospect in
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                    HStack {
+                        if self.filter == .none {
+                            self.icon(for: prospect)
+                        }
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
                     }
                     .contextMenu {
                         Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted") {
@@ -70,6 +75,7 @@ struct ProspectsView: View {
                             }
                         }
                     }
+                    
                 }
             }
             .navigationBarTitle(title)
@@ -84,6 +90,14 @@ struct ProspectsView: View {
                                 simulatedData: "Paul Hudson\npaul@hackingwithswift.com",
                                 completion: self.handleScan)
             }
+        }
+    }
+    
+    func icon(for prospect: Prospect) -> some View {
+        if prospect.isContacted {
+            return Image(systemName: "person.crop.circle.fill.badge.checkmark").foregroundColor(.green)
+        } else {
+            return Image(systemName: "person.crop.circle.fill.badge.exclam").foregroundColor(.secondary)
         }
     }
     
