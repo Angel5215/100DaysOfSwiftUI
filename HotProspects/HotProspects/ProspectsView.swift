@@ -80,14 +80,14 @@ struct ProspectsView: View {
                 Text("Scan")
             }))
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr],
+                MyCodeScannerView(codeTypes: [.qr],
                                 simulatedData: "Paul Hudson\npaul@hackingwithswift.com",
                                 completion: self.handleScan)
             }
         }
     }
     
-    func handleScan(result: Result<String, CodeScannerView.ScanError>) {
+    func handleScan(result: Result<String, MyCodeScannerView.ScanError>) {
         self.isShowingScanner = false
         
         switch result {

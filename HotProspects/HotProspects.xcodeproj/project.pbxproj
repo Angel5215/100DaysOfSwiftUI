@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA265BB623A8992900B71D56 /* MyScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA265BB523A8992900B71D56 /* MyScannerView.swift */; };
 		FA305FCF23A5C734003C6B70 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = FA305FCE23A5C734003C6B70 /* CodeScanner */; };
 		FA8FC54623A49EE90069B968 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FC54523A49EE90069B968 /* ProspectsView.swift */; };
 		FA8FC54823A49EFE0069B968 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FC54723A49EFE0069B968 /* MeView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA265BB523A8992900B71D56 /* MyScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScannerView.swift; sourceTree = "<group>"; };
 		FA8FC54523A49EE90069B968 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		FA8FC54723A49EFE0069B968 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		FA8FC54923A4A2260069B968 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				FAB008A923A086200070D4D6 /* SceneDelegate.swift */,
 				FAB008AB23A086200070D4D6 /* ContentView.swift */,
 				FA8FC54523A49EE90069B968 /* ProspectsView.swift */,
+				FA265BB523A8992900B71D56 /* MyScannerView.swift */,
 				FA8FC54923A4A2260069B968 /* Prospect.swift */,
 				FA8FC54723A49EFE0069B968 /* MeView.swift */,
 				FAB008AD23A086210070D4D6 /* Assets.xcassets */,
@@ -168,6 +171,7 @@
 				FAB008A823A086200070D4D6 /* AppDelegate.swift in Sources */,
 				FAB008AA23A086200070D4D6 /* SceneDelegate.swift in Sources */,
 				FAB008AC23A086200070D4D6 /* ContentView.swift in Sources */,
+				FA265BB623A8992900B71D56 /* MyScannerView.swift in Sources */,
 				FA8FC54823A49EFE0069B968 /* MeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
