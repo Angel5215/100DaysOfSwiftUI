@@ -20,6 +20,8 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             
+            Spacer(minLength: 40)
+            
             VStack {
                 Text("Vibrations")
                     .font(.title)
@@ -27,6 +29,32 @@ struct ContentView: View {
                 HapticsView()
             }
             .frame(maxWidth: .infinity)
+            
+            Spacer(minLength: 40)
+            
+            VStack {
+                Text("Disabling user interactivity")
+                    .font(.title)
+                    .fontWeight(.bold)
+                UserInteractivityView()
+                
+                VStack {
+                    Text("Hello")
+                    // SwiftUI won't trigger actions when a stack spacer is tapped due
+                    // to its `contentShape`
+                    Spacer().frame(height: 100)
+                    Text("World")
+                }
+                // Comment this to get the default behavior of not
+                // getting taps with spacers
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    print("VStack tapped!")
+                }
+            }
+            .frame(maxWidth: .infinity)
+            
+            Spacer(minLength: 40)
         }
         .frame(maxWidth: .infinity)
     }
@@ -34,12 +62,34 @@ struct ContentView: View {
     
 }
 
+struct UserInteractivityView: View {
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(Color.blue)
+                .frame(width: 300, height: 300)
+                .onTapGesture {
+                    print("Rectangle tapped!")
+                }
+
+            Circle()
+                .fill(Color.red)
+                .frame(width: 300, height: 300)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    print("Circle tapped!")
+                }
+                //.allowsHitTesting(false)
+        }
+    }
+}
+
 struct HapticsView: View {
     
     @State private var engine: CHHapticEngine?
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 40) {
             Text("Simple Success")
             .onTapGesture(perform: simpleSuccess)
 
