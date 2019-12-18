@@ -127,6 +127,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 83: Project 16, part five.
 - Day 84: Project 16, part six.
 - Day 85: Project 16, part seven. (**Wrap-up day**).
+- [Day 86](Flashzilla): Project 17, part one.
 
 ## Challenge days
 
