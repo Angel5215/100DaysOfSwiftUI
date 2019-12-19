@@ -8,6 +8,7 @@ This is an app that helps users learn things using flashcards - cards with one t
 - Gestures
 - CoreHaptics
 - `allowsHitTesting()`
+- Combine
 
 ## Images
 
@@ -20,3 +21,8 @@ This is an app that helps users learn things using flashcards - cards with one t
 - When `allowsHitTesting()` is attached to a view with its parameter set to `false`, the view isn't considered tapptable. It doesn't catch any taps, but things behind the view will get tapped instead.
 
 - The `contentShape()` modifier lets us specify the tappable shape for something. For example, the tappable shape for a circle is a circle of the same size.
+
+- The Combine framework adds an extension to `Timer` so that timers can become **publishers**, which are things that announce when their value changes. 
+
+- The `@Published` property wrapped and the `ObsevableObject` protocol both come from Combine. When you import SwiftUI, it implicitly imports Combine.
+

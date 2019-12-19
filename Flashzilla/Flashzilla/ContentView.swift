@@ -10,56 +10,25 @@ import SwiftUI
 import CoreHaptics
 
 struct ContentView: View {
+    
+    // Timer fires every second; it should run on the main thread;
+    // it should run on the common run loop. It connects the timer immediately
+    // which means it will start counting time.
+    let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
+    @State private var counter = 0
+    
     var body: some View {
-        ScrollView(.vertical) {
-            VStack {
-                Text("Gestures")
-                    .font(.title)
-                    .fontWeight(.bold)
-                GesturesView()
-            }
-            .frame(maxWidth: .infinity)
-            
-            Spacer(minLength: 40)
-            
-            VStack {
-                Text("Vibrations")
-                    .font(.title)
-                    .fontWeight(.bold)
-                HapticsView()
-            }
-            .frame(maxWidth: .infinity)
-            
-            Spacer(minLength: 40)
-            
-            VStack {
-                Text("Disabling user interactivity")
-                    .font(.title)
-                    .fontWeight(.bold)
-                UserInteractivityView()
+        Text("Hello world!")
+            .onReceive(timer) { time in
+                if self.counter == 5 {
+                    self.timer.upstream.connect().cancel()
+                } else {
+                    print("The time is now \(time)")
+                }
                 
-                VStack {
-                    Text("Hello")
-                    // SwiftUI won't trigger actions when a stack spacer is tapped due
-                    // to its `contentShape`
-                    Spacer().frame(height: 100)
-                    Text("World")
-                }
-                // Comment this to get the default behavior of not
-                // getting taps with spacers
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    print("VStack tapped!")
-                }
+                self.counter += 1
             }
-            .frame(maxWidth: .infinity)
-            
-            Spacer(minLength: 40)
-        }
-        .frame(maxWidth: .infinity)
     }
-    
-    
 }
 
 struct UserInteractivityView: View {
