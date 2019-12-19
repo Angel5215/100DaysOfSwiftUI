@@ -28,6 +28,15 @@ struct ContentView: View {
                 
                 self.counter += 1
             }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                print("Moving to the background!")
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                print("Moving back to the foreground!")
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
+                print("User took a screenshot!")
+            }
     }
 }
 
