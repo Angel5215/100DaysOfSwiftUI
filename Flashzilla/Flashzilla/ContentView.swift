@@ -17,7 +17,13 @@ struct ContentView: View {
     let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     @State private var counter = 0
     
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    @Environment(\.accessibilityReduceTransparency) var reduceTransparency
+    @Environment(\.accessibilityReduceMotion) var reduceMotion
+    @State var scale: CGFloat = 1
+    
     var body: some View {
+        VStack(spacing: 20) {
         Text("Hello world!")
             .onReceive(timer) { time in
                 if self.counter == 5 {
@@ -37,8 +43,45 @@ struct ContentView: View {
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
                 print("User took a screenshot!")
             }
+            
+            HStack {
+                if differentiateWithoutColor {
+                    Image(systemName: "checkmark.circle")
+                }
+
+                Text("Success")
+            }
+            .padding()
+            .background(differentiateWithoutColor ? Color.black : Color.green)
+            .foregroundColor(Color.white)
+            .clipShape(Capsule())
+            
+            Text("Hello, World!")
+            .scaleEffect(scale)
+            .onTapGesture {
+                withOptionalAnimation {
+                    self.scale *= 1.5
+                }
+            }
+            
+            Text("Hello, World!")
+                .padding()
+                .background(reduceTransparency ? Color.black : Color.black.opacity(0.5))
+                .foregroundColor(Color.white)
+                .clipShape(Capsule())
+        }
     }
 }
+
+
+public func withOptionalAnimation<Result>(_ animation: Animation? = .default, _ body: () throws -> Result) rethrows -> Result {
+    if UIAccessibility.isReduceMotionEnabled {
+        return try body()
+    } else {
+        return try withAnimation(animation, body)
+    }
+}
+
 
 struct UserInteractivityView: View {
     var body: some View {
