@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3C57E323B021A900584605 /* EditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C57E223B021A900584605 /* EditCardsView.swift */; };
 		FAABB6D523AC97720001B62B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABB6D423AC97720001B62B /* Card.swift */; };
 		FAABB6D723AC98E50001B62B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABB6D623AC98E50001B62B /* CardView.swift */; };
 		FAF8AE1523A9DEAA00DE29C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8AE1423A9DEAA00DE29C5 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3C57E223B021A900584605 /* EditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardsView.swift; sourceTree = "<group>"; };
 		FAABB6D423AC97720001B62B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FAABB6D623AC98E50001B62B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FAF8AE1123A9DEAA00DE29C5 /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				FAF8AE1623A9DEAA00DE29C5 /* SceneDelegate.swift */,
 				FAF8AE1823A9DEAA00DE29C5 /* ContentView.swift */,
 				FAABB6D623AC98E50001B62B /* CardView.swift */,
+				FA3C57E223B021A900584605 /* EditCardsView.swift */,
 				FAABB6D423AC97720001B62B /* Card.swift */,
 				FAF8AE1A23A9DEAB00DE29C5 /* Assets.xcassets */,
 				FAF8AE1F23A9DEAB00DE29C5 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3C57E323B021A900584605 /* EditCardsView.swift in Sources */,
 				FAF8AE1523A9DEAA00DE29C5 /* AppDelegate.swift in Sources */,
 				FAF8AE1723A9DEAA00DE29C5 /* SceneDelegate.swift in Sources */,
 				FAF8AE1923A9DEAA00DE29C5 /* ContentView.swift in Sources */,
