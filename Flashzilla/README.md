@@ -15,7 +15,7 @@ This is an app that helps users learn things using flashcards - cards with one t
 
 ## Images
 
-<p align="center"><img src="img/run-example.gif" height="600px"></p>
+<p align="center"><img src="img/run-example.gif"></p>
 
 ## Notes
 
