@@ -18,6 +18,8 @@ struct ContentView: View {
     @State private var isActive = true
     @State private var showingEditScreen = false
     @State private var engine: CHHapticEngine?
+    @State private var selectionSetting: Bool = false
+    @State private var showingSettingsScreen = false
     
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
@@ -46,10 +48,8 @@ struct ContentView: View {
                 
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: self.cards[index]) {
-                            withAnimation {
-                                self.removeCard(at: index)
-                            }
+                        CardView(card: self.cards[index]) { status in
+                            self.handleCardRemoval(at: index, for: status)
                         }
                         .stacked(at: index, in: self.cards.count)
                         .allowsHitTesting(index == self.cards.count - 1)
@@ -88,6 +88,18 @@ struct ContentView: View {
             
             VStack {
                 HStack {
+                    Button(action: {
+                        self.showingSettingsScreen = true
+                    }) {
+                        Image(systemName: "gear")
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+                    .sheet(isPresented: $showingSettingsScreen) {
+                        SettingsView(selectionToggle: self.$selectionSetting)
+                    }
+                    
                     Spacer()
 
                     Button(action: {
@@ -97,6 +109,9 @@ struct ContentView: View {
                             .padding()
                             .background(Color.black.opacity(0.7))
                             .clipShape(Circle())
+                    }
+                    .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
+                        EditCardsView()
                     }
                 }
 
@@ -165,9 +180,6 @@ struct ContentView: View {
                 self.isActive = true
             }
         }
-        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
-            EditCardsView()
-        }
         .onAppear(perform: resetCards)
         .onAppear(perform: prepareHaptics)
     }
@@ -193,6 +205,7 @@ struct ContentView: View {
                 self.cards = decoded
             }
         }
+        self.selectionSetting = UserDefaults.standard.bool(forKey: "SelectionSetting")
     }
     
     private func prepareHaptics() {
@@ -228,6 +241,21 @@ struct ContentView: View {
             try player?.start(atTime: 0)
         } catch {
             print("Error while playing pattern: \(error.localizedDescription)")
+        }
+    }
+    
+    private func handleCardRemoval(at index: Int, for status: Bool) {
+        let card = self.cards[index]
+        
+        withAnimation {
+            self.removeCard(at: index)
+        }
+        
+        if !status && selectionSetting {
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                guard self.isActive else { return }
+                self.cards.insert(card, at: 0)
+            }
         }
     }
 }
