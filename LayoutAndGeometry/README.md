@@ -32,3 +32,6 @@ var body: some View {
 - The simplest alignment option is to use the `alignment` parameter of the `frame()` modifier. Another option is to use the `alignment` parameter of a stack.
 
 - SwiftUI provides an `alignmentGuide()` modifier to create custom alignments. It takes two parameters: the guide we want to change and a closure that returns a new alignment. The closure is given a **`ViewDimensions`** object that contains the width and height of its view, along with the ability to read its various edges.
+
+- To define a custom layout guide you should create an extension on either `VerticalAlignment` or `HorizontalAlignment`, and be a custom type that conforms to the `AlignmentID` protocol.
+
