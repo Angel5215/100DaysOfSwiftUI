@@ -35,3 +35,7 @@ var body: some View {
 
 - To define a custom layout guide you should create an extension on either `VerticalAlignment` or `HorizontalAlignment`, and be a custom type that conforms to the `AlignmentID` protocol.
 
+- SwiftUI offers two ways of positioning views: absolute positions using `position()` and relative positions using `offset()`.
+
+- When using `position()` we get back a new view that **takes up all available space** so it can position its child at the correct location.
+
