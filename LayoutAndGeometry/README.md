@@ -6,8 +6,12 @@ Technique project used to explore how SwiftUI handles layout.
 ## Topics
 
 - `GeometryReader`
+- SwiftUI three-step layout system
 - Alignment
 - `ViewDimensions`
+- Positioning with `position()` and `offset()`
+- `GeometryProxy`
+- Coordinate spaces
 
 ## Images
 
@@ -39,3 +43,9 @@ var body: some View {
 
 - When using `position()` we get back a new view that **takes up all available space** so it can position its child at the correct location.
 
+- `GeometryProxy` provides a `frame(in:)` method rather than simple properties because the concept of a frame includes *X* and *Y* coordinates which doesn't make sense in isolation. SwiftUI offers **coordinate spaces**: 
+    - When you want to read a view's absolute X and Y coordinates (the **global space** - a view's frame relative to the whole screen)
+    - When you want to read a view's X and Y coordinates compared to their parent (the **local space** - measuring a view's frame relative to its parent)
+    - Custom coordinate spaces using the `coordinateSpace()` modifier to a view - any of its children can then read its frame relative to that coordinate space.
+
+    
