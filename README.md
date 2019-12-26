@@ -134,6 +134,8 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 90: Project 17, part five.
 - Day 91: Project 17, part six (**Wrap-up day**).
 - [Day 92](LayoutAndGeometry): Project 18, part one.
+- Day 93: Project 18, part two.
+- Day 94: Project 18, part three (**Wrap-up day**).
 
 ## Challenge days
 
@@ -167,3 +169,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 76: `challenge/project_fifteen_day_76`
 - Day 85: `challenge/project_sixteen_day_85`
 - Day 91: `challenge/project_seventeen_day_91`
+- Day 94: `challenge/project_eighteen_day_94`

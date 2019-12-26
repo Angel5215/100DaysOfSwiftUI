@@ -15,7 +15,7 @@ Technique project used to explore how SwiftUI handles layout.
 
 ## Images
 
-<p align="center"><img src="img/run-example.gif"></p>
+<p align="center"><img src="img/run-example.gif" height="600px"></p>
 
 ## Notes
 
