@@ -9,7 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    var body: some View {
+        NavigationView {
+            List {
+                NavigationLink(destination:
+                    OuterView()
+                        .background(Color.red)
+                        .coordinateSpace(name: "Custom")) {
+                    Text("Frames and Coordinates")
+                }
+                
+                NavigationLink(destination: ScrollViewVerticalEffectView()) {
+                    Text("ScrollView Effects with GeometryReader 1")
+                }
+                
+                NavigationLink(destination: ScrollViewHorizontalEffectView()) {
+                    Text("ScrollView Effects with GeometryReader 2")
+                }
+            }
+            .navigationBarTitle("Layout and Geometry")
+        }
+    }
+}
+
+struct ScrollViewHorizontalEffectView: View {
     let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
     
     var body: some View {
@@ -29,7 +52,31 @@ struct ContentView: View {
                 .padding(.horizontal, ((fullView.size.width - 150) / 2))
             }
         }
-        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("ScrollView Effects 2", displayMode: .inline)
+    }
+}
+
+struct ScrollViewVerticalEffectView: View {
+    
+    let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
+    
+    var body: some View {
+        GeometryReader { fullView in
+            ScrollView(.vertical) {
+                ForEach(0..<50) { index in
+                    GeometryReader { geo in
+                        Text("Row #\(index)")
+                            .font(.title)
+                            .frame(width: fullView.size.width)
+                            .background(self.colors[index % 7])
+                            .rotation3DEffect(.degrees(Double(geo.frame(in: .global).minY - fullView.size.height / 2) / 5),
+                                              axis: (x: 0, y: 1, z: 0))
+                    }
+                    .frame(height: 40)
+                }
+            }
+        }
+        .navigationBarTitle("ScrollView Effects 1", displayMode: .inline)
     }
 }
 
@@ -41,6 +88,7 @@ struct OuterView: View {
                 .background(Color.green)
             Text("Bottom")
         }
+        .navigationBarTitle("Frames and Coordinates", displayMode: .inline)
     }
 }
 
