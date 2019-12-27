@@ -38,6 +38,11 @@ struct ContentView: View {
                         GeometryReader { localGeo in
                             HStack {
                                 Image(systemName: "\(word.count).circle")
+                                    .foregroundColor(
+                                        Color(hue: Double(localGeo.frame(in: .global).maxY / fullGeo.frame(in: .global).maxY) - 0.34,
+                                              saturation: 1,
+                                              brightness: 0.8)
+                                    )
                                 Text(word)
                                 Spacer()
                             }
