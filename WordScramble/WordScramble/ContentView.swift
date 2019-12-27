@@ -10,7 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     
+    #if targetEnvironment(simulator)
+    @State private var usedWords = "Lorem ipsum dolor sit amet consectetur adipiscing elit parturient lobortis dapibus, platea praesent feugiat mi mus vitae ornare lectus eleifend, etiam curae suspendisse urna nulla porttitor luctus himenaeos conubia. Lectus nibh consequat quam id tempus vestibulum hendrerit vivamus sollicitudin non ullamcorper, sociosqu malesuada euismod at eros ac gravida dis in tristique. Nec primis natoque aliquet parturient ut posuere auctor, fames eu at rhoncus metus felis est eleifend, magna vehicula morbi gravida sed class. Dis mattis torquent nostra magnis integer ac curae morbi convallis, condimentum potenti justo eros sapien curabitur mauris nascetur non, gravida pharetra venenatis imperdiet enim dapibus inceptos quis".split(separator: " ").map(String.init).filter { $0.count >= 3 }
+    #else
     @State private var usedWords = [String]()
+    #endif
+    
+    
     @State private var rootWord = ""
     @State private var newWord = ""
     
@@ -19,16 +25,30 @@ struct ContentView: View {
     @State private var showingError = false
     
     var body: some View {
+        
         NavigationView {
-            VStack {
-                TextField("Enter your word", text: $newWord, onCommit: addNewWord)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .autocapitalization(.none)
-                
-                List(usedWords, id: \.self) {
-                    Image(systemName: "\($0.count).circle")
-                    Text($0)
+            GeometryReader { fullGeo in
+                VStack {
+                    TextField("Enter your word", text: self.$newWord, onCommit: self.addNewWord)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .autocapitalization(.none)
+                    
+                    List(self.usedWords, id: \.self) { word in
+                        GeometryReader { localGeo in
+                            HStack {
+                                Image(systemName: "\(word.count).circle")
+                                Text(word)
+                                Spacer()
+                            }
+                            .offset(x: max(0, ((localGeo.frame(in: .global).maxY / fullGeo.frame(in: .global).maxY) * 100 - 80) * 20 - 100) , y: 0)
+                            .onTapGesture {
+                                print(localGeo.frame(in: .global).maxY, fullGeo.frame(in: .global).maxY)
+                                print("RATIO: ", (localGeo.frame(in: .global).maxY / fullGeo.frame(in: .global).maxY))
+                                print("%: ", (localGeo.frame(in: .global).maxY / fullGeo.frame(in: .global).maxY) * 100)
+                            }
+                        }
+                    }
                 }
             }
             .navigationBarTitle(rootWord)
