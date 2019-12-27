@@ -118,7 +118,7 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 77: Milestone: Projects 13-15 **(TODO)**
 - Day 78: Time for MapKit **(TODO)**.
 
-## Days 79-93: Controlling UI flow
+## Days 79-94: Controlling UI flow
 
 - [Day 79](HotProspects): Project 16, part one.
 - Day 80: Project 16, part two.
@@ -137,6 +137,10 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 93: Project 18, part two.
 - Day 94: Project 18, part three (**Wrap-up day**).
 
+## Day 95: Consolidation VII
+
+- Day 95: Milestione: Project 16-18. **(TODO)**
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
@@ -147,6 +151,7 @@ The projects in this section are completely started from scratch and are designe
 - Challenge 4. **(WIP at `challenge/consolidation_iv_day_47`)**
 - Challenge 5. **(WIP at `challenge/consolidation_v_day_60`)**
 - Challenge 6. **TODO**
+- Challenge 7. **TODO**
 
 ## Wrap-up challenges
 
