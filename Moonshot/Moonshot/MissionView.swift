@@ -34,14 +34,18 @@ struct MissionView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { fullSize in
             ScrollView(.vertical) {
                 VStack {
+                    GeometryReader { geo in
                     Image(self.mission.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
-                        .padding(.top)
+                        .frame(width: geo.size.width)
+                        .scaleEffect(
+                            max(0.2, min(1.0, fullSize.size.height / (fullSize.frame(in: .global).maxY - geo.frame(in: .global).minY)))
+                        )
+                    }
                     
                     Text(self.mission.description)
                         .padding()
