@@ -141,6 +141,10 @@ Repository made to follow 100 Days of SwiftUI.
 
 - Day 95: Milestione: Project 16-18. **(TODO)**
 
+## Day 96-99: One last project
+
+- [Day 96](SnowSeeker): Project 19, part one.
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
