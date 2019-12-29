@@ -13,6 +13,9 @@
 		FA9A82A123B6F17800BCDEF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9A82A023B6F17800BCDEF5 /* Assets.xcassets */; };
 		FA9A82A423B6F17800BCDEF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9A82A323B6F17800BCDEF5 /* Preview Assets.xcassets */; };
 		FA9A82A723B6F17800BCDEF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9A82A523B6F17800BCDEF5 /* LaunchScreen.storyboard */; };
+		FAF6319F23B867AE00E49685 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = FAF6319E23B867AE00E49685 /* resorts.json */; };
+		FAF631A123B867D500E49685 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF631A023B867D500E49685 /* Resort.swift */; };
+		FAF631A323B8690900E49685 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF631A223B8690900E49685 /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FA9A82A323B6F17800BCDEF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA9A82A623B6F17800BCDEF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA9A82A823B6F17800BCDEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF6319E23B867AE00E49685 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		FAF631A023B867D500E49685 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		FAF631A223B8690900E49685 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,12 @@
 				FA9A829A23B6F17700BCDEF5 /* AppDelegate.swift */,
 				FA9A829C23B6F17700BCDEF5 /* SceneDelegate.swift */,
 				FA9A829E23B6F17700BCDEF5 /* ContentView.swift */,
+				FAF631A023B867D500E49685 /* Resort.swift */,
+				FAF631A223B8690900E49685 /* Bundle-Decodable.swift */,
 				FA9A82A023B6F17800BCDEF5 /* Assets.xcassets */,
 				FA9A82A523B6F17800BCDEF5 /* LaunchScreen.storyboard */,
 				FA9A82A823B6F17800BCDEF5 /* Info.plist */,
+				FAF6319E23B867AE00E49685 /* resorts.json */,
 				FA9A82A223B6F17800BCDEF5 /* Preview Content */,
 			);
 			path = SnowSeeker;
@@ -135,6 +144,7 @@
 			files = (
 				FA9A82A723B6F17800BCDEF5 /* LaunchScreen.storyboard in Resources */,
 				FA9A82A423B6F17800BCDEF5 /* Preview Assets.xcassets in Resources */,
+				FAF6319F23B867AE00E49685 /* resorts.json in Resources */,
 				FA9A82A123B6F17800BCDEF5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +158,8 @@
 			files = (
 				FA9A829B23B6F17700BCDEF5 /* AppDelegate.swift in Sources */,
 				FA9A829D23B6F17700BCDEF5 /* SceneDelegate.swift in Sources */,
+				FAF631A323B8690900E49685 /* Bundle-Decodable.swift in Sources */,
+				FAF631A123B867D500E49685 /* Resort.swift in Sources */,
 				FA9A829F23B6F17700BCDEF5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
