@@ -28,10 +28,11 @@ struct ResortDetailsView: View {
     }
 
     var body: some View {
-         VStack {
-               Text("Size: \(size)")
-               Text("Price: \(price)")
-           }
+        Group {
+            Text("Size: \(size)").layoutPriority(1)
+            Spacer().frame(height: 0)
+            Text("Price: \(price)").layoutPriority(1)
+        }
     }
 }
 
