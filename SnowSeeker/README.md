@@ -9,7 +9,7 @@ This is an app to let users browse ski resorts around the world, to help them fi
 
 ## Images
 
-<p align="center"><img src="img/run-example.gif" height="600px"></p>
+<p align="center"><img src="img/run-example.gif"></p>
 
 ## Notes
 

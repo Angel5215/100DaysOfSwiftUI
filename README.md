@@ -144,6 +144,8 @@ Repository made to follow 100 Days of SwiftUI.
 ## Day 96-99: One last project
 
 - [Day 96](SnowSeeker): Project 19, part one.
+- Day 97: Project 19, part two.
+- Day 98: Project 19, part three.
 
 ## Challenge days
 
