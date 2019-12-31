@@ -148,6 +148,10 @@ Repository made to follow 100 Days of SwiftUI.
 - Day 98: Project 19, part three.
 - Day 99: Project 19, part four (**Wrap-up day**)
 
+## Day 100: Wrap up
+
+- Day 100: [Final exam](https://www.hackingwithswift.com/100/swiftui/100)
+
 ## Challenge days
 
 The projects in this section are completely started from scratch and are designed to test what I learned over the last days. My attempt at solving them will be uploaded in the [Challenges](Challenges) folder.
