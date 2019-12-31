@@ -146,6 +146,7 @@ Repository made to follow 100 Days of SwiftUI.
 - [Day 96](SnowSeeker): Project 19, part one.
 - Day 97: Project 19, part two.
 - Day 98: Project 19, part three.
+- Day 99: Project 19, part four (**Wrap-up day**)
 
 ## Challenge days
 
@@ -181,3 +182,4 @@ The solution for challenges of wrap-up days will be uploaded in separate branche
 - Day 85: `challenge/project_sixteen_day_85`
 - Day 91: `challenge/project_seventeen_day_91`
 - Day 94: `challenge/project_eighteen_day_94`
+- Day 99: `challenge/project_nineteen_day_99`
