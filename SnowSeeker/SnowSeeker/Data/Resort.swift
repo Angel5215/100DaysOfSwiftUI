@@ -26,6 +26,8 @@ struct Resort: Codable, Identifiable {
     }
 }
 
+
+
 #if DEBUG
 extension Resort {
     static let allResorts: [Resort] = Bundle.main.decode("resorts.json")
