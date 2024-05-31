@@ -1,7 +1,6 @@
+# 100DaysOfSwiftUI (SwiftUI 1.0 version)
 
-# 100DaysOfSwiftUI
-
-Repository made to follow 100 Days of SwiftUI.
+Repository made to follow 100 Days of SwiftUI. This branch is created to keep the progress made in the original 100 Days of SwiftUI.
 
 ## Days
 ### Days 1 - 12: Introduction to Swift
