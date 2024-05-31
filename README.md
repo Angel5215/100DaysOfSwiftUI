@@ -158,8 +158,8 @@ The projects in this section are completely started from scratch and are designe
 - [Challenge 1](Challenges/Unit%20Converter). Unit conversion app.
 - [Challenge 2](Challenges/Brain%20RPS). Brain training with rock, paper, scissors.
 - [Challenge 3](Challenges/MultiTables). Multiplication Tables practice.
-- Challenge 4. **(WIP at `challenge/consolidation_iv_day_47`)**
-- Challenge 5. **(WIP at `challenge/consolidation_v_day_60`)**
+- Challenge 4. **(WIP at `legacy/swiftui-1/challenge/consolidation_iv_day_47`)**
+- Challenge 5. **(WIP at `legacy/swiftui-1/challenge/consolidation_v_day_60`)**
 - Challenge 6. **TODO**
 - Challenge 7. **TODO**
 
@@ -167,22 +167,22 @@ The projects in this section are completely started from scratch and are designe
 
 The solution for challenges of wrap-up days will be uploaded in separate branches to keep the projects in a state that can be used for a later review or upcoming challenges that use the same projects. To check my attempts at solving them, just checkout the branch from the following list:
 
-- Day 18: `challenge/project_one_day_18`
-- Day 22: `challenge/project_two_day_22`
-- Day 24: `challenge/project_three_day_24`
-- Day 28: `challenge/project_four_day_28`
-- Day 31: `challenge/project_five_day_31`
-- Day 34: `challenge/project_six_day_34`
-- Day 38: `challenge/project_seven_day_38`
-- Day 42: `challenge/project_eight_day_42` 
-- Day 46: `challenge/project_nine_day_46`
-- Day 52: `challenge/project_ten_day_52`
-- Day 56: `challenge/project_eleven_day_56`
-- Day 59: `challenge/project_twelve_day_59`
-- Day 67: `challenge/project_thirteen_day_67`
-- Day 73: `challenge/project_fourteen_day_73`
-- Day 76: `challenge/project_fifteen_day_76`
-- Day 85: `challenge/project_sixteen_day_85`
-- Day 91: `challenge/project_seventeen_day_91`
-- Day 94: `challenge/project_eighteen_day_94`
-- Day 99: `challenge/project_nineteen_day_99`
+- Day 18: `legacy/swiftui-1/challenge/project_one_day_18`
+- Day 22: `legacy/swiftui-1/challenge/project_two_day_22`
+- Day 24: `legacy/swiftui-1/challenge/project_three_day_24`
+- Day 28: `legacy/swiftui-1/challenge/project_four_day_28`
+- Day 31: `legacy/swiftui-1/challenge/project_five_day_31`
+- Day 34: `legacy/swiftui-1/challenge/project_six_day_34`
+- Day 38: `legacy/swiftui-1/challenge/project_seven_day_38`
+- Day 42: `legacy/swiftui-1/challenge/project_eight_day_42` 
+- Day 46: `legacy/swiftui-1/challenge/project_nine_day_46`
+- Day 52: `legacy/swiftui-1/challenge/project_ten_day_52`
+- Day 56: `legacy/swiftui-1/challenge/project_eleven_day_56`
+- Day 59: `legacy/swiftui-1/challenge/project_twelve_day_59`
+- Day 67: `legacy/swiftui-1/challenge/project_thirteen_day_67`
+- Day 73: `legacy/swiftui-1/challenge/project_fourteen_day_73`
+- Day 76: `legacy/swiftui-1/challenge/project_fifteen_day_76`
+- Day 85: `legacy/swiftui-1/challenge/project_sixteen_day_85`
+- Day 91: `legacy/swiftui-1/challenge/project_seventeen_day_91`
+- Day 94: `legacy/swiftui-1/challenge/project_eighteen_day_94`
+- Day 99: `legacy/swiftui-1/challenge/project_nineteen_day_99`
