@@ -20,6 +20,7 @@ struct ContentView: View {
                     value: $checkAmount,
                     format: .currency(code: Locale.current.currency?.identifier ?? "USD")
                 )
+                .keyboardType(.decimalPad)
             }
 
             Section {
