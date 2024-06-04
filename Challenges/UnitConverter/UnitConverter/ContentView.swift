@@ -23,6 +23,7 @@ struct ContentView: View {
             Form {
                 Section("Input value") {
                     TextField("Type your input value", value: $inputValue, format: .number)
+                        .keyboardType(.decimalPad)
                         .focused($isFocused)
                 }
 
