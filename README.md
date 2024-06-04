@@ -9,15 +9,15 @@ This repository originally contained progress for the original 100 Days of Swift
 
 ### Days 1-14: Introduction to Swift
 
-TBD
+The first 14 days provide a gentle warm up for SwiftUI learning as they cover the fundamentals of the Swift programming language. 
 
 ### Day 15: Consolidation I
 
-TBD
+This day covers a quick review on all topics covered on the first 14 days.
 
 ### Days 16-24: Starting SwiftUI
 
-TBD
+- Days 16~18 – Project 1: [WeSplit](Days/WeSplit)
 
 ### Day 25: Consolidation II
 
