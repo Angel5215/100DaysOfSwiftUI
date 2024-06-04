@@ -15,7 +15,23 @@ struct ContentView: View {
     @FocusState private var isFocused: Bool
 
     private var result: Double {
-        0
+        switch outputUnit {
+        case "kilometers": inputInMeters / 1000
+        case "feet": inputInMeters / 0.3048
+        case "yards": inputInMeters / 0.9144
+        case "miles": inputInMeters / 1609.34
+        default: inputInMeters
+        }
+    }
+
+    private var inputInMeters: Double {
+        switch inputUnit {
+        case "kilometers": inputValue * 1000
+        case "feet": inputValue * 0.3048
+        case "yards": inputValue * 0.9144
+        case "miles": inputValue * 1609.34
+        default: inputValue
+        }
     }
 
     var body: some View {
@@ -42,7 +58,7 @@ struct ContentView: View {
                 }
 
                 Section("Results") {
-                    Text(result, format: .number)
+                    Text(result.formatted())
                 }
             }
             .navigationTitle("UnitConverter")
