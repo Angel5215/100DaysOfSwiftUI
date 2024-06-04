@@ -26,17 +26,17 @@ struct ContentView: View {
         return amountPerPerson
     }
 
+    private var currencyCode: String {
+        Locale.current.currency?.identifier ?? "USD"
+    }
+
     var body: some View {
         NavigationStack {
             Form {
                 Section {
-                    TextField(
-                        "Amount",
-                        value: $checkAmount,
-                        format: .currency(code: Locale.current.currency?.identifier ?? "USD")
-                    )
-                    .keyboardType(.decimalPad)
-                    .focused($amountIsFocused)
+                    TextField("Amount", value: $checkAmount, format: .currency(code: currencyCode))
+                        .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)
 
                     Picker("Number of people", selection: $numberOfPeople) {
                         ForEach(2 ..< 100) {
@@ -55,11 +55,11 @@ struct ContentView: View {
                 }
 
                 Section("Amount per person") {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalPerPerson, format: .currency(code: currencyCode))
                 }
 
                 Section("Total amount for the check") {
-                    Text(grandTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(grandTotal, format: .currency(code: currencyCode))
                 }
             }
             .navigationTitle("WeSplit")
