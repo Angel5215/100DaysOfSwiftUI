@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var outputUnit = "kilometers"
     @State private var inputValue = 0.0
 
+    @FocusState private var isFocused: Bool
+
     private var result: Double {
         0
     }
@@ -21,6 +23,7 @@ struct ContentView: View {
             Form {
                 Section("Input value") {
                     TextField("Type your input value", value: $inputValue, format: .number)
+                        .focused($isFocused)
                 }
 
                 Section("Unit configuration") {
@@ -42,6 +45,13 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("UnitConverter")
+            .toolbar {
+                if isFocused {
+                    Button("Done") {
+                        isFocused = false
+                    }
+                }
+            }
         }
     }
 }
