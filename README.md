@@ -17,7 +17,9 @@ This day covers a quick review on all topics covered on the first 14 days.
 
 ### Days 16-24: Starting SwiftUI
 
-- Days 16~18 – Project 1: [WeSplit](Days/WeSplit)
+- Days 16~18: Project 1 - [WeSplit](Days/WeSplit)
+- Day 19: [Challenge - Unit Converter](Challenges/UnitConverter)
+- Days 20~22: Project 2 - [GuessTheFlag](Days/GuessTheFlag)
 
 ### Day 25: Consolidation II
 
