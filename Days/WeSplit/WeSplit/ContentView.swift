@@ -60,6 +60,7 @@ struct ContentView: View {
 
                 Section("Total amount for the check") {
                     Text(grandTotal, format: .currency(code: currencyCode))
+                        .foregroundStyle(tipPercentage == 0 ? .red : .primary)
                 }
             }
             .navigationTitle("WeSplit")
