@@ -33,6 +33,9 @@ struct ContentView: View {
             .padding()
             .padding()
             .background(.thinMaterial)
+
+            Text("Some title")
+                .largeViewTitleStyle()
         }
     }
 }
