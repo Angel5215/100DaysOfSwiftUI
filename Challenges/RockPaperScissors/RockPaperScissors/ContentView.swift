@@ -28,50 +28,69 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack {
-            Text("Score: \(score)")
+        ZStack {
+            LinearGradient(
+                stops: [
+                    Gradient.Stop(
+                        color: Color(red: 38 / 255, green: 0, blue: 0),
+                        location: 0.1
+                    ),
+                    Gradient.Stop(
+                        color: Color(red: 36 / 255, green: 1 / 255, blue: 63 / 255),
+                        location: 0.3
+                    ),
+                    Gradient.Stop(
+                        color: Color(red: 38 / 255, green: 0, blue: 0),
+                        location: 0.8
+                    ),
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
 
-            Text("You should \(shouldPlayerWinText) against \(currentChoiceText)")
+            VStack(spacing: 16) {
+                Text("Score: \(score)")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(.white)
 
-            VStack {
-                Text("Select your move:")
+                VStack {
+                    Text("You should")
+                    Text(shouldPlayerWinText.uppercased())
+                        .font(.title.bold())
+                    Text("against")
+                    Text(currentChoiceText.uppercased())
+                        .font(.title.bold())
+                }
+                .foregroundStyle(.white)
+                .font(.headline)
 
-                Button("🪨") {
-                    updateScore(userMove: "Rock")
+                VStack {
+                    Text("Select your move:")
+                        .foregroundStyle(.secondary)
+                        .font(.headline)
+
+                    SelectionButton(title: "🪨", subtitle: "Rock") {
+                        updateScore(userMove: "Rock")
+                    }
+                    SelectionButton(title: "📃", subtitle: "Paper") {
+                        updateScore(userMove: "Paper")
+                    }
+                    SelectionButton(title: "✂️", subtitle: "Scissors") {
+                        updateScore(userMove: "Scissors")
+                    }
                 }
-                .padding()
-                .frame(minWidth: 150)
-                .background(.blue)
-                .foregroundStyle(.white)
-                .font(.system(size: 80))
-                .clipShape(.capsule)
-                .overlay(Capsule().stroke(.black, lineWidth: 2))
-                Button("📃") {
-                    updateScore(userMove: "Paper")
-                }
-                .padding()
-                .frame(minWidth: 150)
-                .background(.blue)
-                .foregroundStyle(.white)
-                .font(.system(size: 80))
-                .clipShape(.capsule)
-                .overlay(Capsule().stroke(.black, lineWidth: 2))
-                Button("✂️") {
-                    updateScore(userMove: "Scissors")
-                }
-                .padding()
-                .frame(minWidth: 150)
-                .background(.blue)
-                .foregroundStyle(.white)
-                .font(.system(size: 80))
-                .clipShape(.capsule)
-                .overlay(Capsule().stroke(.black, lineWidth: 2))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.regularMaterial)
+                .clipShape(.rect(cornerRadius: 20))
             }
-        }
-        .alert("Game Over", isPresented: $isGameOver) {
-            Button("Restart", action: restartGame)
-        } message: {
-            Text("Your final score is \(score).")
+            .padding()
+            .alert("Game Over", isPresented: $isGameOver) {
+                Button("Restart", action: restartGame)
+            } message: {
+                Text("Your final score is \(score).")
+            }
         }
     }
 
@@ -115,6 +134,42 @@ struct ContentView: View {
         score = 0
         currentTurn = 0
         shuffleMoves()
+    }
+}
+
+struct SelectionButton: View {
+    let title: String
+    let subtitle: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 0) {
+                Text(title)
+                    .foregroundStyle(.white)
+                    .font(.system(size: 80))
+                Text(subtitle)
+                    .foregroundStyle(.white)
+                    .font(.system(size: 20).bold().smallCaps())
+            }
+            .padding()
+            .frame(minWidth: 200)
+            .background(
+                LinearGradient(
+                    stops: [
+                        Gradient.Stop(color: .blue.opacity(0.9), location: 0),
+                        Gradient.Stop(color: .purple.opacity(0.9), location: 0),
+                        Gradient.Stop(color: .blue.opacity(0.9), location: 0.4),
+                        Gradient.Stop(color: .red.opacity(0.9), location: 1),
+                        Gradient.Stop(color: .blue.opacity(0.9), location: 1),
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+        }
+        .clipShape(.capsule)
+        .overlay(Capsule().stroke(.black, lineWidth: 2))
     }
 }
 
