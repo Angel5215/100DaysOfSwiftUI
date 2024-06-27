@@ -24,7 +24,7 @@ This day covers a quick review on all topics covered on the first 14 days.
 
 ### Day 25: Consolidation II
 
-TBD
+- Day 25: [Challenge - RockPaperScissors](Challenges/RockPaperScissors)
 
 ### Days 26-34: Expanding your skills
 
