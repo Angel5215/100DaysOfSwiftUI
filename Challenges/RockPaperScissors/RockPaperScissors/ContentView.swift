@@ -36,15 +36,36 @@ struct ContentView: View {
             VStack {
                 Text("Select your move:")
 
-                Button("Rock") {
+                Button("🪨") {
                     updateScore(userMove: "Rock")
                 }
-                Button("Paper") {
+                .padding()
+                .frame(minWidth: 150)
+                .background(.blue)
+                .foregroundStyle(.white)
+                .font(.system(size: 80))
+                .clipShape(.capsule)
+                .overlay(Capsule().stroke(.black, lineWidth: 2))
+                Button("📃") {
                     updateScore(userMove: "Paper")
                 }
-                Button("Scissors") {
+                .padding()
+                .frame(minWidth: 150)
+                .background(.blue)
+                .foregroundStyle(.white)
+                .font(.system(size: 80))
+                .clipShape(.capsule)
+                .overlay(Capsule().stroke(.black, lineWidth: 2))
+                Button("✂️") {
                     updateScore(userMove: "Scissors")
                 }
+                .padding()
+                .frame(minWidth: 150)
+                .background(.blue)
+                .foregroundStyle(.white)
+                .font(.system(size: 80))
+                .clipShape(.capsule)
+                .overlay(Capsule().stroke(.black, lineWidth: 2))
             }
         }
         .alert("Game Over", isPresented: $isGameOver) {
