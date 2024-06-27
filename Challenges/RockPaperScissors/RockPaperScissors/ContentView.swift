@@ -7,9 +7,13 @@ import SwiftUI
 
 struct ContentView: View {
     private let moves = ["Rock", "Paper", "Scissors"]
+
     @State private var currentChoice = Int.random(in: 0 ..< 2)
     @State private var shouldPlayerWin = Bool.random()
+
     @State private var score = 0
+    @State private var currentTurn = 0
+    @State private var isGameOver = false
 
     private var shouldPlayerWinText: String {
         if shouldPlayerWin {
@@ -43,6 +47,11 @@ struct ContentView: View {
                 }
             }
         }
+        .alert("Game Over", isPresented: $isGameOver) {
+            Button("Restart", action: restartGame)
+        } message: {
+            Text("Your final score is \(score).")
+        }
     }
 
     private func result(for userMove: String, against systemMove: String, shouldWin: Bool) -> Bool {
@@ -57,19 +66,34 @@ struct ContentView: View {
     }
 
     private func updateScore(userMove: String) {
-        let systemMove = moves[currentChoice]
-        if result(for: userMove, against: systemMove, shouldWin: shouldPlayerWin) {
+        if result(for: userMove, against: moves[currentChoice], shouldWin: shouldPlayerWin) {
             score += 1
         } else {
             score -= 1
         }
+        validateGameState()
+    }
 
+    private func validateGameState() {
+        checkIfGameIsOver()
+        guard !isGameOver else { return }
+        currentTurn += 1
         shuffleMoves()
     }
 
     private func shuffleMoves() {
         currentChoice = Int.random(in: 0 ..< 2)
         shouldPlayerWin = Bool.random()
+    }
+
+    private func checkIfGameIsOver() {
+        isGameOver = !(currentTurn < 9)
+    }
+
+    private func restartGame() {
+        score = 0
+        currentTurn = 0
+        shuffleMoves()
     }
 }
 
