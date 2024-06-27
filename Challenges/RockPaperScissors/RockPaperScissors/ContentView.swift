@@ -29,25 +29,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(
-                stops: [
-                    Gradient.Stop(
-                        color: Color(red: 38 / 255, green: 0, blue: 0),
-                        location: 0.1
-                    ),
-                    Gradient.Stop(
-                        color: Color(red: 36 / 255, green: 1 / 255, blue: 63 / 255),
-                        location: 0.3
-                    ),
-                    Gradient.Stop(
-                        color: Color(red: 38 / 255, green: 0, blue: 0),
-                        location: 0.8
-                    ),
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            BackgroundGradient()
 
             VStack(spacing: 16) {
                 Text("Score: \(score)")
@@ -55,12 +37,12 @@ struct ContentView: View {
                     .foregroundStyle(.white)
 
                 VStack {
-                    Text("You should")
-                    Text(shouldPlayerWinText.uppercased())
-                        .font(.title.bold())
-                    Text("against")
-                    Text(currentChoiceText.uppercased())
-                        .font(.title.bold())
+                    Text("You should ") +
+                        Text(shouldPlayerWinText.uppercased())
+                        .font(.title2.bold())
+                    Text(" against ") +
+                        Text(currentChoiceText.uppercased())
+                        .font(.title2.bold())
                 }
                 .foregroundStyle(.white)
                 .font(.headline)
@@ -134,6 +116,30 @@ struct ContentView: View {
         score = 0
         currentTurn = 0
         shuffleMoves()
+    }
+}
+
+struct BackgroundGradient: View {
+    var body: some View {
+        LinearGradient(
+            stops: [
+                Gradient.Stop(
+                    color: Color(red: 38 / 255, green: 0, blue: 0),
+                    location: 0.1
+                ),
+                Gradient.Stop(
+                    color: Color(red: 36 / 255, green: 1 / 255, blue: 63 / 255),
+                    location: 0.3
+                ),
+                Gradient.Stop(
+                    color: Color(red: 38 / 255, green: 0, blue: 0),
+                    location: 0.8
+                ),
+            ],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+        .ignoresSafeArea()
     }
 }
 
