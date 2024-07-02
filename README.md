@@ -28,7 +28,7 @@ This day covers a quick review on all topics covered on the first 14 days.
 
 ### Days 26-34: Expanding your skills
 
-TBD
+- Days 26~28: Project 4 - [BetterRest](Days/BetterRest)
 
 ### Day 35: Consolidation III
 
