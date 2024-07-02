@@ -51,7 +51,7 @@ struct ContentView: View {
                 VStack {
                     bedtime
                 }
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .listRowInsets(EdgeInsets())
                 .background(Color(UIColor.systemGroupedBackground))
             }
