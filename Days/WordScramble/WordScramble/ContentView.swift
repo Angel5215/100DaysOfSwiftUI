@@ -53,6 +53,10 @@ struct ContentView: View {
             return wordError(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'")
         }
 
+        guard isAllowed(word: answer) else {
+            return wordError(title: "Word not allowed", message: "Word is less than 3 characters long or is the same as the start word")
+        }
+
         guard isReal(word: answer) else {
             return wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
         }
@@ -112,6 +116,10 @@ struct ContentView: View {
         errorTitle = title
         errorMessage = message
         showingError = true
+    }
+
+    func isAllowed(word: String) -> Bool {
+        word.count > 2 && word != rootWord
     }
 }
 
