@@ -14,31 +14,42 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
 
+    @State private var score = 0
+
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    TextField("Enter your word", text: $newWord)
-                        .textInputAutocapitalization(.never)
-                }
+            ZStack(alignment: .bottomTrailing) {
+                List {
+                    Section {
+                        TextField("Enter your word", text: $newWord)
+                            .textInputAutocapitalization(.never)
+                    }
 
-                Section {
-                    ForEach(usedWords, id: \.self) { word in
-                        HStack {
-                            Image(systemName: "\(word.count).circle")
-                            Text(word)
+                    Section {
+                        ForEach(usedWords, id: \.self) { word in
+                            HStack {
+                                Image(systemName: "\(word.count).circle")
+                                Text(word)
+                            }
                         }
                     }
                 }
-            }
-            .navigationTitle(rootWord)
-            .onSubmit(addNewWord)
-            .onAppear(perform: startGame)
-            .alert(errorTitle, isPresented: $showingError) {} message: {
-                Text(errorMessage)
-            }
-            .toolbar {
-                Button("Restart", action: startGame)
+                .navigationTitle(rootWord)
+                .onSubmit(addNewWord)
+                .onAppear(perform: startGame)
+                .alert(errorTitle, isPresented: $showingError) {} message: {
+                    Text(errorMessage)
+                }
+                .toolbar {
+                    Button("Restart", action: startGame)
+                }
+
+                HStack {
+                    Spacer()
+                    Text("Score: \(score)")
+                        .font(.headline.weight(.bold).smallCaps())
+                }
+                .padding()
             }
         }
     }
@@ -66,6 +77,7 @@ struct ContentView: View {
 
         withAnimation {
             usedWords.insert(answer, at: 0)
+            score += usedWords.count + answer.count
         }
 
         newWord = ""
@@ -74,6 +86,7 @@ struct ContentView: View {
     func startGame() {
         withAnimation {
             usedWords.removeAll()
+            score = 0
         }
 
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
