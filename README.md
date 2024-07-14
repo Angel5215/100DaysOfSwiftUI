@@ -9,7 +9,7 @@ This repository originally contained progress for the original 100 Days of Swift
 
 ### Days 1-14: Introduction to Swift
 
-The first 14 days provide a gentle warm up for SwiftUI learning as they cover the fundamentals of the Swift programming language. 
+The first 14 days provide a gentle warm up for SwiftUI learning as they cover the fundamentals of the Swift programming language.
 
 ### Day 15: Consolidation I
 
@@ -29,6 +29,7 @@ This day covers a quick review on all topics covered on the first 14 days.
 ### Days 26-34: Expanding your skills
 
 - Days 26~28: Project 4 - [BetterRest](Days/BetterRest)
+- Days 29~31: Project 5 - [WordScramble](Days/WordScramble)
 
 ### Day 35: Consolidation III
 
@@ -44,7 +45,7 @@ TBD
 
 ### Days 49-59: Focus on data
 
-TBD 
+TBD
 
 ### Days 60-61: Consolidation V
 
@@ -52,7 +53,7 @@ TBD
 
 ### Days 62-76: Filters, maps, and more
 
-TBD 
+TBD
 
 ### Days 77-78: Consolidation VI
 
@@ -61,7 +62,7 @@ TBD
 ### Days 79-94: Controlling UI flow
 
 TBD
- 
+
 
 ### Days 95: Consolidation VII
 
