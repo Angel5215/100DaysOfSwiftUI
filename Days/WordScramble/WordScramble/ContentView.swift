@@ -47,7 +47,7 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Text("Score: \(score)")
-                        .font(.headline.weight(.bold).smallCaps())
+                        .font(.headline.weight(.bold).smallCaps().monospacedDigit())
                 }
                 .padding()
             }
