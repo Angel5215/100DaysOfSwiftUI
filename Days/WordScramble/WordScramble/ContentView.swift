@@ -85,6 +85,7 @@ struct ContentView: View {
 
     func startGame() {
         withAnimation {
+            newWord = ""
             usedWords.removeAll()
             score = 0
         }
