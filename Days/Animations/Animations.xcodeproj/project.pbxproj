@@ -14,6 +14,7 @@
 		FA935A0A2C497E7400C831EB /* ImplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A092C497E7400C831EB /* ImplicitAnimationsView.swift */; };
 		FA935A0C2C497ED700C831EB /* CustomizeAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A0B2C497ED700C831EB /* CustomizeAnimationsView.swift */; };
 		FA935A0E2C498BBA00C831EB /* AnimatingBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A0D2C498BBA00C831EB /* AnimatingBindingsView.swift */; };
+		FA935A102C498EC700C831EB /* ExplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A0F2C498EC700C831EB /* ExplicitAnimationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FA935A092C497E7400C831EB /* ImplicitAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimationsView.swift; sourceTree = "<group>"; };
 		FA935A0B2C497ED700C831EB /* CustomizeAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeAnimationsView.swift; sourceTree = "<group>"; };
 		FA935A0D2C498BBA00C831EB /* AnimatingBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingBindingsView.swift; sourceTree = "<group>"; };
+		FA935A0F2C498EC700C831EB /* ExplicitAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				FA935A092C497E7400C831EB /* ImplicitAnimationsView.swift */,
 				FA935A0B2C497ED700C831EB /* CustomizeAnimationsView.swift */,
 				FA935A0D2C498BBA00C831EB /* AnimatingBindingsView.swift */,
+				FA935A0F2C498EC700C831EB /* ExplicitAnimationsView.swift */,
 				FA9359FF2C497CBD00C831EB /* Assets.xcassets */,
 				FA935A012C497CBD00C831EB /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9359FE2C497CBC00C831EB /* ContentView.swift in Sources */,
+				FA935A102C498EC700C831EB /* ExplicitAnimationsView.swift in Sources */,
 				FA935A0E2C498BBA00C831EB /* AnimatingBindingsView.swift in Sources */,
 				FA935A0C2C497ED700C831EB /* CustomizeAnimationsView.swift in Sources */,
 				FA9359FC2C497CBC00C831EB /* AnimationsApp.swift in Sources */,
