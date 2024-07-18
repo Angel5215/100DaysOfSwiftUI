@@ -12,6 +12,7 @@
 		FA935A002C497CBD00C831EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9359FF2C497CBD00C831EB /* Assets.xcassets */; };
 		FA935A032C497CBD00C831EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA935A022C497CBD00C831EB /* Preview Assets.xcassets */; };
 		FA935A0A2C497E7400C831EB /* ImplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A092C497E7400C831EB /* ImplicitAnimationsView.swift */; };
+		FA935A0C2C497ED700C831EB /* CustomizeAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A0B2C497ED700C831EB /* CustomizeAnimationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		FA9359FF2C497CBD00C831EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA935A022C497CBD00C831EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA935A092C497E7400C831EB /* ImplicitAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimationsView.swift; sourceTree = "<group>"; };
+		FA935A0B2C497ED700C831EB /* CustomizeAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeAnimationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				FA9359FB2C497CBC00C831EB /* AnimationsApp.swift */,
 				FA9359FD2C497CBC00C831EB /* ContentView.swift */,
 				FA935A092C497E7400C831EB /* ImplicitAnimationsView.swift */,
+				FA935A0B2C497ED700C831EB /* CustomizeAnimationsView.swift */,
 				FA9359FF2C497CBD00C831EB /* Assets.xcassets */,
 				FA935A012C497CBD00C831EB /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9359FE2C497CBC00C831EB /* ContentView.swift in Sources */,
+				FA935A0C2C497ED700C831EB /* CustomizeAnimationsView.swift in Sources */,
 				FA9359FC2C497CBC00C831EB /* AnimationsApp.swift in Sources */,
 				FA935A0A2C497E7400C831EB /* ImplicitAnimationsView.swift in Sources */,
 			);
