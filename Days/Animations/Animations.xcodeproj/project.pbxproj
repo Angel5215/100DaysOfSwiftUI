@@ -18,6 +18,7 @@
 		FA935A122C49C6ED00C831EB /* ControllingAnimationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A112C49C6ED00C831EB /* ControllingAnimationStackView.swift */; };
 		FA935A142C4A15EA00C831EB /* AnimatingGesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A132C4A15EA00C831EB /* AnimatingGesturesView.swift */; };
 		FA935A162C4A188400C831EB /* AnimatedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A152C4A188400C831EB /* AnimatedTextView.swift */; };
+		FA935A182C4A1A4400C831EB /* TransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA935A172C4A1A4400C831EB /* TransitionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		FA935A112C49C6ED00C831EB /* ControllingAnimationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingAnimationStackView.swift; sourceTree = "<group>"; };
 		FA935A132C4A15EA00C831EB /* AnimatingGesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingGesturesView.swift; sourceTree = "<group>"; };
 		FA935A152C4A188400C831EB /* AnimatedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTextView.swift; sourceTree = "<group>"; };
+		FA935A172C4A1A4400C831EB /* TransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				FA935A112C49C6ED00C831EB /* ControllingAnimationStackView.swift */,
 				FA935A132C4A15EA00C831EB /* AnimatingGesturesView.swift */,
 				FA935A152C4A188400C831EB /* AnimatedTextView.swift */,
+				FA935A172C4A1A4400C831EB /* TransitionsView.swift */,
 				FA9359FF2C497CBD00C831EB /* Assets.xcassets */,
 				FA935A012C497CBD00C831EB /* Preview Content */,
 			);
@@ -163,6 +166,7 @@
 				FA935A102C498EC700C831EB /* ExplicitAnimationsView.swift in Sources */,
 				FA935A0E2C498BBA00C831EB /* AnimatingBindingsView.swift in Sources */,
 				FA935A142C4A15EA00C831EB /* AnimatingGesturesView.swift in Sources */,
+				FA935A182C4A1A4400C831EB /* TransitionsView.swift in Sources */,
 				FA935A122C49C6ED00C831EB /* ControllingAnimationStackView.swift in Sources */,
 				FA935A0C2C497ED700C831EB /* CustomizeAnimationsView.swift in Sources */,
 				FA9359FC2C497CBC00C831EB /* AnimationsApp.swift in Sources */,
