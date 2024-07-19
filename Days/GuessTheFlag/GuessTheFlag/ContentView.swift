@@ -31,6 +31,7 @@ struct ContentView: View {
     @State private var isGameOver = false
 
     @State private var rotationAmount = 0.0
+    @State private var opacity = 1.0
     @State private var tappedFlag = 0
 
     var body: some View {
@@ -84,6 +85,7 @@ struct ContentView: View {
                                     .degrees(tappedFlag == number ? rotationAmount : 0),
                                     axis: (x: 0, y: 1, z: 0)
                                 )
+                                .opacity(tappedFlag != number ? opacity : 1)
                         }
                     }
                 }
@@ -115,12 +117,10 @@ struct ContentView: View {
             score -= 5
         }
 
-        withAnimation(.bouncy(duration: 0.9)) {
+        withAnimation(.bouncy(duration: 0.75)) {
             tappedFlag = number
             rotationAmount += 360
-        } completion: {
-            tappedFlag = -1
-            rotationAmount = 0
+            opacity = 0.25
         }
 
         showingScore = true
@@ -129,6 +129,7 @@ struct ContentView: View {
 
     func askQuestion() {
         checkIfGameIsOver()
+        restoreAnimationState()
         guard !isGameOver else { return }
         shuffleQuestions()
     }
@@ -148,6 +149,12 @@ struct ContentView: View {
         if currentQuestion > 7 {
             isGameOver = true
         }
+    }
+
+    func restoreAnimationState() {
+        tappedFlag = -1
+        rotationAmount = 0
+        opacity = 1
     }
 }
 
