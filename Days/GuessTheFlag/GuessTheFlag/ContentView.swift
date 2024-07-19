@@ -33,6 +33,8 @@ struct ContentView: View {
     @State private var rotationAmount = 0.0
     @State private var opacity = 1.0
     @State private var tappedFlag = 0
+    @State private var scale = 1.0
+    @State private var offset = 0.0
 
     var body: some View {
         ZStack {
@@ -86,6 +88,8 @@ struct ContentView: View {
                                     axis: (x: 0, y: 1, z: 0)
                                 )
                                 .opacity(tappedFlag != number ? opacity : 1)
+                                .scaleEffect(tappedFlag != number ? scale : 1)
+                                .offset(x: 0, y: tappedFlag != number ? offset : 0)
                         }
                     }
                 }
@@ -121,6 +125,11 @@ struct ContentView: View {
             tappedFlag = number
             rotationAmount += 360
             opacity = 0.25
+            scale = 0.25
+        }
+
+        withAnimation(.easeInOut(duration: 1).delay(0.5)) {
+            offset = UIScreen.main.bounds.height * 2
         }
 
         showingScore = true
@@ -155,6 +164,8 @@ struct ContentView: View {
         tappedFlag = -1
         rotationAmount = 0
         opacity = 1
+        scale = 1
+        offset = 0
     }
 }
 
