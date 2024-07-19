@@ -30,6 +30,9 @@ struct ContentView: View {
     @State private var currentQuestion = 0
     @State private var isGameOver = false
 
+    @State private var rotationAmount = 0.0
+    @State private var tappedFlag = 0
+
     var body: some View {
         ZStack {
             RadialGradient(
@@ -77,6 +80,10 @@ struct ContentView: View {
                             flagTapped(number)
                         } label: {
                             FlagImage(name: countries[number])
+                                .rotation3DEffect(
+                                    .degrees(tappedFlag == number ? rotationAmount : 0),
+                                    axis: (x: 0, y: 1, z: 0)
+                                )
                         }
                     }
                 }
@@ -106,6 +113,14 @@ struct ContentView: View {
         } else {
             scoreTitle = "Wrong! That's the flag of \(countries[number])"
             score -= 5
+        }
+
+        withAnimation(.bouncy(duration: 0.9)) {
+            tappedFlag = number
+            rotationAmount += 360
+        } completion: {
+            tappedFlag = -1
+            rotationAmount = 0
         }
 
         showingScore = true
