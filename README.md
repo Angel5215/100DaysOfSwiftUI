@@ -30,6 +30,7 @@ This day covers a quick review on all topics covered on the first 14 days.
 
 - Days 26~28: Project 4 - [BetterRest](Days/BetterRest)
 - Days 29~31: Project 5 - [WordScramble](Days/WordScramble)
+- Days 32~34: Project 6 - [Animations](Days/Animations)
 
 ### Day 35: Consolidation III
 
