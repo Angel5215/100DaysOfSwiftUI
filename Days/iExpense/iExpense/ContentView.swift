@@ -25,6 +25,7 @@ struct ContentView: View {
                         }
                         Spacer()
                         Text(item.amount, format: .currency(code: currencyCode))
+                            .expenseStyle(amount: item.amount)
                     }
                 }
                 .onDelete(perform: removeItems)
