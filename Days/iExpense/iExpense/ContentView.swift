@@ -5,9 +5,27 @@
 
 import SwiftUI
 
+struct ItemSection {
+    let title: String
+    let items: [ExpenseItem]
+}
+
 struct ContentView: View {
     @State private var expenses = Expenses()
     @State private var showingAddExpense = false
+
+    var sections: [ItemSection] {
+        [
+            ItemSection(
+                title: "Personal Expenses",
+                items: expenses.items.filter { $0.type == "Personal" }
+            ),
+            ItemSection(
+                title: "Business Expenses",
+                items: expenses.items.filter { $0.type == "Business" }
+            ),
+        ]
+    }
 
     var currencyCode: String {
         Locale.current.currency?.identifier ?? "USD"
@@ -16,19 +34,20 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+                ForEach(sections, id: \.title) { section in
+                    Section(section.title) {
+                        ForEach(section.items) { item in
+                            HStack {
+                                Text(item.name)
+                                    .font(.headline)
+                                Spacer()
+                                Text(item.amount, format: .currency(code: currencyCode))
+                                    .expenseStyle(amount: item.amount)
+                            }
                         }
-                        Spacer()
-                        Text(item.amount, format: .currency(code: currencyCode))
-                            .expenseStyle(amount: item.amount)
+                        .onDelete(perform: removeItems(from: section.items))
                     }
                 }
-                .onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -42,8 +61,11 @@ struct ContentView: View {
         }
     }
 
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItems(from array: [ExpenseItem]) -> (_ offsets: IndexSet) -> Void {
+        { offsets in
+            let ids = offsets.map { array[$0].id }
+            expenses.items.removeAll { item in ids.contains(item.id) }
+        }
     }
 }
 
