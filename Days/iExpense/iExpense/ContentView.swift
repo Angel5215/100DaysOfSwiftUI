@@ -10,6 +10,12 @@ struct ItemSection {
     let items: [ExpenseItem]
 }
 
+extension [ExpenseItem] {
+    func filter(by type: ExpenseItemType) -> [ExpenseItem] {
+        filter { $0.type == type }
+    }
+}
+
 struct ContentView: View {
     @State private var expenses = Expenses()
     @State private var showingAddExpense = false
@@ -18,11 +24,11 @@ struct ContentView: View {
         [
             ItemSection(
                 title: "Personal Expenses",
-                items: expenses.items.filter { $0.type == "Personal" }
+                items: expenses.items.filter(by: .personal)
             ),
             ItemSection(
                 title: "Business Expenses",
-                items: expenses.items.filter { $0.type == "Business" }
+                items: expenses.items.filter(by: .business)
             ),
         ]
     }

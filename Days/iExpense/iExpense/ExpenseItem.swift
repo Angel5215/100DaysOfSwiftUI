@@ -9,8 +9,13 @@ import Observation
 struct ExpenseItem: Identifiable, Codable {
     var id = UUID()
     let name: String
-    let type: String
+    let type: ExpenseItemType
     let amount: Double
+}
+
+enum ExpenseItemType: String, Codable, CaseIterable {
+    case personal = "Personal"
+    case business = "Business"
 }
 
 @Observable
