@@ -10,5 +10,5 @@ This project is an expense tracker that separates personal costs from business c
 ## Video
 
 <div align="center">
-  <a href="https://youtu.be/ew37c801f8A"><img src="https://img.youtube.com/vi/https://youtu.be/ew37c801f8A/0.jpg" alt="Sample"></a>
+  <a href="https://youtu.be/ew37c801f8A"><img src="https://img.youtube.com/vi/ew37c801f8A/0.jpg" alt="iExpense thumbnail"></a>
 </div>
