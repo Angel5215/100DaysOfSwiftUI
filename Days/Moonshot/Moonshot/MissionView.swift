@@ -32,10 +32,12 @@ struct MissionView: View {
                     .padding(.top)
 
                 VStack(alignment: .leading) {
+                    CustomDivider()
                     Text("Mission Highlights")
                         .font(.title.bold())
                         .padding(.bottom, 5)
                     Text(mission.description)
+                    CustomDivider()
                 }
                 .padding(.horizontal)
 
@@ -74,6 +76,15 @@ struct MissionView: View {
         .navigationTitle(mission.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .background(.darkBackground)
+    }
+}
+
+struct CustomDivider: View {
+    var body: some View {
+        Rectangle()
+            .frame(height: 2)
+            .foregroundStyle(.lightBackground)
+            .padding(.vertical)
     }
 }
 
