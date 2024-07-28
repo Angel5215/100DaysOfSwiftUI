@@ -9,6 +9,16 @@ struct Mission: Codable, Identifiable {
     let crew: [CrewRole]
     let description: String
 
+    // MARK: - Helpers
+
+    var displayName: String {
+        "Apollo \(id)"
+    }
+
+    var image: String {
+        "apollo\(id)"
+    }
+
     // MARK: - Helper types
 
     struct CrewRole: Codable {
