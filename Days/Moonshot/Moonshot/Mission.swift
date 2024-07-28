@@ -3,9 +3,11 @@
 // Last modified by 'Ángel Vázquez' in 2024.
 //
 
+import Foundation
+
 struct Mission: Codable, Identifiable {
     let id: Int
-    let launchDate: String?
+    let launchDate: Date?
     let crew: [CrewRole]
     let description: String
 
@@ -17,6 +19,10 @@ struct Mission: Codable, Identifiable {
 
     var image: String {
         "apollo\(id)"
+    }
+
+    var formattedLaunchDate: String {
+        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
     }
 
     // MARK: - Helper types
