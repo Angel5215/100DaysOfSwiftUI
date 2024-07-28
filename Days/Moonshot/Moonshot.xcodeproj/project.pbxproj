@@ -61,6 +61,30 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		FA8B4A642C562B6C00225829 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA0F62A12C54B515000D2844 /* Bundle+Decodable.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		FA8B4A652C562B7700225829 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA99EA182C5364BC00A9ABE4 /* ContentView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FA8B4A662C562B8100225829 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA99EA162C5364BC00A9ABE4 /* MoonshotApp.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		FA99EA0A2C5364BC00A9ABE4 = {
 			isa = PBXGroup;
 			children = (
@@ -80,11 +104,11 @@
 		FA99EA152C5364BC00A9ABE4 /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				FA8B4A662C562B8100225829 /* Main */,
+				FA8B4A652C562B7700225829 /* Views */,
+				FA8B4A642C562B6C00225829 /* Extensions */,
 				FA0F629E2C54B4BB000D2844 /* Data */,
 				FA0F629D2C54B43A000D2844 /* Resources */,
-				FA99EA162C5364BC00A9ABE4 /* MoonshotApp.swift */,
-				FA99EA182C5364BC00A9ABE4 /* ContentView.swift */,
-				FA0F62A12C54B515000D2844 /* Bundle+Decodable.swift */,
 				FA99EA1C2C5364BD00A9ABE4 /* Preview Content */,
 			);
 			path = Moonshot;
