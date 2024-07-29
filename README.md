@@ -39,6 +39,7 @@ TBD
 ### Days 36-46: Scaling up to bigger apps
 
 - Days 36-38: Project 7 - [iExpense](Days/iExpense)
+- Days 39~42: Project 8 - [Moonshot](Days/Moonshot)
 
 ### Days 47-48: Consolidation IV
 
