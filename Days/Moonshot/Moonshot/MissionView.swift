@@ -31,6 +31,8 @@ struct MissionView: View {
                     }
                     .padding(.top)
 
+                Text(mission.launchDate?.formatted(date: .complete, time: .omitted) ?? "Not launched")
+
                 VStack(alignment: .leading) {
                     CustomDivider()
 
@@ -80,7 +82,7 @@ extension MissionView {
     let missions: [Mission] = Bundle.main.decode("missions.json")
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     return NavigationStack {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[1], astronauts: astronauts)
             .preferredColorScheme(.dark)
     }
 }
