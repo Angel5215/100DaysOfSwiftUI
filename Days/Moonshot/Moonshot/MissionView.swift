@@ -31,7 +31,7 @@ struct MissionView: View {
                     }
                     .padding(.top)
 
-                Text(mission.launchDate?.formatted(date: .complete, time: .omitted) ?? "Not launched")
+                Text(mission.formattedLaunchDate(style: .complete, defaultValue: "Not launched"))
 
                 VStack(alignment: .leading) {
                     CustomDivider()

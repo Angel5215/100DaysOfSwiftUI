@@ -21,8 +21,8 @@ struct Mission: Codable, Identifiable {
         "apollo\(id)"
     }
 
-    var formattedLaunchDate: String {
-        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    func formattedLaunchDate(style: Date.FormatStyle.DateStyle = .abbreviated, defaultValue: String = "N/A") -> String {
+        launchDate?.formatted(date: style, time: .omitted) ?? defaultValue
     }
 
     // MARK: - Helper types
