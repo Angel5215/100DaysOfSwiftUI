@@ -51,17 +51,7 @@ struct MissionView: View {
                 }
                 .padding(.horizontal)
 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(crew, id: \.role) { crewMember in
-                            NavigationLink {
-                                AstronautView(astronaut: crewMember.astronaut)
-                            } label: {
-                                CrewMemberView(crewMember: crewMember)
-                            }
-                        }
-                    }
-                }
+                CrewCarouselView(crew: crew)
             }
             .padding(.bottom)
         }
