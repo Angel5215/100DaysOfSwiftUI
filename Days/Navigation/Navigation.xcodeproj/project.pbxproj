@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7F64EE2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F64ED2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift */; };
 		FAECF1282C59E03E00FDB350 /* NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF1272C59E03E00FDB350 /* NavigationApp.swift */; };
 		FAECF12A2C59E03E00FDB350 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF1292C59E03E00FDB350 /* ContentView.swift */; };
 		FAECF12C2C59E03E00FDB350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAECF12B2C59E03E00FDB350 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA7F64ED2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnToRootExampleView.swift; sourceTree = "<group>"; };
 		FAECF1242C59E03E00FDB350 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAECF1272C59E03E00FDB350 /* NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationApp.swift; sourceTree = "<group>"; };
 		FAECF1292C59E03E00FDB350 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				FAECF1272C59E03E00FDB350 /* NavigationApp.swift */,
 				FAECF1292C59E03E00FDB350 /* ContentView.swift */,
+				FA7F64ED2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift */,
 				FAECF12B2C59E03E00FDB350 /* Assets.xcassets */,
 				FAECF12D2C59E03E00FDB350 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAECF12A2C59E03E00FDB350 /* ContentView.swift in Sources */,
+				FA7F64EE2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift in Sources */,
 				FAECF1282C59E03E00FDB350 /* NavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
