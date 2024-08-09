@@ -10,9 +10,10 @@ struct ContentView: View {
     let missions: [Mission] = Bundle.main.decode("missions.json")
 
     @State private var showingGrid = false
+    @State private var pathStore = PathStore()
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $pathStore.path) {
             Group {
                 if showingGrid {
                     GridLayout(missions: missions)

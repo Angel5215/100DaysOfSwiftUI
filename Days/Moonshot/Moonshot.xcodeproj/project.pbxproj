@@ -24,6 +24,7 @@
 		FA99EA192C5364BC00A9ABE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99EA182C5364BC00A9ABE4 /* ContentView.swift */; };
 		FA99EA1B2C5364BD00A9ABE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA99EA1A2C5364BD00A9ABE4 /* Assets.xcassets */; };
 		FA99EA1E2C5364BD00A9ABE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA99EA1D2C5364BD00A9ABE4 /* Preview Assets.xcassets */; };
+		FAD007D32C660A4F00CACD81 /* PathStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD007D22C660A4F00CACD81 /* PathStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		FA99EA182C5364BC00A9ABE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA99EA1A2C5364BD00A9ABE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA99EA1D2C5364BD00A9ABE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAD007D22C660A4F00CACD81 /* PathStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0F629F2C54B4C1000D2844 /* Astronaut.swift */,
+				FAD007D22C660A4F00CACD81 /* PathStore.swift */,
 				FA8B4A622C56244100225829 /* Mission.swift */,
 			);
 			name = Data;
@@ -222,6 +225,7 @@
 				FA70CFD12C562F5E00CDE63A /* MissionView.swift in Sources */,
 				FA70CFD72C5641E000CDE63A /* CrewMemberView.swift in Sources */,
 				FA26008F2C575351007BC899 /* ContentView+ListLayout.swift in Sources */,
+				FAD007D32C660A4F00CACD81 /* PathStore.swift in Sources */,
 				FA0F62A02C54B4C1000D2844 /* Astronaut.swift in Sources */,
 				FA70CFD32C56413000CDE63A /* AstronautView.swift in Sources */,
 				FA0F62A22C54B515000D2844 /* Bundle+Decodable.swift in Sources */,

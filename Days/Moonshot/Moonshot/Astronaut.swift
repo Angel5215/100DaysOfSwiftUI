@@ -9,7 +9,7 @@ struct Astronaut: Hashable, Codable, Identifiable {
     let description: String
 }
 
-struct CrewMember: Hashable {
+struct CrewMember: Hashable, Codable {
     let role: String
     let astronaut: Astronaut
 }
