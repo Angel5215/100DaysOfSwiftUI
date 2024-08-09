@@ -26,6 +26,9 @@ struct ContentView: View {
             .navigationDestination(for: Mission.self) { mission in
                 MissionView(mission: mission, astronauts: astronauts)
             }
+            .navigationDestination(for: CrewMember.self) { crewMember in
+                AstronautView(astronaut: crewMember.astronaut)
+            }
             .toolbar {
                 Button("Toggle view", systemImage: showingGrid ? "square.fill.text.grid.1x2" : "square.grid.3x2.fill") {
                     withAnimation(.default) {
