@@ -15,7 +15,14 @@ struct NavigationBarCustomizationView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.blue)
             .toolbarColorScheme(.dark)
-            .toolbar(.hidden, for: .navigationBar)
+            // .toolbar(.hidden, for: .navigationBar)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    Button("Tap Me") {}
+
+                    Button("Or Tap Me") {}
+                }
+            }
         }
     }
 }
