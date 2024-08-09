@@ -10,6 +10,7 @@
 		FA7F64EE2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F64ED2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift */; };
 		FAD007CD2C65E8C900CACD81 /* ReturnToRootExampleObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD007CC2C65E8C900CACD81 /* ReturnToRootExampleObservableView.swift */; };
 		FAD007CF2C65F88C00CACD81 /* CodableNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD007CE2C65F88C00CACD81 /* CodableNavigationStackView.swift */; };
+		FAD007D12C65FB6400CACD81 /* NavigationBarCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD007D02C65FB6400CACD81 /* NavigationBarCustomizationView.swift */; };
 		FAECF1282C59E03E00FDB350 /* NavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF1272C59E03E00FDB350 /* NavigationApp.swift */; };
 		FAECF12A2C59E03E00FDB350 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECF1292C59E03E00FDB350 /* ContentView.swift */; };
 		FAECF12C2C59E03E00FDB350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAECF12B2C59E03E00FDB350 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		FA7F64ED2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnToRootExampleView.swift; sourceTree = "<group>"; };
 		FAD007CC2C65E8C900CACD81 /* ReturnToRootExampleObservableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnToRootExampleObservableView.swift; sourceTree = "<group>"; };
 		FAD007CE2C65F88C00CACD81 /* CodableNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableNavigationStackView.swift; sourceTree = "<group>"; };
+		FAD007D02C65FB6400CACD81 /* NavigationBarCustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomizationView.swift; sourceTree = "<group>"; };
 		FAECF1242C59E03E00FDB350 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAECF1272C59E03E00FDB350 /* NavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationApp.swift; sourceTree = "<group>"; };
 		FAECF1292C59E03E00FDB350 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				FA7F64ED2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift */,
 				FAD007CC2C65E8C900CACD81 /* ReturnToRootExampleObservableView.swift */,
 				FAD007CE2C65F88C00CACD81 /* CodableNavigationStackView.swift */,
+				FAD007D02C65FB6400CACD81 /* NavigationBarCustomizationView.swift */,
 				FAECF12B2C59E03E00FDB350 /* Assets.xcassets */,
 				FAECF12D2C59E03E00FDB350 /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD007D12C65FB6400CACD81 /* NavigationBarCustomizationView.swift in Sources */,
 				FAECF12A2C59E03E00FDB350 /* ContentView.swift in Sources */,
 				FAD007CD2C65E8C900CACD81 /* ReturnToRootExampleObservableView.swift in Sources */,
 				FA7F64EE2C5ADDBE0059B7A9 /* ReturnToRootExampleView.swift in Sources */,
