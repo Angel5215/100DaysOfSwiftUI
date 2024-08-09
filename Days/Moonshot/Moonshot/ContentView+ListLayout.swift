@@ -7,15 +7,12 @@ import SwiftUI
 
 extension ContentView {
     struct ListLayout: View {
-        let astronauts: [String: Astronaut]
         let missions: [Mission]
 
         var body: some View {
             List {
                 ForEach(missions) { mission in
-                    NavigationLink {
-                        MissionView(mission: mission, astronauts: astronauts)
-                    } label: {
+                    NavigationLink(value: mission) {
                         HStack {
                             Image(mission.image)
                                 .resizable()

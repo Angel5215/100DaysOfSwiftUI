@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Mission: Codable, Identifiable {
+struct Mission: Hashable, Codable, Identifiable {
     let id: Int
     let launchDate: Date?
     let crew: [CrewRole]
@@ -27,7 +27,7 @@ struct Mission: Codable, Identifiable {
 
     // MARK: - Helper types
 
-    struct CrewRole: Codable {
+    struct CrewRole: Hashable, Codable {
         let name: String
         let role: String
     }
