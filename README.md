@@ -40,8 +40,9 @@ TBD
 
 - Days 36-38: Project 7 - [iExpense](Days/iExpense)
 - Days 39~42: Project 8 - [Moonshot](Days/Moonshot)
+- Days 43~46: Project 9 - [Navigation](Days/Navigation)
 
-### Days 47-48: Consolidation IV
+### Days 47-48: Consolidation IV
 
 TBD
 
@@ -53,7 +54,7 @@ TBD
 
 TBD
 
-### Days 62-76: Filters, maps, and more
+### Days 62-76: Filters, maps, and more
 
 TBD
 
