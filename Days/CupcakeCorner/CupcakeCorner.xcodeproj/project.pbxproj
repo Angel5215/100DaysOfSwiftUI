@@ -12,6 +12,7 @@
 		FAEC05A02C6C12AE0058D663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC059F2C6C12AE0058D663 /* Assets.xcassets */; };
 		FAEC05A32C6C12AE0058D663 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC05A22C6C12AE0058D663 /* Preview Assets.xcassets */; };
 		FAFFBC662C73F091002FF10A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFFBC652C73F091002FF10A /* Order.swift */; };
+		FAFFBC682C73F397002FF10A /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFFBC672C73F397002FF10A /* AddressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		FAEC059F2C6C12AE0058D663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEC05A22C6C12AE0058D663 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAFFBC652C73F091002FF10A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		FAFFBC672C73F397002FF10A /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFFBC652C73F091002FF10A /* Order.swift */,
+				FAFFBC672C73F397002FF10A /* AddressView.swift */,
 				FAEC059B2C6C12AD0058D663 /* CupcakeCornerApp.swift */,
 				FAEC059D2C6C12AD0058D663 /* ContentView.swift */,
 				FAEC059F2C6C12AE0058D663 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAFFBC662C73F091002FF10A /* Order.swift in Sources */,
+				FAFFBC682C73F397002FF10A /* AddressView.swift in Sources */,
 				FAEC059E2C6C12AD0058D663 /* ContentView.swift in Sources */,
 				FAEC059C2C6C12AD0058D663 /* CupcakeCornerApp.swift in Sources */,
 			);
