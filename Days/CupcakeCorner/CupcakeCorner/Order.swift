@@ -7,7 +7,7 @@ import Foundation
 import Observation
 
 @Observable
-class Order {
+class Order: Codable {
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
 
     var type = 0
@@ -51,5 +51,19 @@ class Order {
         }
 
         return finalCost
+    }
+}
+
+extension Order {
+    enum CodingKeys: String, CodingKey {
+        case _type = "type"
+        case _quantity = "quantity"
+        case _specialRequestEnabled = "specialRequestEnabled"
+        case _extraFrosting = "extraFrosting"
+        case _addSprinkles = "addSprinkles"
+        case _name = "name"
+        case _city = "city"
+        case _streetAddress = "streetAddress"
+        case _zip = "zip"
     }
 }
