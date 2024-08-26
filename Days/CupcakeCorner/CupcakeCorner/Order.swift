@@ -3,6 +3,7 @@
 // Last modified by 'Ángel Vázquez' in 2024.
 //
 
+import Foundation
 import Observation
 
 @Observable
@@ -35,5 +36,20 @@ class Order {
         } else {
             true
         }
+    }
+
+    var cost: Decimal {
+        var finalCost = Decimal(quantity) * 2
+        finalCost += Decimal(type) / 2
+
+        if extraFrosting {
+            finalCost += Decimal(quantity)
+        }
+
+        if addSprinkles {
+            finalCost += Decimal(quantity) / 2
+        }
+
+        return finalCost
     }
 }
