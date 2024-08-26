@@ -28,4 +28,12 @@ class Order {
     var streetAddress = ""
     var city = ""
     var zip = ""
+
+    var hasValidAddress: Bool {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+            false
+        } else {
+            true
+        }
+    }
 }
