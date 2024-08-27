@@ -48,7 +48,7 @@ TBD
 
 ### Days 49-59: Focus on data
 
-TBD
+- Days 49~52: Project 10 - [CupcakeCorner](Days/CupcakeCorner)
 
 ### Days 60-61: Consolidation V
 
