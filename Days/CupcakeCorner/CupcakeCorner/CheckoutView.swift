@@ -8,7 +8,7 @@ import SwiftUI
 struct CheckoutView: View {
     var order: Order
 
-    @State private var confirmationMessage = ""
+    @State private var confirmationMessage = ConfirmationMessage()
     @State private var showingConfirmation = false
 
     var body: some View {
@@ -37,10 +37,10 @@ struct CheckoutView: View {
         .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
         .scrollBounceBehavior(.basedOnSize)
-        .alert("Thank you!", isPresented: $showingConfirmation) {
-            Button("OK") {}
+        .alert(confirmationMessage.title, isPresented: $showingConfirmation) {
+            Button(confirmationMessage.buttonTitle) {}
         } message: {
-            Text(confirmationMessage)
+            Text(confirmationMessage.description)
         }
     }
 
@@ -58,11 +58,28 @@ struct CheckoutView: View {
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
-            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
-            showingConfirmation = true
+            confirmationMessage = ConfirmationMessage(
+                title: "Thank you!",
+                description: "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!",
+                buttonTitle: "OK"
+            )
         } catch {
-            print("Checkout failed: \(error.localizedDescription)")
+            confirmationMessage = ConfirmationMessage(
+                title: "Error",
+                description: "Checkout failed: \(error.localizedDescription)",
+                buttonTitle: "OK"
+            )
         }
+
+        showingConfirmation = true
+    }
+
+    // MARK: - Helpers
+
+    private struct ConfirmationMessage {
+        var title = ""
+        var description = ""
+        var buttonTitle = ""
     }
 }
 
