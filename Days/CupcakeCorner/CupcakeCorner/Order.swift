@@ -31,11 +31,9 @@ class Order: Codable {
     var zip = ""
 
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
-            false
-        } else {
-            true
-        }
+        let emptyFields = [name, streetAddress, city, zip]
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        return !emptyFields.contains(true)
     }
 
     var cost: Decimal {
